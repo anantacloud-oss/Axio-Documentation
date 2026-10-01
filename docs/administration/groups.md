@@ -215,54 +215,6 @@ permalink: /axio/administration/groups/
     </ul>
   </section>
 
-  <section>
-    <h2>API reference</h2>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Endpoint</th>
-            <th>Purpose</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>GET /organizations/:orgId/teams</code></td>
-            <td>List internal groups</td>
-          </tr>
-          <tr>
-            <td><code>POST /organizations/:orgId/teams</code></td>
-            <td>Create internal group</td>
-          </tr>
-          <tr>
-            <td><code>PATCH /organizations/:orgId/teams/:teamId</code></td>
-            <td>Update name / description</td>
-          </tr>
-          <tr>
-            <td><code>DELETE /organizations/:orgId/teams/:teamId</code></td>
-            <td>Delete empty internal group</td>
-          </tr>
-          <tr>
-            <td><code>POST /organizations/:orgId/teams/:teamId/members</code></td>
-            <td>Add member (<code>userId</code>, <code>role</code>)</td>
-          </tr>
-          <tr>
-            <td><code>DELETE /organizations/:orgId/teams/:teamId/members/:memberId</code></td>
-            <td>Remove member from group</td>
-          </tr>
-          <tr>
-            <td><code>GET /admin/groups?organizationId=…</code> (v2)</td>
-            <td>Internal + external (synced) group directory summary</td>
-          </tr>
-          <tr>
-            <td><code>GET /organizations/:orgId/enterprise/scim/groups</code></td>
-            <td>SCIM group payload used to resolve synced group members</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
   <div class="groups-bottom">
 
     <section class="groups-panel about-groups">

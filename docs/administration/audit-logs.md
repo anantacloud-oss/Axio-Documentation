@@ -174,37 +174,4 @@ permalink: /axio/administration/audit-logs/
     <p class="note">Editing retention requires <code>org:update</code> (typically organization Owner).</p>
   </section>
 
-  <section>
-    <h2>API reference</h2>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>Endpoint</th><th>Purpose</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><code>GET /organizations/:orgId/audit-logs</code></td><td>Search / list events (query filters)</td></tr>
-          <tr><td><code>GET /organizations/:orgId/audit-logs/:id</code></td><td>Event detail</td></tr>
-          <tr><td><code>GET /organizations/:orgId/audit-logs/dashboard</code></td><td>KPI counts</td></tr>
-          <tr><td><code>GET /organizations/:orgId/audit-logs/analytics?days=30</code></td><td>Charts data</td></tr>
-          <tr><td><code>GET /organizations/:orgId/audit-logs/categories</code></td><td>Category list</td></tr>
-          <tr><td><code>GET /organizations/:orgId/audit-logs/export</code></td><td>CSV export</td></tr>
-          <tr><td><code>GET /organizations/:orgId/audit-logs/export/json</code></td><td>JSON export</td></tr>
-          <tr><td><code>GET /organizations/:orgId/audit-logs/retention-policy</code></td><td>Read retention settings</td></tr>
-          <tr><td><code>PUT /organizations/:orgId/audit-logs/retention-policy</code></td><td>Update retention (<code>org:update</code>)</td></tr>
-          <tr><td><code>POST /organizations/:orgId/audit-logs/retention-policy/run</code></td><td>Run retention job</td></tr>
-          <tr><td><code>GET /organizations/:orgId/audit-logs/archives</code></td><td>Search archived events</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section>
-    <h2>Related surfaces</h2>
-    <ul>
-      <li><strong>My Profile</strong> — personal sign-in activity and charts from a subset of org audit logs (current organization, limited page size)</li>
-      <li><strong>Security &amp; Governance</strong> — compliance and break-glass workflows reference this audit trail</li>
-      <li><strong>Roles &amp; Access</strong> — no embedded audit tab; use this page for full RBAC-related events (filter Category = RBAC or search)</li>
-    </ul>
-  </section>
-
 </div>

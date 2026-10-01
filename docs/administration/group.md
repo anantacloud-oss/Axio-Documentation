@@ -374,55 +374,5 @@ permalink: /axio/administration/runner/group/
 
   </section>
 
-  <section>
-    <h2>API reference</h2>
-
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Endpoint</th>
-            <th>Purpose</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>GET /organizations/:orgId/runner-groups</code></td>
-            <td>List groups; optional <code>?search=</code>. Ensures <code>Default</code> exists.</td>
-          </tr>
-          <tr>
-            <td><code>POST /organizations/:orgId/runner-groups</code></td>
-            <td>Create group (<code>runner:manage</code>)</td>
-          </tr>
-          <tr>
-            <td><code>PATCH /organizations/:orgId/runner-groups/:groupId</code></td>
-            <td>Update name, description, scope, tags, <code>enabled</code> (<code>runner:manage</code>)</td>
-          </tr>
-          <tr>
-            <td><code>DELETE /organizations/:orgId/runner-groups/:groupId</code></td>
-            <td>Delete group; runners/tokens/pools moved to <code>Default</code> (<code>runner:manage</code>)</td>
-          </tr>
-          <tr>
-            <td><code>POST /organizations/:orgId/runner-groups/:groupId/runners</code></td>
-            <td>Assign existing runners to a group (<code>runner:manage</code>)</td>
-          </tr>
-          <tr>
-            <td><code>DELETE /organizations/:orgId/runner-groups/:groupId/runners/:runnerId</code></td>
-            <td>Remove runner from group (moves to <code>Default</code>)</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <div class="callout callout-info">
-    <div class="callout-icon">i</div>
-    <p>
-      <strong>Example axio.yaml</strong> — target the system default group:
-    </p>
-    <pre><code>runner:
-  strategy: runner-group
-  runnerGroup: Default</code></pre>
-  </div>
 
 </div>

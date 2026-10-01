@@ -237,24 +237,6 @@ permalink: /axio/administration/tenant/
     </div>
   </section>
 
-  <section class="tenant-section">
-    <h2>API reference</h2>
-    <div class="tenant-fields">
-      <div class="tenant-field">
-        <label><code>GET /organizations/:id</code></label>
-        <p>Organization details including <code>organizationCode</code>, <code>slug</code>, <code>isPlatformProvider</code>, and member/project/team counts.</p>
-      </div>
-      <div class="tenant-field">
-        <label><code>PATCH /organizations/:id</code></label>
-        <p>Update <code>name</code> and/or <code>description</code>. Requires <code>org:update</code>.</p>
-      </div>
-      <div class="tenant-field">
-        <label><code>GET /admin/organizations/dashboard?organizationId=…</code></label>
-        <p>Admin dashboard payload powering KPI subtitles and tenant insight charts.</p>
-      </div>
-    </div>
-  </section>
-
   <div class="tenant-warning">
     <strong>♧ &nbsp; Safeguards</strong>
     <ul>

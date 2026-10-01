@@ -245,35 +245,4 @@ permalink: /axio/administration/integrations/
     <p>Import validates version and organization ID, then creates secret providers that do not already exist (matched by name and type). Other categories are not auto-created from import.</p>
   </section>
 
-  <section>
-    <h2>Legacy routes</h2>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>Legacy path</th><th>Redirects to</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><code>/administration/integrations</code></td><td><code>/admin/integrations</code></td></tr>
-          <tr><td><code>/vcs</code>, <code>/git</code></td><td><code>/admin/integrations/source-control</code></td></tr>
-          <tr><td><code>/admin/security/idp</code></td><td><code>/admin/integrations/identity-providers</code></td></tr>
-          <tr><td><code>/admin/integration/github</code></td><td><code>/admin/integrations/source-control/github</code></td></tr>
-          <tr><td><code>/admin/integrations/itsm</code></td><td><code>/admin/integrations/change-management</code></td></tr>
-          <tr><td><code>/admin/integrations/collaboration</code></td><td><code>/admin/integrations/chatops</code></td></tr>
-          <tr><td><code>/enterprise</code></td><td>Legacy SSO &amp; SCIM (see Authentication Providers)</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section>
-    <h2>Related documentation</h2>
-    <ul>
-      <li><a href="{{ '/axio/ai/model-platform/' | relative_url }}">Model Platform</a> — route AI workloads after providers are configured</li>
-      <li><a href="{{ '/axio/administration/mfa/' | relative_url }}">MFA</a> — org MFA enforcement (uses Communication integrations for delivery)</li>
-      <li><a href="{{ '/axio/administration/audit-logs/' | relative_url }}">Audit Logs</a> — integration, connection, and credential change history</li>
-      <li><a href="{{ '/axio/operations/cost/' | relative_url }}">Cost</a> — FinOps and Infracost estimation sources</li>
-      <li><a href="{{ '/axio/security-governance/index/' | relative_url }}">Security &amp; Governance</a> — Jira change-management tickets from policy findings</li>
-    </ul>
-  </section>
-
 </div>

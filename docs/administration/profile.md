@@ -127,27 +127,5 @@ Org-wide MFA policy: <code>/administration/mfa</code> (administrators only).
 <div><strong>Recent sign-ins</strong><span>Latest authentication events derived from audit logs</span></div>
 </div>
 
-<h2>API reference (personal scope)</h2>
-<div class="profile-table">
-<div class="profile-head"><b>Endpoint</b><b>Purpose</b></div>
-<div><code>PATCH /users/me</code><span>Update first name, last name, avatar URL</span></div>
-<div><code>POST /auth/resend-verification</code><span>Resend email verification message</span></div>
-<div><code>GET /users/me/mfa?organizationId=…</code><span>MFA status for current org context</span></div>
-<div><code>POST /users/me/mfa/totp/enroll</code><span>Start TOTP enrollment (Google or Microsoft)</span></div>
-<div><code>POST /users/me/mfa/totp/verify</code><span>Verify code and enable MFA; returns recovery codes</span></div>
-<div><code>POST /users/me/mfa/recovery-codes/regenerate</code><span>Regenerate recovery codes (requires current MFA code)</span></div>
-<div><code>GET /users/me/sessions</code><span>List active sessions</span></div>
-<div><code>DELETE /users/me/sessions/:id</code><span>Revoke one session</span></div>
-<div><code>POST /users/me/sessions/revoke-all</code><span>Sign out other devices (<code>keepCurrent: true</code>) or everywhere (<code>false</code>)</span></div>
-<div><code>GET /organizations/:orgId/audit-logs</code><span>Audit events powering activity charts and recent sign-ins</span></div>
-</div>
-
-<h2>Related administration pages</h2>
-<div class="profile-table">
-<div class="profile-head"><b>Page</b><b>Relationship</b></div>
-<div><strong>Administration → MFA</strong> (<code>/administration/mfa</code>)<span>Org-wide MFA policy — which methods are allowed and whether MFA is required (<code>identity:manage</code>)</span></div>
-<div><strong>Administration → Users</strong> (<code>/administration/users</code>)<span>Administrators manage other users' accounts, roles, and groups</span></div>
-<div><strong>Notifications</strong> (<code>/notifications</code>)<span>Personal notification preferences linked from Account Security</span></div>
-</div>
 
 </div>

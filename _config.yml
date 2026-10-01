@@ -1,0 +1,21 @@
+title: Documentation
+description: Documentation for Axio
+
+theme: just-the-docs
+
+url: "https://developer.anantacloud.com"
+baseurl: ""
+
+permalink: pretty
+
+search_enabled: true
+
+color_scheme: light
+
+nav_sort: case_sensitive
+
+mermaid:
+  version: "11.4.1"
+
+
+footer_content: 'Copyright &copy; 2026 <a href="https://www.anantacloud.com" target="_blank">Ananta Cloud</a>. All rights reserved.'

@@ -824,7 +824,7 @@
 }
 
 .axio-manual-info p {
-  font-size: 14px !important;
+  font-size: 15px !important;
   line-height: 1.65 !important;
 }
 
@@ -866,14 +866,14 @@
 }
 
 .axio-manual-step strong {
-  font-size: 15px !important;
+  font-size: 16px !important;
   line-height: 1.4 !important;
 }
 
 .axio-manual-step small {
   max-width: 240px !important;
   margin-top: 5px !important;
-  font-size: 13px !important;
+  font-size: 15px !important;
   line-height: 1.55 !important;
 }
 
@@ -936,7 +936,7 @@
 
 .axio-manual-help {
   margin-top: 9px !important;
-  font-size: 13px !important;
+  font-size: 15px !important;
   line-height: 1.55 !important;
 }
 
@@ -1012,11 +1012,11 @@
 }
 
 .axio-manual-review span {
-  font-size: 13px !important;
+  font-size: 15px !important;
 }
 
 .axio-manual-review strong {
-  font-size: 14px !important;
+  font-size: 15px !important;
 }
 
 
@@ -1031,7 +1031,7 @@
   min-width: 120px !important;
   height: 46px !important;
   padding: 0 20px !important;
-  font-size: 14px !important;
+  font-size: 15px !important;
   border-radius: 9px !important;
 }
 
@@ -1076,11 +1076,11 @@
 }
 
 .axio-manual-note strong {
-  font-size: 14px !important;
+  font-size: 16px !important;
 }
 
 .axio-manual-note p {
-  font-size: 12px !important;
+  font-size: 15px !important;
 }
 
 

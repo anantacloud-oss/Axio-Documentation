@@ -326,7 +326,7 @@ Configure a stack step by step in Axio — repository, cloud runtime, state back
             <div class="axio-variable-row">
               <input value="region" aria-label="Variable name">
               <span>=</span>
-              <input value="ap-south-1" aria-label="Variable value">
+              <input value="us-east-1" aria-label="Variable value">
               <button type="button" class="axio-delete">×</button>
             </div>
             <button type="button" class="axio-add">+ Add Variable</button>
@@ -365,17 +365,17 @@ Configure a stack step by step in Axio — repository, cloud runtime, state back
       <div class="axio-manual-form-step" data-panel="8">
 
         <div class="axio-manual-review">
-          <div><span>Project</span><strong>Acme Corp</strong></div>
+          <div><span>Project</span><strong>Abcd Corp</strong></div>
           <div><span>Team workspace</span><strong>platform-team</strong></div>
           <div><span>Environment</span><strong>Development</strong></div>
           <div><span>Stack name</span><strong>my-app-stack</strong></div>
           <div><span>Repository</span><strong>acme/my-infra @ main</strong></div>
           <div><span>Repository path</span><strong>.</strong></div>
-          <div><span>Cloud</span><strong>AWS · acme-aws-prod · ap-south-1</strong></div>
+          <div><span>Cloud</span><strong>AWS · abcd-aws-prod · us-east-1</strong></div>
           <div><span>IaC engine</span><strong>Terraform 1.15.9</strong></div>
           <div><span>Backend</span><strong>Axio database</strong></div>
           <div><span>Workflow template</span><strong>Terraform Standard Deploy</strong></div>
-          <div><span>Variables</span><strong>region = ap-south-1</strong></div>
+          <div><span>Variables</span><strong>region = us-east-1</strong></div>
           <div><span>Policy packs</span><strong>None</strong></div>
         </div>
 

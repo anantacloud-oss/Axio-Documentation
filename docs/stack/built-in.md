@@ -15,7 +15,8 @@ permalink: /axio/stack/built-in/
     <div class="section-eyebrow">WORKFLOW TEMPLATES</div>
     <h1>Built-in Workflow Templates</h1>
     <p>
-      Built-in workflow templates are platform-provided pipelines for each supported IaC engine and operation
+      Built-in workflow templates are 
+      <br>platform-provided pipelines for each supported <br>IaC engine and operation
       (deploy, destroy, drift). They appear in <strong>Stacks → Workflow Templates</strong> as
       <strong>Built-in</strong>, are always available without publishing, and <strong>cannot be edited</strong>.
       Use <strong>Duplicate</strong> on a built-in template to create an editable organization copy with a new ID.
@@ -90,7 +91,7 @@ permalink: /axio/stack/built-in/
         <tr><td><strong class="template-id terraform">◆ terraform-standard-deploy</strong></td><td>Terraform</td><td>PLAN, APPLY</td><td>AWS, Azure, GCP, OCI, DigitalOcean</td><td>Init, validate, scan, plan, approval, apply, notify</td></tr>
         <tr><td><strong class="template-id opentofu">◆ opentofu-standard-deploy</strong></td><td>OpenTofu</td><td>PLAN, APPLY</td><td>AWS, Azure, GCP, OCI, DigitalOcean</td><td>Standard deploy pipeline for OpenTofu</td></tr>
         <tr><td><strong class="template-id pulumi">◆ pulumi-standard-deploy</strong></td><td>Pulumi</td><td>PLAN, APPLY</td><td>AWS, Azure, GCP, OCI, DigitalOcean</td><td>Login, stack select, preview, approval, up, notify</td></tr>
-        <tr><td><strong class="template-id cloudformation">◆ cloudformation-standard-deploy</strong></td><td>CloudFormation</td><td>PLAN, APPLY</td><td>AWS</td><td>Validate, lint, security scan, changeset, approval, deploy</td></tr>
+        <tr><td><strong class="template-id cloudformation">◆ cloudformation-standard-<br>&nbsp;&nbsp;&nbsp;&nbsp;deploy</strong></td><td>CloudFormation</td><td>PLAN, APPLY</td><td>AWS</td><td>Validate, lint, security scan, changeset, approval, deploy</td></tr>
         <tr><td><strong class="template-id crossplane">◆ crossplane-standard-deploy</strong></td><td>Crossplane</td><td>PLAN, APPLY, VALIDATE</td><td>AWS, Azure, GCP, OCI, DigitalOcean</td><td>Validate, package, approval, apply Crossplane compositions</td></tr>
         <tr><td><strong class="template-id bicep">◆ arm-bicep-standard-deploy</strong></td><td>ARM / Bicep</td><td>PLAN, APPLY</td><td>Azure</td><td>Validate, what-if, approval, deploy Azure resources</td></tr>
       </tbody>

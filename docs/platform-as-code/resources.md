@@ -252,103 +252,6 @@ permalink: /axio/platform-as-code/resources/
             <div class="resources-bottom-grid">
 
 
-                <!-- DETAILS -->
-
-                <div class="resource-details-card">
-
-                    <h3>Resource detail (Environment/production)</h3>
-
-
-                    <div class="resource-detail-tabs">
-
-                        <span class="active">Summary</span>
-                        <span>Manifest (read-only)</span>
-                        <span>Alerts</span>
-
-                    </div>
-
-
-                    <div class="resource-detail-body">
-
-                        <div class="resource-detail-fields">
-
-                            <div>
-                                <strong>Kind:</strong>
-                                <span>Environment</span>
-                            </div>
-
-                            <div>
-                                <strong>API Version:</strong>
-                                <span class="api-badge">
-                                    platform.axio.io/v1
-                                </span>
-                            </div>
-
-                            <div>
-                                <strong>Repository:</strong>
-                                <span>abcd-platform-config</span>
-                            </div>
-
-                            <div>
-                                <strong>Branch:</strong>
-                                <span>main</span>
-                            </div>
-
-                            <div>
-                                <strong>Manifest path:</strong>
-                                <span>platform-config/environments/production.yaml</span>
-                            </div>
-
-                            <div>
-                                <strong>Commit:</strong>
-                                <span>a1b2c3d</span>
-                            </div>
-
-                            <div>
-                                <strong>Last Sync:</strong>
-                                <span>Mar 20, 2026, 10:32 AM</span>
-                            </div>
-
-                            <div>
-                                <strong>Sync Status:</strong>
-                                <span class="mini-status synced">
-                                    ● READY
-                                </span>
-                            </div>
-
-                            <div>
-                                <strong>Drift:</strong>
-                                <span class="mini-status healthy">
-                                    ● In sync
-                                </span>
-                            </div>
-
-                        </div>
-
-
-                        <div class="resource-yaml">
-
-                            <button type="button">Copy</button>
-
-                            <pre><code>apiVersion: platform.axio.io/v1
-kind: Environment
-metadata:
-  name: production
-  labels:
-    team: platform
-spec:
-  displayName: Production Environment
-  project: ecommerce
-  workspace: development
-  type: PRODUCTION</code></pre>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
                 <!-- TIP -->
 
                 <div class="resources-tip-card">
@@ -434,9 +337,9 @@ href="{{ '/axio/platform-as-code/catalog/' | relative_url }}">
 
 <a
 class="nav-button next"
-href="{{ '/axio/platform-as-code/' | relative_url }}">
+href="{{ '/axio/platform-as-code/synchronization/' | relative_url }}">
 
-Platform as Code →
+Synchronizations →
 
 </a>
 

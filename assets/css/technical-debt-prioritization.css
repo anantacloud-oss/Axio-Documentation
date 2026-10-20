@@ -1,0 +1,300 @@
+/*
+ * Axio Technical Debt — Prioritization & Dependency Intelligence (Phase 5)
+ * File: assets/css/technical-debt-prioritization.css
+ */
+
+.td-prio-page {
+  --prio-ink: #102b59;
+  --prio-text: #405a83;
+  --prio-muted: #667da2;
+  --prio-blue: #0877f9;
+  --prio-border: #d8e5f4;
+  max-width: 1500px;
+  margin: 0 auto;
+  color: var(--prio-text);
+  font-size: 14px;
+  line-height: 1.45;
+}
+.td-prio-page * { box-sizing: border-box; }
+.td-prio-page h1,
+.td-prio-page h2,
+.td-prio-page strong { color: var(--prio-ink); }
+.td-prio-page h1 {
+  margin: 8px 0 0;
+  font-size: clamp(2rem, 3vw, 2.65rem);
+  font-weight: 780;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+.td-prio-page h2 {
+  margin: 0 0 3px;
+  font-size: 1.2rem;
+  font-weight: 760;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.td-prio-page p { margin: 0 0 8px; }
+.td-prio-page code { color: #17396c; font-size: .9em; overflow-wrap: anywhere; }
+
+/* Breadcrumb and page heading */
+.td-prio-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0 14px;
+  color: #62799b;
+  font-size: 12px;
+}
+.td-prio-home { color: var(--prio-blue); font-size: 17px; }
+.td-prio-breadcrumb strong { font-weight: 600; }
+.td-prio-header { margin-bottom: 16px; }
+.td-prio-subtitle {
+  margin: 2px 0 9px !important;
+  color: #687da0;
+  font-size: clamp(1.25rem, 1.8vw, 1.6rem);
+  font-weight: 720;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+}
+.td-prio-header > p:last-child { max-width: 1160px; margin-bottom: 0; font-size: 15px; line-height: 1.48; }
+
+/* Metric cards */
+.td-prio-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin: 17px 0 13px;
+}
+.td-prio-metric {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+  min-height: 100px;
+  padding: 12px 14px;
+  border: 1px solid var(--prio-border);
+  border-radius: 7px;
+}
+.td-prio-metric-icon {
+  display: grid;
+  flex: 0 0 66px;
+  place-items: center;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.75);
+  font-size: 27px;
+  font-weight: 750;
+}
+.td-prio-metric p { margin: 0 0 3px; font-size: 12px; }
+.td-prio-metric strong { margin-right: 10px; font-size: 27px; line-height: 1.1; }
+.td-prio-metric small { display: block; margin-top: 2px; color: var(--prio-muted); font-size: 11px; }
+.td-prio-change { font-size: 12px; font-weight: 750; white-space: nowrap; }
+.td-prio-good { color: #00a86b; }
+.td-prio-bad { color: #ef4444; }
+.td-prio-red { border-color: #ffdddd; background: linear-gradient(110deg,#fff6f6,#fff); }
+.td-prio-red .td-prio-metric-icon { color: #ef4444; background: #ffe7e7; }
+.td-prio-green { border-color: #d4f4e5; background: linear-gradient(110deg,#f0fff8,#fff); }
+.td-prio-green .td-prio-metric-icon { color: #08a86a; background: #d9f8e9; }
+.td-prio-blue { border-color: #d9eaff; background: linear-gradient(110deg,#f1f8ff,#fff); }
+.td-prio-blue .td-prio-metric-icon { color: #0877f9; background: #e0efff; }
+.td-prio-purple { border-color: #e8dcff; background: linear-gradient(110deg,#faf5ff,#fff); }
+.td-prio-purple .td-prio-metric-icon { color: #7c3aed; background: #eee2ff; }
+
+/* Main columns and sections */
+.td-prio-main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr);
+  align-items: start;
+  gap: 24px;
+}
+.td-prio-section { min-width: 0; margin-bottom: 18px; }
+.td-prio-section > p { margin-bottom: 8px; }
+
+/* Priority scoring factor cards */
+.td-prio-factors {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  padding: 5px 0 15px;
+  border: 1px solid #e0eaf7;
+  border-radius: 6px;
+  background: #fff;
+}
+.td-prio-factor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  min-height: 127px;
+  padding: 8px 7px;
+  border: 1px solid var(--prio-border);
+  border-radius: 6px;
+  text-align: center;
+}
+.td-prio-factor > span { margin-bottom: 4px; font-size: 23px; font-weight: 800; }
+.td-prio-factor strong { font-size: 11px; line-height: 1.3; }
+.td-prio-factor b { margin-top: 1px; color: var(--prio-ink); font-size: 14px; }
+.td-prio-factor p { margin: 6px 0 0; font-size: 11px; line-height: 1.35; }
+.td-prio-factor-red { border-color: #ffdddd; background: #fffafa; }
+.td-prio-factor-red > span { color: #ef4444; }
+.td-prio-factor-blue { border-color: #d9eaff; background: #f5faff; }
+.td-prio-factor-blue > span { color: #0877f9; }
+.td-prio-factor-purple { border-color: #e8dcff; background: #fcf9ff; }
+.td-prio-factor-purple > span { color: #8b5cf6; }
+.td-prio-factor-green { border-color: #d4f4e5; background: #f5fff9; }
+.td-prio-factor-green > span { color: #10b981; }
+.td-prio-factor-amber { border-color: #ffe9bf; background: #fffcf5; }
+.td-prio-factor-amber > span { color: #f59e0b; }
+
+/* Prioritized items table */
+.td-prio-table-wrap { overflow-x: auto; border: 1px solid #d4e0ee; border-radius: 6px; }
+.td-prio-table { width: 100%; margin: 0; border-collapse: collapse; font-size: 11px; line-height: 1.35; }
+.td-prio-table thead { background: #edf3f9; }
+.td-prio-table th {
+  padding: 7px 9px;
+  border-bottom: 1px solid #d4e0ee;
+  color: var(--prio-ink);
+  font-weight: 750;
+  text-align: left;
+  white-space: nowrap;
+}
+.td-prio-table td { padding: 6px 9px; border-bottom: 1px solid #dce6f0; vertical-align: top; }
+.td-prio-table tr:last-child td { border-bottom: 0; }
+.td-prio-table th + th,
+.td-prio-table td + td { border-left: 1px solid #dce6f0; }
+.td-prio-table tbody tr:nth-child(even) { background: #fbfdff; }
+.td-prio-pill { display: inline-block; min-width: 53px; padding: 2px 7px; border: 1px solid transparent; border-radius: 12px; text-align: center; font-size: 10px; }
+.td-prio-pill-high { color: #ef4444; border-color: #ffcaca; background: #fff0f0; }
+.td-prio-pill-medium { color: #d97706; border-color: #ffdfaa; background: #fff7e8; }
+.td-prio-pill-low { color: #0877f9; border-color: #b9dcff; background: #edf7ff; }
+
+/* API code sample */
+.td-prio-api-section { margin-top: 18px; }
+.td-prio-code { overflow: hidden; border: 1px solid #243b5b; border-radius: 6px; color: #edf5ff; background: #1d2d43; }
+.td-prio-code-toolbar { display: flex; align-items: center; gap: 10px; min-height: 31px; padding-right: 12px; border-bottom: 1px solid rgba(255,255,255,.1); }
+.td-prio-code-toolbar > span { align-self: stretch; display: grid; flex: 0 0 62px; place-items: center; color: #fff; background: #0783c7; font-size: 10px; font-weight: 800; }
+.td-prio-code-toolbar code { color: #edf5ff; font-size: 10px; }
+.td-prio-code-toolbar b { margin-left: auto; color: #edf5ff; font-size: 10px; white-space: nowrap; }
+.td-prio-code pre { margin: 0; padding: 10px 17px; color: #edf5ff; font-size: 11px; line-height: 1.35; white-space: pre-wrap; overflow-wrap: anywhere; }
+.td-prio-code pre code { color: inherit; }
+
+/* Donut chart and legend */
+.td-prio-chart-section { padding: 11px 12px 13px; border: 1px solid var(--prio-border); border-radius: 6px; }
+.td-prio-donut-layout { display: grid; grid-template-columns: minmax(150px, .9fr) minmax(160px, 1.1fr); align-items: center; gap: 18px; padding: 8px 5px 0; }
+.td-prio-donut {
+  display: grid;
+  place-items: center;
+  width: min(100%, 176px);
+  aspect-ratio: 1;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: conic-gradient(#ff4247 0 31%, #ffb33f 31% 72%, #4b9cff 72% 100%);
+}
+.td-prio-donut > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 58%;
+  height: 58%;
+  border-radius: 50%;
+  background: #fff;
+}
+.td-prio-donut strong { font-size: 25px; line-height: 1.15; }
+.td-prio-donut span { margin-top: 2px; font-size: 11px; }
+.td-prio-legend { display: grid; gap: 13px; margin: 0; padding: 0; list-style: none; }
+.td-prio-legend li { display: grid; grid-template-columns: 14px minmax(0,1fr) auto; align-items: center; gap: 9px; font-size: 12px; }
+.td-prio-legend strong { font-size: 12px; font-weight: 500; white-space: nowrap; }
+.td-prio-dot { width: 13px; height: 13px; border-radius: 50%; }
+.td-prio-dot-high { background: #ff4247; }
+.td-prio-dot-medium { background: #ffb33f; }
+.td-prio-dot-low { background: #4b9cff; }
+
+/* Dependency graph */
+.td-prio-dependency-section { margin-top: 10px; }
+.td-prio-dependency {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 20px minmax(0,1.15fr) 20px minmax(0,1fr);
+  grid-template-rows: repeat(3, minmax(52px, auto));
+  align-items: center;
+  gap: 5px 4px;
+  padding-top: 3px;
+}
+.td-prio-resource {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  min-height: 52px;
+  padding: 6px 8px;
+  border: 1px solid #d9eaff;
+  border-radius: 6px;
+  background: #f4f9ff;
+  color: var(--prio-ink);
+  font-size: 11px;
+  line-height: 1.25;
+}
+.td-prio-resource > span { display: grid; flex: 0 0 25px; place-items: center; width: 25px; height: 25px; border-radius: 5px; font-size: 19px; font-weight: 800; }
+.td-prio-resource small { display: block; margin-top: 2px; color: var(--prio-muted); font-size: 10px; }
+.td-prio-resource-ecs { grid-column: 1; grid-row: 1; }
+.td-prio-resource-rds { grid-column: 1; grid-row: 2; }
+.td-prio-resource-s3 { grid-column: 1; grid-row: 3; }
+.td-prio-resource-ecs > span, .td-prio-resource-rds > span { color: #0877f9; }
+.td-prio-resource-s3 > span { color: #10a878; }
+.td-prio-resource-lambda { grid-column: 5; grid-row: 1; }
+.td-prio-resource-api { grid-column: 5; grid-row: 2; }
+.td-prio-resource-cloudwatch { grid-column: 5; grid-row: 3; }
+.td-prio-resource-lambda > span { color: #f59e0b; }
+.td-prio-resource-api > span { color: #8b5cf6; }
+.td-prio-resource-cloudwatch > span { color: #db2777; }
+.td-prio-central {
+  grid-column: 3;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 0;
+  min-height: 78px;
+  padding: 8px 6px;
+  border: 1px solid #ffcaca;
+  border-radius: 7px;
+  background: #fff3f3;
+  text-align: center;
+}
+.td-prio-central > span { color: #ef4444; font-size: 25px; }
+.td-prio-central strong { display: block; font-size: 11px; line-height: 1.25; }
+.td-prio-central small { display: block; margin-top: 3px; font-size: 10px; }
+.td-prio-dependency-arrows { grid-column: 2; grid-row: 1 / 4; color: #6c8ab2; font-size: 17px; line-height: 2.6; text-align: center; }
+.td-prio-arrows-right { grid-column: 4; }
+
+/* Benefits panel */
+.td-prio-benefits { margin-top: 12px; padding: 12px 15px; border: 1px solid #bfeedd; border-radius: 6px; background: linear-gradient(120deg,#effdf7,#f7fffb); }
+.td-prio-benefits h2 { display: flex; align-items: center; gap: 10px; }
+.td-prio-benefits h2 > span { display: grid; place-items: center; width: 25px; height: 25px; border-radius: 50%; color: #fff; background: #10b981; font-size: 15px; }
+.td-prio-benefits ul { display: grid; gap: 5px; margin: 7px 0 0; padding: 0 0 0 25px; list-style: none; }
+.td-prio-benefits li { position: relative; margin: 0; font-size: 12px; }
+.td-prio-benefits li::before { position: absolute; left: -22px; top: 1px; display: grid; place-items: center; width: 14px; height: 14px; border-radius: 50%; color: #fff; background: #10b981; content: "✓"; font-size: 9px; font-weight: 800; }
+
+/* Responsive */
+@media (max-width: 1150px) {
+  .td-prio-main-grid { grid-template-columns: 1fr; }
+  .td-prio-donut-layout { grid-template-columns: minmax(150px,.7fr) minmax(180px,1fr); }
+}
+@media (max-width: 850px) {
+  .td-prio-metrics { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .td-prio-factors { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .td-prio-dependency { min-width: 470px; }
+  .td-prio-dependency-section { overflow-x: auto; }
+}
+@media (max-width: 600px) {
+  .td-prio-page h1 { font-size: 1.85rem; }
+  .td-prio-metrics { grid-template-columns: 1fr; }
+  .td-prio-metric { min-height: 86px; }
+  .td-prio-factors { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .td-prio-table { min-width: 760px; }
+  .td-prio-donut-layout { grid-template-columns: 1fr; }
+  .td-prio-code-toolbar code { overflow-wrap: anywhere; }
+}

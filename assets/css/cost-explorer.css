@@ -1,0 +1,407 @@
+/* =========================================================
+   AXIO DOCUMENTATION — COST EXPLORER
+   Styles are scoped to .cost-page
+   ========================================================= */
+
+.cost-page {
+    --cost-ink: #14213d;
+    --cost-text: #40516f;
+    --cost-muted: #66748d;
+    --cost-purple: #5b3df5;
+    --cost-blue: #1769df;
+    --cost-border: #dce5f2;
+    color: var(--cost-text);
+    line-height: 1.7;
+}
+
+.cost-page h1,
+.cost-page h2,
+.cost-page h3,
+.cost-page h4 {
+    color: var(--cost-ink);
+    line-height: 1.35;
+}
+
+.cost-page h1 {
+    margin: 20px 0 14px;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+
+.cost-page h2 {
+    margin: 30px 0 12px;
+    font-size: 1.45rem;
+    font-weight: 800;
+}
+
+.cost-page h3 {
+    margin-top: 0;
+    font-size: 1.08rem;
+    font-weight: 750;
+}
+
+.cost-page p,
+.cost-page li {
+    color: var(--cost-text);
+    line-height: 1.75;
+}
+
+
+.cost-page code {
+    padding: 0.12em 0.35em;
+    border: 1px solid #e6eaf2;
+    border-radius: 5px;
+    background: #f7f8fc;
+    color: #4d35bf;
+    font-size: 0.9em;
+    overflow-wrap: anywhere;
+}
+
+/* Intro paragraphs */
+.cost-page .cost-intro {
+    font-size: 1.02rem;
+    line-height: 1.8;
+}
+
+/* Info callout */
+.cost-page .cost-info-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 22px 0 28px;
+    padding: 19px 22px;
+    border: 1px solid #cbdcff;
+    border-left: 4px solid #76aaff;
+    border-radius: 12px;
+    background: linear-gradient(110deg, #f2f7ff, #f9fbff);
+    box-sizing: border-box;
+}
+
+.cost-page .cost-info-icon {
+    display: grid;
+    flex: 0 0 38px;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    background: #e1edff;
+    color: var(--cost-blue);
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.cost-page .cost-info-box h3 {
+    margin: 0 0 5px;
+    color: #075dcc;
+}
+
+.cost-page .cost-info-box p {
+    margin: 0;
+}
+
+/* Workflow flow */
+.cost-page .cost-flow {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 22px 0 30px;
+    padding: 20px;
+    border: 1px solid var(--cost-border);
+    border-radius: 14px;
+    background: #fbfcff;
+    box-sizing: border-box;
+}
+
+.cost-page .cost-flow-card {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    min-width: 0;
+    padding: 16px;
+    border: 1px solid #dce5f2;
+    border-radius: 11px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.cost-page .cost-flow-icon {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+    background: #edf3ff;
+    color: var(--cost-blue);
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.cost-page .cost-flow-card strong {
+    color: #243452;
+}
+
+.cost-page .cost-flow-card p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.cost-page .cost-flow-blue {
+    border-color: #b8d4ff;
+}
+
+.cost-page .cost-flow-green {
+    border-color: #a8e3c2;
+}
+
+.cost-page .cost-flow-green .cost-flow-icon {
+    background: #e9f9f0;
+    color: #138451;
+}
+
+.cost-page .cost-flow-purple {
+    border-color: #d5c9ff;
+}
+
+.cost-page .cost-flow-purple .cost-flow-icon {
+    background: #f1edff;
+    color: var(--cost-purple);
+}
+
+.cost-page .cost-flow-orange {
+    border-color: #f3d19a;
+}
+
+.cost-page .cost-flow-orange .cost-flow-icon {
+    background: #fff2df;
+    color: #b66a00;
+}
+
+.cost-page .cost-flow-arrow {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    color: var(--cost-purple);
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+/* Tables */
+.cost-page .cost-table {
+    width: 100%;
+    margin: 18px 0 24px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--cost-border);
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    font-size: 0.94rem;
+}
+
+.cost-page .cost-table th,
+.cost-page .cost-table td {
+    padding: 12px 14px;
+    border-right: 1px solid var(--cost-border);
+    border-bottom: 1px solid var(--cost-border);
+    text-align: left;
+    vertical-align: top;
+    overflow-wrap: break-word;
+}
+
+.cost-page .cost-table th:last-child,
+.cost-page .cost-table td:last-child {
+    border-right: 0;
+}
+
+.cost-page .cost-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.cost-page .cost-table thead th {
+    background: #f4f2ff;
+    color: #182746;
+    font-weight: 800;
+}
+
+.cost-page .cost-table tbody tr:nth-child(even) {
+    background: #fbfcff;
+}
+
+.cost-page .cost-table tbody tr:hover {
+    background: #f5f8ff;
+}
+
+.cost-page .cost-table-wrapper {
+    width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+}
+
+/* Dimension chips */
+.cost-page .cost-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 16px 0 22px;
+}
+
+.cost-page .cost-tabs span {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 12px;
+    border: 1px solid #dce5f2;
+    border-radius: 999px;
+    background: #fff;
+    color: #40516f;
+    font-size: 0.88rem;
+    font-weight: 650;
+}
+
+.cost-page .cost-tabs span.active {
+    border-color: #c9bdff;
+    background: #f2efff;
+    color: #5137d8;
+}
+
+/* Two-column feature section */
+.cost-page .cost-two-column {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+    align-items: start;
+    gap: 22px;
+    margin: 26px 0;
+}
+
+.cost-page .cost-two-column > div {
+    min-width: 0;
+}
+
+.cost-page .cost-two-column h2 {
+    margin-top: 0;
+}
+
+.cost-page .cost-check-list {
+    padding-left: 1.35rem;
+}
+
+.cost-page .cost-check-list li {
+    margin: 8px 0;
+    padding-left: 3px;
+}
+
+.cost-page .cost-check-list li::marker {
+    color: #16a36a;
+}
+
+/* Resource detail panel */
+.cost-page .cost-report-box {
+    padding: 20px;
+    border: 1px solid #cbdcff;
+    border-radius: 12px;
+    background: #f6f9ff;
+    box-sizing: border-box;
+}
+
+.cost-page .cost-report-box h3 {
+    color: #075dcc;
+}
+
+.cost-page .cost-report-box ul {
+    margin-bottom: 0;
+    padding-left: 1.25rem;
+}
+
+.cost-page .cost-report-box li {
+    margin: 8px 0;
+}
+
+/* Tip/note */
+.cost-page .cost-note {
+    margin: 24px 0;
+    padding: 18px 21px;
+    border: 1px solid #eadfbd;
+    border-left: 4px solid #efb43e;
+    border-radius: 11px;
+    background: #fffdf6;
+    box-sizing: border-box;
+}
+
+.cost-page .cost-note strong {
+    color: #a96800;
+}
+
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .cost-page .cost-flow {
+        flex-wrap: wrap;
+    }
+
+    .cost-page .cost-flow-card {
+        flex: 1 1 40%;
+    }
+
+    .cost-page .cost-flow-arrow {
+        display: none;
+    }
+
+    .cost-page .cost-two-column {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .cost-page h1 {
+        font-size: 1.7rem;
+    }
+
+    .cost-page .cost-info-box {
+        padding: 15px;
+    }
+
+    .cost-page .cost-flow {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        padding: 14px;
+    }
+
+    .cost-page .cost-flow-card {
+        width: 100%;
+    }
+
+    .cost-page .cost-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .cost-page .cost-note,
+    .cost-page .cost-report-box {
+        padding: 16px;
+    }
+}
+
+
+
+/* Align Cost Explorer content to the top-left */
+.cost-page {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Remove extra top spacing from the page heading */
+.cost-page h1 {
+    margin-top: 0;
+}
+
+/* Prevent the first content section from being pushed down */
+.cost-page > :first-child {
+    margin-top: 0;
+}
+

@@ -363,9 +363,9 @@ href="{{ '/axio/platform-as-code/synchronization/' | relative_url }}">
 
 <a
 class="nav-button next"
-href="{{ '/axio/platform-as-code/' | relative_url }}">
+href="{{ '/axio/operations/approval/' | relative_url }}">
 
-Platform as Code →
+Approval →
 
 </a>
 

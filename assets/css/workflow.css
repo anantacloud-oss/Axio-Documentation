@@ -159,7 +159,7 @@
    ========================================================= */
 
 .workflow-capability-card p {
-    font-size: 14px !important;
+    font-size: 15px !important;
     line-height: 1.6 !important;
 }
 
@@ -201,7 +201,7 @@
 }
 
 .workflow-start-content p {
-    font-size: 14px !important;
+    font-size: 15px !important;
     line-height: 1.6 !important;
 }
 
@@ -214,7 +214,7 @@
     min-height: 44px !important;
     padding: 0 20px !important;
     border-radius: 7px !important;
-    font-size: 13px !important;
+    font-size: 15px !important;
 }
 
 .workflow-start-button span {
@@ -293,6 +293,352 @@
     font-size: 16px !important;
     line-height: 1.7 !important;
 }
+
+
+
+/* =========================================================
+   AXIO — WORKFLOW TEMPLATES DOCUMENTATION
+   ========================================================= */
+
+.workflow-template-sources,
+.workflow-template-usage {
+    display: grid;
+    width: 100%;
+    gap: 20px;
+    margin: 22px 0 30px;
+    box-sizing: border-box;
+}
+
+/* Three-column template source cards */
+.workflow-template-sources {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+}
+
+/* Common source card */
+.workflow-template-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 23px;
+    border: 1px solid #e0e6f0;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 4px 16px rgba(24, 39, 75, 0.045);
+    box-sizing: border-box;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.workflow-template-card:hover {
+    box-shadow: 0 8px 24px rgba(24, 39, 75, 0.08);
+    transform: translateY(-2px);
+}
+
+/* Header */
+.workflow-template-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin-bottom: 17px;
+}
+
+.workflow-template-icon {
+    display: grid;
+    flex: 0 0 43px;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 11px;
+    background: #f0edff;
+    color: #6040e8;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.workflow-template-card-header h3 {
+    margin: 1px 0 9px;
+    color: #111a38;
+    font-size: 18px;
+    font-weight: 650;
+    line-height: 1.4;
+}
+
+/* Status badges */
+.workflow-template-badge {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 750;
+    line-height: 1.4;
+}
+
+.builtin-badge {
+    color: #4f46b8;
+    background: #f0edff;
+}
+
+.catalog-badge {
+    color: #087443;
+    background: #e8f8ef;
+}
+
+.git-badge {
+    color: #075fc5;
+    background: #e9f3ff;
+}
+
+/* Description */
+.workflow-template-description {
+    margin: 0 0 19px;
+    color: #596783;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+/* Detail sections */
+.workflow-template-detail {
+    margin-top: 13px;
+    padding-top: 14px;
+    border-top: 1px solid #edf0f5;
+}
+
+.workflow-template-detail > strong {
+    display: block;
+    margin-bottom: 7px;
+    color: #263653;
+    font-size: 16px;
+    font-weight: 650;
+}
+
+.workflow-template-detail p {
+    margin: 5px 0 0;
+    color: #596783;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.workflow-template-card code,
+.workflow-template-callout code,
+.workflow-template-usage code {
+    display: inline-block;
+    max-width: 100%;
+    padding: 3px 7px;
+    border: 1px solid #e6e3f3;
+    border-radius: 5px;
+    background: #f5f3fc;
+    color: #5836c5;
+    font-family: Consolas, "SFMono-Regular", monospace;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+    box-sizing: border-box;
+}
+
+/* Card accent borders */
+.workflow-template-card.builtin {
+    border-top: 3px solid #8770f4;
+}
+
+.workflow-template-card.catalog {
+    border-top: 3px solid #42b883;
+}
+
+.workflow-template-card.git-sync {
+    border-top: 3px solid #66aaff;
+}
+
+/* Git auto-publish note */
+.workflow-template-note {
+    margin-top: 16px;
+    padding: 12px;
+    border: 1px solid #c8dcff;
+    border-radius: 9px;
+    background: #f0f6ff;
+    color: #344a70;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   BUILT-IN WORKFLOW CALLOUT
+   ========================================================= */
+
+.workflow-template-callout {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 24px 0 32px;
+    padding: 22px 24px;
+    border: 1px solid #b9d8ff;
+    border-left: 5px solid #78b7ff;
+    border-radius: 13px;
+    background: linear-gradient(110deg, #eff7ff, #f8fbff);
+    box-sizing: border-box;
+}
+
+.workflow-template-callout-icon {
+    display: grid;
+    flex: 0 0 38px;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #dcecff;
+    color: #075dcc;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.workflow-template-callout h3 {
+    margin: 1px 0 8px;
+    color: #075dcc;
+    font-size: 16px !important;
+    font-weight: 650;
+}
+
+.workflow-template-callout p {
+    margin: 0;
+    color: #394968;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.workflow-template-examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 13px;
+}
+
+/* =========================================================
+   HOW TEMPLATES ARE USED
+   ========================================================= */
+
+.workflow-template-usage {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.workflow-usage-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    min-width: 0;
+    padding: 22px;
+    border: 1px solid #e0e6f0;
+    border-radius: 13px;
+    background: #ffffff;
+    box-shadow: 0 3px 13px rgba(24, 39, 75, 0.035);
+    box-sizing: border-box;
+}
+
+.workflow-usage-number {
+    display: grid;
+    flex: 0 0 43px;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    border: 1px solid #dcd4ff;
+    border-radius: 11px;
+    background: #f1edff;
+    color: #603be4;
+    font-size: 14px;
+    font-weight: 650;
+}
+
+.workflow-usage-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.workflow-usage-content h3 {
+    margin: 1px 0 9px;
+    color: #111a38;
+    font-size: 17px;
+    font-weight: 650;
+    line-height: 1.45;
+}
+
+.workflow-usage-content p {
+    margin: 0 0 13px;
+    color: #596783;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.workflow-usage-content a {
+    display: inline-block;
+    color: #5035e9;
+    font-size: 15px;
+    font-weight: 750;
+    line-height: 1.7;
+    text-decoration: none;
+}
+
+.workflow-usage-content a:hover {
+    color: #3822c9;
+    text-decoration: underline;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+    .workflow-template-sources {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .workflow-template-card.git-sync {
+        grid-column: 1 / -1;
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+    .workflow-template-sources,
+    .workflow-template-usage {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    .workflow-template-card.git-sync {
+        grid-column: auto;
+    }
+
+    .workflow-template-card {
+        padding: 19px;
+    }
+
+    .workflow-template-card-header h3 {
+        font-size: 17px;
+    }
+
+    .workflow-template-callout {
+        gap: 12px;
+        padding: 17px;
+    }
+
+    .workflow-template-callout-icon {
+        flex-basis: 32px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .workflow-usage-step {
+        gap: 12px;
+        padding: 18px;
+    }
+
+    .workflow-usage-number {
+        flex-basis: 36px;
+        width: 36px;
+        height: 36px;
+    }
+}
+
 
 
 /* =========================================================

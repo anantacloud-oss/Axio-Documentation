@@ -446,7 +446,7 @@ After the environment is created, configure governance from the Environments lis
     </a>
 
     <a class="nav-button next"
-        href="{{ '/axio/organization/environment/create-environment-platform-as-code/' | relative_url }}">
+        href="{{ '/axio/organization/create-environment-platform-as-code/' | relative_url }}">
         Create Environment using Platform as Code →
     </a>
 

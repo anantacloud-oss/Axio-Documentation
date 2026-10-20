@@ -167,7 +167,7 @@ Manage your Axio **platform** resources using Git. Define, version, and collabor
                     <img src="{{ '/assets/icons/refresh-cw (1).svg' | relative_url }}" alt="Synchronize">
                 </div>
                 <strong>Synchronize</strong>
-                <span>Sync now, scheduled Auto sync, or webhook</span>
+                <span>Sync now, schedule Auto sync, or webhook</span>
             </div>
 
             <div class="workflow-arrow">→</div>
@@ -197,7 +197,7 @@ Manage your Axio **platform** resources using Git. Define, version, and collabor
                     <img src="{{ '/assets/icons/git-merge.svg' | relative_url }}" alt="Reconcile">
                 </div>
                 <strong>Reconcile</strong>
-                <span>Resources are created or updated in Axio</span>
+                <span>Resource are created or updated in Axio</span>
             </div>
 
             <div class="workflow-arrow">→</div>
@@ -319,9 +319,9 @@ href="{{ '/axio/stack/built-in/' | relative_url }}">
 
 <a
 class="nav-button next"
-href="{{ '/axio/organization/overview/' | relative_url }}">
+href="{{ '/axio/platform-as-code/catalog/' | relative_url }}">
 
-Organization Overview →
+Catalog →
 
 </a>
 

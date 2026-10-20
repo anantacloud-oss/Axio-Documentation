@@ -128,23 +128,192 @@ Axio supports two YAML shapes when authoring or importing workflow templates.
 </div>
 
 
+
 ## Where templates come from
 
-| Source | How it is loaded | In the UI |
-|--------|------------------|-----------|
-| **Built-in platform templates** | Registered in the API at startup (code registry plus optional YAML under <code>apps/api/workflow-templates/</code>) | Shown as <strong>Built-in</strong>; read-only; available immediately |
-| **Organization catalog** | Created or imported in **Stacks → Workflow Templates**, versioned in PostgreSQL, published per version | <strong>User Managed</strong>; editable; must be <strong>Published</strong> to select on stack runs |
-| **Platform as Code Git sync** | <code>kind: WorkflowTemplate</code> manifests (or raw deployment-template YAML) in PaC repositories, synchronized from **Platform as Code → Synchronizations** | Appears in the org catalog after sync; use <code>spec.publish: true</code> or <code>status: ACTIVE</code> for auto-publish |
+<div class="workflow-template-sources">
 
-Built-in templates include one standard **deploy**, **destroy**, and **drift** workflow per IaC engine (Terraform, OpenTofu, Pulumi, CloudFormation, Crossplane, and Azure ARM/Bicep), for example <code>terraform-standard-deploy</code> and <code>opentofu-standard-deploy</code>.
+  <div class="workflow-template-card builtin">
 
+    <div class="workflow-template-card-header">
+      <span class="workflow-template-icon">▤</span>
+      <div>
+        <h3>Built-in platform templates</h3>
+        <span class="workflow-template-badge builtin-badge">Built-in · Read-only</span>
+      </div>
+    </div>
+
+    <p class="workflow-template-description">
+      Registered in the API at startup through the code registry and optional YAML files.
+    </p>
+
+    <div class="workflow-template-detail">
+      <strong>How it is loaded</strong>
+      <code>stacks/workflow-templates</code>
+    </div>
+
+    <div class="workflow-template-detail">
+      <strong>In the UI</strong>
+      <p>Shown as <strong>Built-in</strong>. Available immediately and cannot be edited.</p>
+    </div>
+
+  </div>
+
+  <div class="workflow-template-card catalog">
+
+    <div class="workflow-template-card-header">
+      <span class="workflow-template-icon">▦</span>
+      <div>
+        <h3>Organization catalog</h3>
+        <span class="workflow-template-badge catalog-badge">User Managed</span>
+      </div>
+    </div>
+
+    <p class="workflow-template-description">
+      Templates created or imported in the Axio UI and stored with version history.
+    </p>
+
+    <div class="workflow-template-detail">
+      <strong>How it is loaded</strong>
+      <p>Stacks → Workflow Templates. Versions are stored in PostgreSQL and published individually.</p>
+    </div>
+
+    <div class="workflow-template-detail">
+      <strong>In the UI</strong>
+      <p>Editable by authorized users. A version must be <strong>Published</strong> before it can be selected for stack runs.</p>
+    </div>
+
+  </div>
+
+  <div class="workflow-template-card git-sync">
+
+    <div class="workflow-template-card-header">
+      <span class="workflow-template-icon">⌘</span>
+      <div>
+        <h3>Platform as Code Git sync</h3>
+        <span class="workflow-template-badge git-badge">GitOps</span>
+      </div>
+    </div>
+
+    <p class="workflow-template-description">
+      Workflow templates managed as code in Platform as Code repositories.
+    </p>
+
+    <div class="workflow-template-detail">
+      <strong>How it is loaded</strong>
+      <code>kind: WorkflowTemplate</code>
+      <p>Raw deployment-template YAML is also supported.</p>
+    </div>
+
+    <div class="workflow-template-detail">
+      <strong>In the UI</strong>
+      <p>Synchronize through Platform as Code → Synchronizations. Templates appear in the organization catalog after sync.</p>
+    </div>
+
+    <div class="workflow-template-note">
+      Use <code>spec.publish: true</code> or <code>status: ACTIVE</code> for auto-publish.
+    </div>
+
+  </div>
+
+</div>
+
+<div class="workflow-template-callout">
+
+  <div class="workflow-template-callout-icon">i</div>
+
+  <div>
+    <h3>Standard built-in workflows</h3>
+
+    <p>
+      Built-in templates include one standard <strong>deploy</strong>,
+      <strong>destroy</strong>, and <strong>drift</strong> workflow per IaC engine:
+      Terraform, OpenTofu, Pulumi, CloudFormation, Crossplane, and Azure ARM/Bicep.
+    </p>
+
+    <div class="workflow-template-examples">
+      <code>terraform-standard-deploy</code>
+      <code>opentofu-standard-deploy</code>
+    </div>
+  </div>
+
+</div>
+
+---
 
 ## How templates are used
 
-1. **Manual stack creation** — select a compatible published template on the <strong>Workflow Template</strong> wizard step (see <a href="{{ '/axio/stack/manual-step/' | relative_url }}">Create Stack Manually</a>).
-2. **From axio.yaml** — set <code>workflowTemplate</code> or <code>workflowHint</code> in the manifest; Axio resolves a matching template after upload (see <a href="{{ '/axio/stack/from-axio/' | relative_url }}">Create Stack from axio.yaml</a>).
-3. **Run stack** — choose a template when starting Plan, Apply, Destroy, or other operations; the stack may remember a default template from provisioning.
-4. **Stack detail** — view or change the linked template; deprecated versions show a banner with upgrade guidance.
+<div class="workflow-template-usage">
+
+  <div class="workflow-usage-step">
+
+    <div class="workflow-usage-number">01</div>
+
+    <div class="workflow-usage-content">
+      <h3>Manual stack creation</h3>
+
+      <p>
+        Select a compatible published template on the
+        <strong>Workflow Template</strong> wizard step.
+      </p>
+
+      <a href="{{ '/axio/stack/manual-step/' | relative_url }}">
+        Create Stack Manually →
+      </a>
+    </div>
+
+  </div>
+
+  <div class="workflow-usage-step">
+
+    <div class="workflow-usage-number">02</div>
+
+    <div class="workflow-usage-content">
+      <h3>From axio.yaml</h3>
+
+      <p>
+        Set <code>workflowTemplate</code> or <code>workflowHint</code>
+        in the manifest. Axio resolves a matching template after upload.
+      </p>
+
+      <a href="{{ '/axio/stack/from-axio/' | relative_url }}">
+        Create Stack from axio.yaml →
+      </a>
+    </div>
+
+  </div>
+
+  <div class="workflow-usage-step">
+
+    <div class="workflow-usage-number">03</div>
+
+    <div class="workflow-usage-content">
+      <h3>Run stack</h3>
+
+      <p>
+        Choose a template when starting Plan, Apply, Destroy, or other
+        operations. The stack may remember a default template from provisioning.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="workflow-usage-step">
+
+    <div class="workflow-usage-number">04</div>
+
+    <div class="workflow-usage-content">
+      <h3>Stack detail</h3>
+
+      <p>
+        View or change the linked template. Deprecated versions display a
+        banner with upgrade guidance.
+      </p>
+    </div>
+
+  </div>
+
+</div>
 
 
 ## What's on this page?

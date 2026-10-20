@@ -356,15 +356,15 @@ spec:
 class="nav-button previous"
 href="{{ '/axio/platform-as-code/' | relative_url }}">
 
-← Platform as Code
+← Platform-As-Code
 
 </a>
 
 <a
 class="nav-button next"
-href="{{ '/axio/organization/overview/' | relative_url }}">
+href="{{ '/axio/platform-as-code/resources/' | relative_url }}">
 
-Organization Overview →
+Resources →
 
 </a>
 

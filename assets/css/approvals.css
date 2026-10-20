@@ -1,0 +1,328 @@
+/* =========================================================
+   AXIO DOCUMENTATION — APPROVALS PAGE
+   Scoped to .approvals-page to avoid changing other docs pages
+   ========================================================= */
+
+.approvals-page {
+    --approval-ink: #172443;
+    --approval-text: #40516f;
+    --approval-muted: #66748d;
+    --approval-purple: #5b3df5;
+    --approval-blue: #1769df;
+    --approval-border: #dce4f0;
+    color: var(--approval-text);
+    line-height: 1.7;
+}
+
+.approvals-page h1,
+.approvals-page h2,
+.approvals-page h3,
+.approvals-page h4 {
+    color: var(--approval-ink);
+    line-height: 1.35;
+}
+
+.approvals-page h1 {
+    margin: 20px 0 14px;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+
+.approvals-page h2 {
+    margin: 30px 0 12px;
+    font-size: 1.45rem;
+    font-weight: 800;
+}
+
+.approvals-page h3 {
+    font-size: 1.08rem;
+    font-weight: 750;
+}
+
+.approvals-page p,
+.approvals-page li {
+    color: var(--approval-text);
+    line-height: 1.75;
+}
+
+.approvals-page code {
+    padding: 0.12em 0.35em;
+    border: 1px solid #e6e9f1;
+    border-radius: 5px;
+    background: #f7f8fc;
+    color: #4d35bf;
+    font-size: 0.9em;
+    overflow-wrap: anywhere;
+}
+
+.approvals-page a {
+    color: var(--approval-purple);
+    text-underline-offset: 3px;
+}
+
+.approvals-page a:hover {
+    color: #3824c9;
+}
+
+/* Information callouts */
+.approvals-page .operations-callout {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin: 20px 0 24px;
+    padding: 18px 21px;
+    border: 1px solid #cbdcff;
+    border-left: 4px solid #76aaff;
+    border-radius: 12px;
+    background: linear-gradient(110deg, #f2f7ff, #f9fbff);
+    box-sizing: border-box;
+}
+
+.approvals-page .operations-callout-info {
+    border-color: #cbdcff;
+    border-left-color: #76aaff;
+    background: #f4f8ff;
+}
+
+.approvals-page .operations-callout-icon {
+    display: grid;
+    flex: 0 0 36px;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #e1edff;
+    color: #1769df;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.approvals-page .operations-callout strong {
+    color: #233555;
+}
+
+.approvals-page .operations-callout p {
+    margin: 5px 0 0;
+}
+
+/* Tables */
+.approvals-page .approval-lifecycle-table {
+    width: 100%;
+    margin: 18px 0 24px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--approval-border);
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    font-size: 0.94rem;
+}
+
+.approvals-page .approval-lifecycle-table th,
+.approvals-page .approval-lifecycle-table td {
+    padding: 12px 14px;
+    border-right: 1px solid var(--approval-border);
+    border-bottom: 1px solid var(--approval-border);
+    text-align: left;
+    vertical-align: top;
+}
+
+.approvals-page .approval-lifecycle-table th:last-child,
+.approvals-page .approval-lifecycle-table td:last-child {
+    border-right: 0;
+}
+
+.approvals-page .approval-lifecycle-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.approvals-page .approval-lifecycle-table thead th {
+    background: #f4f2ff;
+    color: #182746;
+    font-weight: 800;
+}
+
+.approvals-page .approval-lifecycle-table tbody tr:nth-child(even) {
+    background: #fbfcff;
+}
+
+.approvals-page .approval-lifecycle-table tbody tr:hover {
+    background: #f5f8ff;
+}
+
+/* Workflow approval flow */
+.approvals-page .approval-flow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 22px 0;
+    padding: 20px;
+    border: 1px solid #dce5f3;
+    border-radius: 14px;
+    background: #fbfcff;
+    box-sizing: border-box;
+}
+
+.approvals-page .approval-flow-step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 0;
+    min-height: 88px;
+    padding: 13px 10px;
+    border: 1px solid #cbd8f5;
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.approvals-page .approval-flow-step strong {
+    color: #263653;
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+.approvals-page .approval-flow-step-yellow {
+    border-color: #f3d18a;
+    background: #fffaf0;
+}
+
+.approvals-page .approval-flow-step-purple {
+    border-color: #d5c9ff;
+    background: #f7f4ff;
+}
+
+.approvals-page .approval-flow-step-green {
+    border-color: #a8e3c2;
+    background: #f1fcf6;
+}
+
+.approvals-page .approval-flow-step-blue {
+    border-color: #b9d8ff;
+    background: #f1f7ff;
+}
+
+.approvals-page .approval-flow-arrow {
+    flex: 0 0 auto;
+    color: #5b3df5;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+/* Status pills */
+.approvals-page .approval-status {
+    display: inline-block;
+    padding: 4px 10px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.approvals-page .approval-status-pending {
+    color: #9a5b00;
+    border-color: #f3d18a;
+    background: #fff7e6;
+}
+
+.approvals-page .approval-status-approved {
+    color: #087443;
+    border-color: #a8e3c2;
+    background: #effbf4;
+}
+
+.approvals-page .approval-status-rejected {
+    color: #b42318;
+    border-color: #ffc8c2;
+    background: #fff3f1;
+}
+
+/* Tip card */
+.approvals-page .tip-box {
+    margin: 24px 0;
+    padding: 20px 22px;
+    border: 1px solid #eadfbd;
+    border-left: 4px solid #efb43e;
+    border-radius: 12px;
+    background: #fffdf6;
+    box-sizing: border-box;
+}
+
+.approvals-page .tip-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.approvals-page .tip-header img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.approvals-page .tip-header h3 {
+    margin: 0;
+    color: #a96800;
+}
+
+.approvals-page .tip-box p:last-child {
+    margin-bottom: 0;
+}
+
+.approvals-page .tip-box hr {
+    margin: 18px 0;
+    border: 0;
+    border-top: 1px solid #e8dcc0;
+}
+
+/* Responsive tables and flow */
+@media (max-width: 900px) {
+    .approvals-page .approval-flow {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .approvals-page .approval-flow-step {
+        flex: 1 1 28%;
+    }
+
+    .approvals-page .approval-flow-arrow {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .approvals-page h1 {
+        font-size: 1.7rem;
+    }
+
+    .approvals-page .operations-callout {
+        padding: 15px;
+    }
+
+    .approvals-page .approval-lifecycle-table {
+        display: block;
+        overflow-x: auto;
+        white-space: normal;
+    }
+
+    .approvals-page .approval-flow {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        padding: 14px;
+    }
+
+    .approvals-page .approval-flow-step {
+        width: 100%;
+        min-height: 64px;
+    }
+
+    .approvals-page .tip-box {
+        padding: 16px;
+    }
+}

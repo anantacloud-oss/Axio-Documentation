@@ -480,9 +480,9 @@ href="{{ '/axio/platform-as-code/resources/' | relative_url }}">
 
 <a
 class="nav-button next"
-href="{{ '/axio/platform-as-code/' | relative_url }}">
+href="{{ '/axio/platform-as-code/history/' | relative_url }}">
 
-Platform as Code →
+History →
 
 </a>
 

@@ -91,7 +91,6 @@ Each row shows **Request type**, **Name**, **Scope**, **Status**, **Requested by
 
 Search filters by title, environment, requester, policy, status, and related fields. Pending counts appear as category chips at the top of the inbox (**Platform as Code**, **Workflow gate**, **Other**).
 
-Deep links: `?request=&lt;id&gt;` opens a request; `?tab=history` opens History (if permitted).
 
 ## How workflow approvals work
 

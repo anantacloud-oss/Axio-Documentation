@@ -9,13 +9,20 @@ permalink: /axio/operations/approval/
 <link rel="stylesheet" href="{{ '/assets/css/approvals.css' | relative_url }}">
 
 
-<div class="approvals-page" markdown="1">
-
 # Approvals
 
-Open **Operations → Approvals** for your decision inbox. Axio routes pending items here when a **workflow gate** pauses a stack deployment, when a **Platform as Code** synchronization plan requires sign-off, or when a **policy**-driven approval is raised.
+<div class="approval-intro">
+  <p>
+    Open <strong>Operations → Approvals</strong> for your decision inbox.
+    Axio routes pending items here when a
+    <strong>workflow gate</strong> pauses a stack deployment,
+    when a <strong>Platform as Code</strong> synchronization plan
+    requires sign-off, or when a <strong>policy</strong>-driven
+    approval is raised.
+  </p>
+</div>
 
-Access to this page requires **`governance:approve`** or **`approval:manage`**. (The API also uses **`approval:read`** for listing; the Operations nav is gated as above.)
+
 
 <div class="operations-callout operations-callout-info">
   <div class="operations-callout-icon">ⓘ</div>
@@ -27,6 +34,8 @@ Access to this page requires **`governance:approve`** or **`approval:manage`**. 
     </p>
   </div>
 </div>
+
+<section class="approval-section approval-section-request-types" markdown="1">
 
 ## Request types
 
@@ -42,7 +51,8 @@ Pending items are grouped into three categories in the inbox:
   </thead>
   <tbody>
     <tr>
-      <td><strong>Platform as Code</strong></td>
+      <td><strong>
+           Platform as Code</strong></td>
       <td>
         A Git synchronization plan needs manual sign-off because the repository policy requires
         <strong>manual approval</strong>, and/or the plan includes
@@ -53,17 +63,23 @@ Pending items are grouped into three categories in the inbox:
       <td>Repository or resource name (often shown as Git synchronization)</td>
     </tr>
     <tr>
-      <td><strong>Workflow</strong></td>
+      <td><strong>
+            Workflow</strong></td>
       <td>A stack deployment reaches an approval stage in its workflow</td>
       <td>Environment or project (e.g. Production)</td>
     </tr>
     <tr>
-      <td><strong>Policy</strong></td>
+      <td><strong>
+           Policy</strong></td>
       <td>Other governance or policy-driven approval requests</td>
       <td>Varies by policy</td>
     </tr>
   </tbody>
 </table>
+
+</section>
+
+
 
 <div class="operations-callout operations-callout-info">
   <div class="operations-callout-icon">ⓘ</div>
@@ -78,186 +94,593 @@ Pending items are grouped into three categories in the inbox:
   </div>
 </div>
 
-## Using the Approvals page
 
-The subtitle on the page describes the main sources: **Platform as Code sync plans** and **workflow gates**. Policy-class items still appear with request type **Policy**.
+<div class="approvals-page">
 
-The page has two tabs:
+  
+  <section class="approval-section" id="using-approvals">
 
-- **Inbox** — Pending requests. Use **Assigned to me** to list only items where you can decide and have not already approved at the current level.
-- **History** — Completed requests (visible only with **`approval:manage`**). Users with that permission can **remove** entries from history.
+    <div class="approval-section-heading">
+      <span class="approval-section-number">01</span>
+      <div>
+        <h2>Using the Approvals page</h2>
+        <p>Manage pending decisions and review completed requests.</p>
+      </div>
+    </div>
 
-Each row shows **Request type**, **Name**, **Scope**, **Status**, **Requested by**, **Approved by**, and **Waiting** (age, optional expiry, and a **Your decision** chip when applicable). An **Actions** column offers **Review** for pending items. Click a row or **Review** to open the detail dialog, add an optional comment, and **Approve** or **Reject**. The table supports **pagination**.
+    <p>
+      The Approvals page brings together requests from
+      <strong>Platform as Code sync plans</strong> and
+      <strong>workflow gates</strong>. Policy-class items also appear
+      with the request type <strong>Policy</strong>.
+    </p>
 
-Search filters by title, environment, requester, policy, status, and related fields. Pending counts appear as category chips at the top of the inbox (**Platform as Code**, **Workflow gate**, **Other**).
+    <div class="approval-feature-grid">
 
+      <article class="approval-feature-card">
+        <div class="approval-feature-icon approval-icon-purple">
+          <span aria-hidden="true">▤</span>
+        </div>
+        <h3>Inbox</h3>
+        <p>
+          Review pending requests that require an approval decision.
+          Use <strong>Assigned to me</strong> to list only requests
+          where you can decide and have not already approved at the
+          current level.
+        </p>
+      </article>
 
-## How workflow approvals work
+      <article class="approval-feature-card">
+        <div class="approval-feature-icon approval-icon-blue">
+          <span aria-hidden="true">◷</span>
+        </div>
+        <h3>History</h3>
+        <p>
+          View completed requests. This tab is visible only to users
+          with <code>approval:manage</code>. Authorized users can
+          remove entries from history.
+        </p>
+      </article>
 
-When a stack deployment workflow reaches an approval stage, execution pauses until an authorized approver decides.
+      <article class="approval-feature-card">
+        <div class="approval-feature-icon approval-icon-green">
+          <span aria-hidden="true">⌕</span>
+        </div>
+        <h3>Search and filters</h3>
+        <p>
+          Search by title, environment, requester, policy, status,
+          and related fields. Category chips at the top show pending
+          counts for Platform as Code, Workflow gate, and Other.
+        </p>
+      </article>
 
-<div class="approval-flow">
-  <div class="approval-flow-step">
-    <strong>Workflow reaches<br>approval stage</strong>
-  </div>
-  <span class="approval-flow-arrow">→</span>
+    </div>
 
-  <div class="approval-flow-step approval-flow-step-yellow">
-    <strong>Request created &amp;<br>notified</strong>
-  </div>
-  <span class="approval-flow-arrow">→</span>
+    <h3 class="approval-subheading">Understanding the request table</h3>
 
-  <div class="approval-flow-step approval-flow-step-purple">
-    <strong>Approver reviews<br>the request</strong>
-  </div>
-  <span class="approval-flow-arrow">→</span>
+    <p>Each row provides the following information:</p>
 
-  <div class="approval-flow-step approval-flow-step-green">
-    <strong>Approved /<br>Rejected</strong>
-  </div>
-  <span class="approval-flow-arrow">→</span>
+    <div class="approval-field-grid">
+      <div><strong>Request type</strong><span>Platform as Code, Workflow, or Policy.</span></div>
+      <div><strong>Name</strong><span>The request or associated resource name.</span></div>
+      <div><strong>Scope</strong><span>The applicable environment, project, or resource.</span></div>
+      <div><strong>Status</strong><span>The current request state.</span></div>
+      <div><strong>Requested by</strong><span>The person who initiated the request.</span></div>
+      <div><strong>Approved by</strong><span>The approver or approvers recorded for the request.</span></div>
+      <div><strong>Waiting</strong><span>Request age, optional expiry, and a Your decision chip when applicable.</span></div>
+      <div><strong>Actions</strong><span>Use Review to open a pending request.</span></div>
+    </div>
 
-  <div class="approval-flow-step approval-flow-step-blue">
-    <strong>Workflow<br>continues or stops</strong>
-  </div>
-</div>
+    <div class="approval-callout approval-callout-info">
+      <span class="approval-callout-symbol" aria-hidden="true">i</span>
+      <div>
+        <strong>Reviewing a request</strong>
+        <p>
+          Click a row or select <strong>Review</strong> to open the
+          detail dialog. Add an optional comment, then select
+          <strong>Approve</strong> or <strong>Reject</strong>.
+          The table supports pagination.
+        </p>
+      </div>
+    </div>
 
-If approved, the workflow resumes. If rejected, the deployment run does not proceed.
+  </section>
 
-You can also approve or reject from the **stack deployment / workflow run detail** view when the run is paused at an approval stage — the same request appears under **Operations → Approvals**.
+  <section class="approval-section" id="request-types">
 
-If **Break Glass** is active for the target environment, the workflow may **bypass** the approval gate and no inbox item is created.
+    <div class="approval-section-heading">
+      <span class="approval-section-number">02</span>
+      <div>
+        <h2>Request types</h2>
+        <p>Identify why an approval request appears in the inbox.</p>
+      </div>
+    </div>
 
-Environment-level approval can be disabled when the environment policy is off or set to **none**; otherwise a missing per-environment policy still defaults to manual approval behavior for workflow gates.
+    <div class="approval-table-wrap">
+      <table class="approval-lifecycle-table">
+        <thead>
+          <tr>
+            <th scope="col">Type</th>
+            <th scope="col">When it appears</th>
+            <th scope="col">Typical scope</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <span class="approval-type-label">
+                <span class="approval-type-icon approval-type-platform" aria-hidden="true">▤</span>
+                Platform as Code
+              </span>
+            </td>
+            <td>
+              A Git synchronization plan needs manual sign-off because
+              repository policy requires <strong>manual approval</strong>,
+              and/or the plan includes <strong>updates or pending removals</strong>
+              on sensitive resources marked with
+              <code>metadata.sensitive: true</code> or the label/annotation
+              <code>platform.axio.io/sensitive</code>.
+            </td>
+            <td>Repository or resource name, often shown as Git synchronization.</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="approval-type-label">
+                <span class="approval-type-icon approval-type-workflow" aria-hidden="true">⚙</span>
+                Workflow
+              </span>
+            </td>
+            <td>A stack deployment reaches an approval stage in its workflow.</td>
+            <td>Environment or project, such as Production.</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="approval-type-label">
+                <span class="approval-type-icon approval-type-policy" aria-hidden="true">▤</span>
+                Policy
+              </span>
+            </td>
+            <td>Other governance or policy-driven approval requests.</td>
+            <td>Varies by policy.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-## How Platform as Code approvals work
+  </section>
 
-When a synchronization plan requires approval, the sync run stays in **awaiting approval** (plan **pending**) until decided. Approving applies the Git reconciliation plan; rejecting leaves platform resources unchanged.
+  <section class="approval-section" id="workflow-approvals">
 
-You can approve or reject from **Platform as Code → Synchronizations** (`/platform-as-code/syncs`) in the **Recent runs** section, which uses the same approval requests as **Operations → Approvals**.
+    <div class="approval-section-heading">
+      <span class="approval-section-number">03</span>
+      <div>
+        <h2>How workflow approvals work</h2>
+        <p>Deployment execution pauses until an authorized approver decides.</p>
+      </div>
+    </div>
 
-The detail dialog for PaC requests summarizes the plan and links to **Open synchronizations**.
+    <div class="approval-flow" aria-label="Workflow approval process">
 
-## Approval request lifecycle
+      <div class="approval-flow-step">
+        <span class="approval-flow-index">01</span>
+        <strong>Workflow reaches an approval stage</strong>
+        <span class="approval-flow-caption">Deployment pauses</span>
+      </div>
 
-Requests can be in one of the following states.
+      <span class="approval-flow-arrow" aria-hidden="true">→</span>
 
-<table class="approval-lifecycle-table">
-  <thead>
-    <tr>
-      <th>State</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><span class="approval-status approval-status-pending">Pending</span></td>
-      <td>Waiting for an approver decision. May show time remaining until expiry.</td>
-    </tr>
-    <tr>
-      <td><span class="approval-status approval-status-approved">Approved</span></td>
-      <td>Approved manually; the workflow or sync plan can proceed.</td>
-    </tr>
-    <tr>
-      <td><span class="approval-status approval-status-rejected">Rejected</span></td>
-      <td>Rejected by an approver; the workflow stops or the sync plan is not applied.</td>
-    </tr>
-    <tr>
-      <td><strong>Auto approved</strong></td>
-      <td>Approved automatically by policy (no manual action required).</td>
-    </tr>
-    <tr>
-      <td><strong>Emergency approved</strong></td>
-      <td>Approved through emergency break-glass on the approval policy when enabled (API); not a separate button on the Operations Approvals dialog today.</td>
-    </tr>
-    <tr>
-      <td><strong>Expired</strong></td>
-      <td>The approval window elapsed; outcome depends on policy expiry action.</td>
-    </tr>
-    <tr>
-      <td><strong>Canceled</strong></td>
-      <td>The underlying run or request was canceled before a decision.</td>
-    </tr>
-  </tbody>
-</table>
+      <div class="approval-flow-step approval-flow-step-yellow">
+        <span class="approval-flow-index">02</span>
+        <strong>Request created and notified</strong>
+        <span class="approval-flow-caption">Approvers are notified</span>
+      </div>
 
-Multi-level policies show a stepper in the request detail dialog when more than one level is configured. Each level may require one or more approvers before the request advances.
+      <span class="approval-flow-arrow" aria-hidden="true">→</span>
 
-## Who can approve?
+      <div class="approval-flow-step approval-flow-step-purple">
+        <span class="approval-flow-index">03</span>
+        <strong>Approver reviews the request</strong>
+        <span class="approval-flow-caption">Review details and comment</span>
+      </div>
 
-Permissions and assignment depend on the request type.
+      <span class="approval-flow-arrow" aria-hidden="true">→</span>
 
-### Permissions
+      <div class="approval-flow-step approval-flow-step-green">
+        <span class="approval-flow-index">04</span>
+        <strong>Approved or rejected</strong>
+        <span class="approval-flow-caption">Decision is recorded</span>
+      </div>
 
-Users with either of these organization permissions can open **Operations → Approvals** and decide most requests:
+      <span class="approval-flow-arrow" aria-hidden="true">→</span>
 
-- <code>governance:approve</code>
-- <code>approval:manage</code> (also required to view the **History** tab and remove completed entries)
+      <div class="approval-flow-step approval-flow-step-blue">
+        <span class="approval-flow-index">05</span>
+        <strong>Workflow continues or stops</strong>
+        <span class="approval-flow-caption">Outcome is applied</span>
+      </div>
 
-Organization **Owner** and **Admin** roles include these capabilities by default and can see org-wide requests when scope rules allow.
+    </div>
 
-### Workflow deployment gates
+    <div class="approval-outcome-grid">
+      <div class="approval-outcome-card approval-outcome-success">
+        <strong>✓ Approved</strong>
+        <p>The workflow resumes.</p>
+      </div>
+      <div class="approval-outcome-card approval-outcome-danger">
+        <strong>✕ Rejected</strong>
+        <p>The deployment run does not proceed.</p>
+      </div>
+    </div>
 
-For **Workflow** requests (stack deployments):
+    <p>
+      You can also approve or reject a request from the
+      <strong>stack deployment / workflow run detail</strong> view
+      when the run is paused at an approval stage. The same request
+      appears under <strong>Operations → Approvals</strong>.
+    </p>
 
-- Users with <code>governance:approve</code> or <code>approval:manage</code> can decide (subject to environment scope rules).
-- **Environment owners** — users or groups under **Organization → Environments → Assign owner** — receive deploy/approve assignments; they can approve when they are eligible approvers for that environment and pass self-approval rules.
-- **Multi-level** policies may require sequential or parallel sign-off across configured approver lists.
+    <div class="approval-callout approval-callout-warning">
+      <span class="approval-callout-symbol" aria-hidden="true">!</span>
+      <div>
+        <strong>Break Glass can bypass the gate</strong>
+        <p>
+          If Break Glass is active for the target environment, the
+          workflow may bypass the approval gate and no inbox item
+          is created.
+        </p>
+      </div>
+    </div>
 
-Self-approval: if the user who **triggered** the deployment tries to approve and self-approval is disabled for that environment, approve is blocked with a clear message; reject remains available.
+    <h3 class="approval-subheading">Environment approval settings</h3>
 
-### Platform as Code sync plans
+    <p>
+      Environment-level approval can be disabled when the environment
+      policy is off or set to <code>none</code>. Otherwise, if an
+      environment-specific policy is missing, workflow gates default
+      to manual approval behavior.
+    </p>
 
-For **Platform as Code** requests:
+  </section>
 
-- Users with <code>pac:manage</code>, <code>approval:manage</code>, or <code>governance:approve</code> can decide.
-- Scoped members with <code>pac:read</code> and <code>iac:manage</code> may approve sync plans that affect only resources in their scope (server re-checks on decide).
+  <section class="approval-section" id="pac-approvals">
 
-### Policy and other requests
+    <div class="approval-section-heading">
+      <span class="approval-section-number">04</span>
+      <div>
+        <h2>How Platform as Code approvals work</h2>
+        <p>Control when Git reconciliation plans can be applied.</p>
+      </div>
+    </div>
 
-When an approval policy defines explicit approver lists (users or groups), only assigned approvers — or users with <code>approval:manage</code> / <code>governance:approve</code> — can decide.
+    <div class="approval-pac-panel">
+      <div class="approval-pac-panel-header">
+        <span class="approval-pac-icon" aria-hidden="true">↻</span>
+        <div>
+          <h3>Synchronization approval</h3>
+          <span class="approval-mini-label">PLAN REVIEW</span>
+        </div>
+      </div>
 
-<div class="tip-box">
+      <p>
+        When a synchronization plan requires approval, the sync run
+        stays in <strong>awaiting approval</strong> (plan
+        <strong>pending</strong>) until a decision is made.
+      </p>
 
-    <div class="tip-header">
+      <div class="approval-outcome-grid">
+        <div class="approval-outcome-card approval-outcome-success">
+          <strong>✓ Approve</strong>
+          <p>Applies the Git reconciliation plan.</p>
+        </div>
+        <div class="approval-outcome-card approval-outcome-danger">
+          <strong>✕ Reject</strong>
+          <p>Leaves platform resources unchanged.</p>
+        </div>
+      </div>
+    </div>
 
-        <img src="{{ '/assets/icons/lightbulb.svg' | relative_url }}"
-             alt="Tip">
+    <p>
+      You can approve or reject requests from
+      <strong>Platform as Code → Synchronizations</strong> in the
+      <strong>Recent runs</strong> section. This uses the same approval
+      requests as <strong>Operations → Approvals</strong>.
+    </p>
 
-        <h3>Tip — Environment owners &amp; skip self-approval</h3>
+    <div class="approval-callout approval-callout-info">
+      <span class="approval-callout-symbol" aria-hidden="true">↗</span>
+      <div>
+        <strong>Request details</strong>
+        <p>
+          The Platform as Code request detail dialog summarizes the
+          plan and provides a link to <strong>Open synchronizations</strong>.
+        </p>
+        <a class="approval-inline-link"
+           href="{{ '/axio/platform-as-code/syncs/' | relative_url }}">
+          Go to Synchronizations →
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="approval-section" id="request-lifecycle">
+
+    <div class="approval-section-heading">
+      <span class="approval-section-number">05</span>
+      <div>
+        <h2>Approval request lifecycle</h2>
+        <p>Understand request outcomes and multi-level approval.</p>
+      </div>
+    </div>
+
+    <p>Requests can be in one of the following states.</p>
+
+    <div class="approval-table-wrap">
+      <table class="approval-lifecycle-table approval-status-table">
+        <thead>
+          <tr>
+            <th scope="col">State</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="approval-status approval-status-pending">Pending</span></td>
+            <td>Waiting for an approver decision. May show time remaining until expiry.</td>
+          </tr>
+          <tr>
+            <td><span class="approval-status approval-status-approved">Approved</span></td>
+            <td>Approved manually; the workflow or sync plan can proceed.</td>
+          </tr>
+          <tr>
+            <td><span class="approval-status approval-status-rejected">Rejected</span></td>
+            <td>Rejected by an approver; the workflow stops or the sync plan is not applied.</td>
+          </tr>
+          <tr>
+            <td><span class="approval-status approval-status-auto">Auto approved</span></td>
+            <td>Approved automatically by policy; no manual action is required.</td>
+          </tr>
+          <tr>
+            <td><span class="approval-status approval-status-emergency">Emergency approved</span></td>
+            <td>Approved through emergency break-glass on the approval policy when enabled (API); this is not a separate button in the Operations Approvals dialog today.</td>
+          </tr>
+          <tr>
+            <td><span class="approval-status approval-status-expired">Expired</span></td>
+            <td>The approval window elapsed; the outcome depends on the policy expiry action.</td>
+          </tr>
+          <tr>
+            <td><span class="approval-status approval-status-canceled">Canceled</span></td>
+            <td>The underlying run or request was canceled before a decision.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="approval-callout approval-callout-info">
+      <span class="approval-callout-symbol" aria-hidden="true">↗</span>
+      <div>
+        <strong>Multi-level approval policies</strong>
+        <p>
+          When more than one level is configured, the request detail
+          dialog displays a stepper. Each level may require one or
+          more approvers before the request advances.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="approval-section" id="who-can-approve">
+
+    <div class="approval-section-heading">
+      <span class="approval-section-number">06</span>
+      <div>
+        <h2>Who can approve?</h2>
+        <p>Permissions and assignment rules depend on the request type.</p>
+      </div>
+    </div>
+
+    <h3 class="approval-subheading">Organization permissions</h3>
+
+    <div class="approval-permission-grid">
+
+      <article class="approval-permission-card">
+        <code>governance:approve</code>
+        <p>
+          Allows eligible users to open Operations → Approvals and
+          decide most requests, subject to scope and request-specific rules.
+        </p>
+      </article>
+
+      <article class="approval-permission-card">
+        <code>approval:manage</code>
+        <p>
+          Allows eligible users to decide requests, view the History
+          tab, and remove completed history entries.
+        </p>
+      </article>
 
     </div>
 
     <p>
-        For <strong>workflow</strong> approvals, assign at least one user or group as an
-        <strong>Environment owner</strong> on the target environment. Owners can run workflows there
-        and approve deployment gates when they are eligible approvers.
+      Organization <strong>Owner</strong> and <strong>Admin</strong>
+      roles include these capabilities by default and can see
+      organization-wide requests when scope rules allow.
     </p>
 
-    <p>
-        Enable <strong>Skip self-approval for workflows</strong> (on by default when assigning owners) so the user who
-        triggered a deployment cannot approve their own run — even if they are listed as an owner.
-        Another owner must approve those requests.
-    </p>
+    <div class="approval-permission-section">
+      <h3>Workflow deployment gates</h3>
+      <p>For <strong>Workflow</strong> requests involving stack deployments:</p>
+      <ul class="approval-detail-list">
+        <li>
+          Users with <code>governance:approve</code> or
+          <code>approval:manage</code> can decide, subject to
+          environment scope rules.
+        </li>
+        <li>
+          <strong>Environment owners</strong> — users or groups
+          configured under <strong>Organization → Environments → Assign owner</strong>
+          — receive deployment and approval assignments. They can approve
+          when eligible for that environment and permitted by self-approval rules.
+        </li>
+        <li>
+          <strong>Multi-level policies</strong> may require sequential
+          or parallel sign-off across configured approver lists.
+        </li>
+      </ul>
 
-    <p>
-        Platform as Code sync approvals follow repository manual-approval settings and Git sensitivity
-        markers, not environment-owner assignment. Use
-        <a href="{{ '/axio/platform-as-code/syncs/' | relative_url }}">Synchronizations</a>
+      <div class="approval-callout approval-callout-warning">
+        <span class="approval-callout-symbol" aria-hidden="true">!</span>
+        <div>
+          <strong>Self-approval restriction</strong>
+          <p>
+            If the user who triggered a deployment tries to approve it
+            while self-approval is disabled for that environment,
+            approval is blocked with a clear message. Rejection remains
+            available.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="approval-permission-section">
+      <h3>Platform as Code sync plans</h3>
+      <p>For <strong>Platform as Code</strong> requests:</p>
+      <ul class="approval-detail-list">
+        <li>
+          Users with <code>pac:manage</code>,
+          <code>approval:manage</code>, or
+          <code>governance:approve</code> can decide.
+        </li>
+        <li>
+          Scoped members with <code>pac:read</code> and
+          <code>iac:manage</code> may approve sync plans that affect
+          only resources in their scope. The server re-checks
+          authorization when a decision is submitted.
+        </li>
+      </ul>
+    </div>
+
+    <div class="approval-permission-section">
+      <h3>Policy and other requests</h3>
+      <p>
+        When an approval policy defines explicit approver lists
+        (users or groups), only assigned approvers or users with
+        <code>approval:manage</code> or
+        <code>governance:approve</code> can decide.
+      </p>
+    </div>
+
+    <aside class="approval-tip-card">
+      <div class="approval-tip-heading">
+        <div>
+          <span class="approval-tip-eyebrow">RECOMMENDED CONFIGURATION</span>
+          <h3>Environment owners and skip self-approval</h3>
+        </div>
+      </div>
+
+      <p>
+        For workflow approvals, assign at least one user or group as
+        an <strong>Environment owner</strong> on the target environment.
+        Owners can run workflows there and approve deployment gates
+        when they are eligible approvers.
+      </p>
+
+      <p>
+        Enable <strong>Skip self-approval for workflows</strong>
+        (on by default when assigning owners) so the user who triggered
+        a deployment cannot approve their own run, even if they are
+        listed as an owner. Another owner must approve those requests.
+      </p>
+
+      <p>
+        Platform as Code sync approvals follow repository manual-approval
+        settings and Git sensitivity markers, not environment-owner
+        assignment. Use
+        <a href="{{ '/axio/platform-as-code/syncs/' | relative_url }}">
+          Synchronizations
+        </a>
         to monitor runs after you decide.
+      </p>
+    </aside>
+
+  </section>
+
+  <section class="approval-section approval-section-last"
+           id="approval-notifications">
+
+    <div class="approval-section-heading">
+      <span class="approval-section-number">07</span>
+      <div>
+        <h2>Notifications</h2>
+        <p>Stay informed about approval requests and their outcomes.</p>
+      </div>
+    </div>
+
+    <p>
+      Approval <strong>policies</strong> can define notification
+      channels, including in-app notifications, email, Slack, and
+      Microsoft Teams. When configured and integrated, the platform
+      sends notifications for relevant request lifecycle events.
     </p>
 
+    <div class="approval-notification-grid">
+      <div class="approval-notification-item">
+        <span class="approval-notification-icon">◉</span>
+        <div>
+          <strong>In-app</strong>
+          <p>Governance notifications and approval updates.</p>
+        </div>
+      </div>
+      <div class="approval-notification-item">
+        <span class="approval-notification-icon">✉</span>
+        <div>
+          <strong>Email</strong>
+          <p>Policy-configured email notifications.</p>
+        </div>
+      </div>
+      <div class="approval-notification-item">
+        <span class="approval-notification-icon">↗</span>
+        <div>
+          <strong>Slack and Teams</strong>
+          <p>External channels when configured and integrated.</p>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      Workflow gate requests also raise <strong>governance in-app
+      notifications</strong> to organization administrators when a
+      deployment approval is requested.
+    </p>
+
+    <div class="approval-callout approval-callout-info">
+      <span class="approval-callout-symbol" aria-hidden="true">i</span>
+      <div>
+        <strong>Decision history and delivery tracking</strong>
+        <p>
+          The Operations request detail dialog shows previous decisions
+          and optional comments. Notification delivery history is stored
+          for the request but is not displayed in that dialog today.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="approval-page-footer">
+    <span class="approval-footer-mark" aria-hidden="true">✓</span>
+    <div>
+      <strong>Governance with clear accountability</strong>
+      <p>
+        Review each request, verify its scope, and record your decision
+        before the associated workflow or synchronization proceeds.
+      </p>
+    </div>
+  </footer>
+
 </div>
 
-## Notifications
-
-Approval **policies** can define notification channels (**in-app**, **email**, **Slack**, **Microsoft Teams**) when configured; the platform sends notifications on request lifecycle events where integrated.
-
-Workflow gate requests also raise **governance in-app notifications** to organization administrators when a deployment approval is requested.
-
-The Operations request detail dialog shows **previous decisions** and optional **comments**. Notification delivery history is stored for the request but is **not** shown in that dialog today.
-
-</div>
 
 
 <div class="page-navigation">

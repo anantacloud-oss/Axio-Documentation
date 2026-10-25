@@ -218,7 +218,7 @@ The **External inventory** tab shows cloud resources discovered outside your dec
 
 <div class="drift-note">
 
-<strong>Note:</strong> A failed check can mean the IaC plan or preview could not complete on the assigned runner — not confirmed infrastructure drift. Open the monitor detail view, review **readiness checks**, and run a new check after fixing runner or configuration issues.
+<strong>Note:</strong> A failed check can mean the IaC plan or preview could not complete on the assigned runner — not confirmed infrastructure drift. Open the monitor detail view, review <strong>readiness</strong> <strong>checks</strong>, and run a new check after fixing runner or configuration issues.
 
 </div>
 
@@ -278,7 +278,7 @@ The **External inventory** tab shows cloud resources discovered outside your dec
 
 <p>Leave scheduling off for <strong>Manual checks</strong> only. The <strong>Schedule</strong> column shows the configured frequency, or <strong>Paused</strong> when the monitor is disabled.</p>
 
-<p><strong>In-app</strong> drift notifications are always enabled for watches. Configure <strong>ChatOps</strong> (Slack, Teams, webhook) and <strong>email</strong> under <strong>Notification</strong><strong>settings</strong> when creating or editing a watch. Subscribe integrations to the <strong>Drift</strong><strong>detected</strong> event under **Administration → Integrations → ChatOps**.</p>
+<p><strong>In-app</strong> drift notifications are always enabled for watches. Configure <strong>ChatOps</strong> (Slack, Teams, webhook) and <strong>email</strong> under <strong>Notification</strong><strong>settings</strong> when creating or editing a watch. Subscribe integrations to the <strong>Drift</strong><strong>detected</strong> event under <strong>Administration</strong> → <strong>Integrations</strong> → <strong>ChatOps</strong>.</p>
 
 </div>
 
@@ -296,7 +296,7 @@ The **External inventory** tab shows cloud resources discovered outside your dec
 
 <p>Click a row to open the <strong>monitor detail</strong> dialog for check history, resource diffs, plan output, readiness checks, insights, acknowledge/snooze controls, and watch settings (schedule, auto-remediate, pause).</p>
 
-<p><strong>Acknowledge</strong> drift to suppress alerts temporarily while you investigate. <strong>Snooze</strong> pauses alerting for a period. <strong>Fix drift</strong> runs guided or apply remediation when permitted by stack policy (including optional **require acknowledgment before remediate** and **block stack apply while unacknowledged drift** settings).</p>
+<p><strong>Acknowledge</strong> drift to suppress alerts temporarily while you investigate. <strong>Snooze</strong> pauses alerting for a period. <strong>Fix drift</strong> runs guided or apply remediation when permitted by stack policy (including optional <strong>require</strong> <strong>acknowledgment</strong> <strong>before</strong> <strong>remediate</strong> and <strong>block</strong> <strong>stack</strong> <strong>apply</strong> <strong>while</strong> <strong>unacknowledged</strong> <strong>drift</strong> settings).</p>
 
 </div>
 
@@ -338,7 +338,7 @@ The **`operations`** platform entitlement (Professional and Enterprise plans) ga
 
 <ul>
   <li><strong>Production check SLO</strong> — Target percentage of production stacks checked within a rolling window. Production stacks are identified from deployment context linked to environments with catalog type <strong>PRODUCTION</strong> (not name patterns).</li>
-  <li><strong>Posture report</strong> — Markdown summary of drift health (downloadable); optional **Email + ChatOps** delivery</li>
+  <li><strong>Posture report</strong> — Markdown summary of drift health (downloadable); optional <strong>Email</strong> + <strong>ChatOps</strong> delivery</li>
   <li><strong>Operations drift auditor pack</strong> — ZIP export of posture and evidence artifacts</li>
   <li><strong>Check history retention</strong> — How long check records are kept (plus configurable prod SLO target and window)</li>
   <li><strong>MSP rollup</strong> — Parent organizations can view child-tenant SLO and open drift episodes</li>

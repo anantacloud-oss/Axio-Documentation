@@ -37,15 +37,30 @@
 
 .td-page h2 {
   margin: 0 0 5px;
-  font-size: 1.25rem;
+  font-size: 1.25rem !important;
   line-height: 1.2;
   letter-spacing: -0.02em;
   font-weight: 750;
 }
 
-.td-page p { margin: 0 0 10px; }
-.td-page small { display: block; color: var(--td-muted); font-size: 11px; line-height: 1.35; }
-.td-page code { color: #15396e; font-size: .88em; }
+
+.td-page p { 
+  margin: 0 0 10px; 
+}
+
+
+.td-page small { 
+  display: block; 
+  color: var(--td-muted); 
+  font-size: 14px; 
+  line-height: 1.35; 
+}
+
+
+.td-page code { 
+  color: #15396e; 
+  font-size: .88em; 
+}
 
 .td-breadcrumb {
   display: flex;
@@ -98,9 +113,25 @@
   background: #fff;
 }
 
-.td-metric p { margin: 0 0 4px; font-size: 12px; }
-.td-metric strong { font-size: 25px; line-height: 1.1; margin-right: 10px; }
-.td-metric small { margin-top: 2px; }
+.td-metric p { 
+  margin: 0 0 4px; 
+  font-size: 15px;
+  font-weight: 650; 
+}
+
+
+.td-metric strong { 
+  font-size: 25px; 
+  line-height: 1.1; 
+  margin-right: 10px; 
+}
+
+
+.td-metric small { 
+  margin-top: 2px; 
+}
+
+
 .td-metric-icon {
   display: grid;
   place-items: center;
@@ -112,6 +143,8 @@
   font-weight: 700;
   background: rgba(255,255,255,.7);
 }
+
+
 .td-blue { background: linear-gradient(110deg, #f2f8ff, #fff); border-color: #d4e8ff; }
 .td-blue .td-metric-icon { color: #0877f9; background: #e0efff; }
 .td-red { background: linear-gradient(110deg, #fff6f6, #fff); border-color: #ffdddd; }
@@ -132,7 +165,11 @@
 }
 .td-column { min-width: 0; }
 .td-section { margin: 0 0 18px; }
-.td-section > p { line-height: 1.55; }
+
+.td-section > p { 
+  line-height: 1.55;
+  font-size: 15px; 
+}
 
 .td-panel {
   border: 1px solid var(--td-border);
@@ -141,15 +178,31 @@
   padding: 17px;
 }
 .td-capabilities { margin-top: 22px; padding: 16px 17px 12px; }
-.td-capabilities h2 { margin-bottom: 10px; }
+
+
+.td-capabilities h2 { 
+  margin-bottom: 10px; 
+  font-size: 15px;
+}
+
+
 .td-capability {
   display: flex;
   gap: 12px;
   align-items: center;
   padding: 7px 0;
 }
-.td-capability p { margin: 1px 0 0; font-size: 12px; }
-.td-capability strong { font-size: 13px; }
+
+
+.td-capability p { 
+  margin: 1px 0 0; 
+  font-size: 15px; }
+
+
+.td-capability strong { 
+  font-size: 15px; 
+}
+
 .td-small-icon {
   flex: 0 0 42px;
   width: 42px;
@@ -162,12 +215,18 @@
   font-size: 23px;
 }
 
-.td-architecture { padding: 10px; }
+.td-architecture { 
+  padding: 10px; 
+}
+
+
 .td-source-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 7px;
 }
+
+
 .td-source {
   min-width: 0;
   display: flex;
@@ -181,9 +240,27 @@
   border-radius: 6px;
   background: #f7fbff;
 }
-.td-source span { color: var(--td-blue); font-size: 21px; line-height: 1.2; }
-.td-source strong { margin: 4px 0 1px; font-size: 11px; }
-.td-source small { font-size: 10px; }
+
+
+.td-source span { 
+  color: var(--td-blue); 
+  font-size: 25px; 
+  line-height: 1.2; 
+}
+
+
+
+.td-source strong { 
+  margin: 4px 0 1px; 
+  font-size: 15px; 
+}
+
+
+.td-source small { 
+  font-size: 15px; 
+}
+
+
 .td-flow-line,
 .td-down-line { text-align: center; color: #6b92c8; font-size: 19px; line-height: 1.6; }
 .td-axio-node {
@@ -219,9 +296,26 @@
 .td-output-grid strong { margin-top: 3px; font-size: 11px; }
 .td-output-grid small { font-size: 10px; }
 
-.td-how { margin-top: 19px; }
-.td-steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
-.td-steps > div { min-width: 0; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.td-how { 
+  margin-top: 19px; 
+}
+
+
+.td-steps { 
+  display: grid; 
+  grid-template-columns: repeat(5, minmax(0, 1fr)); 
+  gap: 8px; 
+}
+
+
+.td-steps > div { 
+  min-width: 0; display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
+}
+
+
 .td-steps span {
   display: grid;
   place-items: center;
@@ -232,11 +326,27 @@
   border-radius: 50%;
   background: var(--td-blue);
   color: white;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 750;
 }
-.td-steps strong { font-size: 11px; line-height: 1.3; }
-.td-steps small { margin-top: 4px; font-size: 10px; }
+
+table th, table td {
+  border: 1px solid #dfe3eb;
+  text-align: left;
+  font-size: 15px !important;
+}
+
+
+.td-steps strong { 
+  font-size: 15px; 
+  line-height: 1.3; 
+}
+
+
+.td-steps small { 
+  margin-top: 4px; 
+  font-size: 15px; 
+}
 
 .td-source-types { margin-top: 18px; }
 .td-table-wrap { width: 100%; overflow-x: auto; border: 1px solid #d5e1ef; border-radius: 6px; }

@@ -290,7 +290,7 @@ docker compose -f deploy/runner/docker-compose.agent.yml up -d --build</code></p
 
          Use <code>runner-agent</code> (DooD) or <code>runner-iac-tools</code>.
 
-         See <a href="{{ '/runners/iac-requirements' | relative_url }}">IaC requirements</a>.
+         See IaC requirements
 
        </p>
 
@@ -446,7 +446,7 @@ helm upgrade --install axio-runner ./kubernetes/helm \\
 
      <p class="link-line">
 
-       See <a href="{{ '/runners/isolation' | relative_url }}">Runner isolation</a>.
+       See Runner isolation
 
      </p>
 

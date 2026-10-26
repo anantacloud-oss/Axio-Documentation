@@ -1,0 +1,450 @@
+/* ==========================================
+   BREAK GLASS — DOCUMENTATION PAGE
+   ========================================== */
+
+.compliance-risk-reports {
+  --crr-primary: #174ea6;
+  --crr-primary-dark: #0b2f63;
+  --crr-text: #334155;
+  --crr-muted: #64748b;
+  --crr-border: #dbe5f1;
+  --crr-surface: #ffffff;
+  --crr-soft-blue: #f5f9ff;
+
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  color: var(--crr-text);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* ---------- Page header ---------- */
+
+.compliance-risk-reports .crr-page-header {
+  margin: 0 0 32px;
+  padding: 28px 30px;
+  border: 1px solid #d7e6fb;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #f0f6ff 0%, #ffffff 75%);
+  box-shadow: 0 5px 18px rgba(25, 72, 135, 0.05);
+}
+
+.compliance-risk-reports .crr-page-header h1 {
+  margin: 0 0 12px;
+  color: var(--crr-primary-dark);
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.7px;
+}
+
+.compliance-risk-reports .crr-page-header p {
+  max-width: 1050px;
+  margin: 0;
+  color: #526782;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* ---------- Sections ---------- */
+
+.compliance-risk-reports .crr-section {
+  min-width: 0;
+  margin: 0 0 30px;
+  padding: 24px;
+  border: 1px solid var(--crr-border);
+  border-radius: 12px;
+  background: var(--crr-surface);
+  box-shadow: 0 3px 12px rgba(15, 45, 85, 0.035);
+}
+
+.compliance-risk-reports .crr-section > h2,
+.compliance-risk-reports .crr-section-title h2 {
+  margin: 0 0 16px;
+  color: var(--crr-primary-dark);
+  font-size: 23px;
+  font-weight: 750;
+  line-height: 1.35;
+  letter-spacing: -0.35px;
+}
+
+.compliance-risk-reports .crr-section > p,
+.compliance-risk-reports .crr-main-column > p {
+  margin: 0 0 15px;
+}
+
+.compliance-risk-reports strong {
+  color: #173b70;
+  font-weight: 700;
+}
+
+/* ---------- Section heading with icon ---------- */
+
+.compliance-risk-reports .crr-section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.compliance-risk-reports .crr-section-title h2 {
+  margin: 0;
+}
+
+.compliance-risk-reports .crr-icon {
+  display: inline-flex;
+  flex: 0 0 38px;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.compliance-risk-reports .compliance-icon {
+  color: #2563eb;
+  background: #eaf2ff;
+}
+
+.compliance-risk-reports .audit-icon {
+  color: #0d9488;
+  background: #e6fffa;
+}
+
+/* ---------- Tables ---------- */
+
+.compliance-risk-reports .crr-table {
+  width: 100%;
+  margin: 16px 0 22px;
+  border: 1px solid #d9e4f1;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 9px;
+  background: #fff;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.compliance-risk-reports .crr-table th {
+  padding: 13px 15px;
+  border-bottom: 1px solid #d5e2f1;
+  background: #f0f5ff;
+  color: #173b70;
+  font-weight: 750;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.compliance-risk-reports .crr-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e6edf5;
+  color: #40536c;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.compliance-risk-reports .crr-table th:not(:last-child),
+.compliance-risk-reports .crr-table td:not(:last-child) {
+  border-right: 1px solid #e1e9f3;
+}
+
+.compliance-risk-reports .crr-table tbody tr:nth-child(even) {
+  background: #f9fbfe;
+}
+
+.compliance-risk-reports .crr-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.compliance-risk-reports .crr-table tbody tr {
+  transition: background-color 0.18s ease;
+}
+
+.compliance-risk-reports .crr-table tbody tr:hover {
+  background: #f0f6ff;
+}
+
+.compliance-risk-reports .crr-table code {
+  display: inline-block;
+  max-width: 100%;
+  padding: 2px 6px;
+  border: 1px solid #e1e8f0;
+  border-radius: 5px;
+  background: #f5f8fc;
+  color: #174a91;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Callout ---------- */
+
+.compliance-risk-reports .crr-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 20px 0 0;
+  padding: 16px 18px;
+  border: 1px solid;
+  border-radius: 9px;
+}
+
+.compliance-risk-reports .amber-callout {
+  border-color: #f3d49a;
+  background: #fff9eb;
+}
+
+.compliance-risk-reports .callout-icon {
+  display: flex;
+  flex: 0 0 26px;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #f59e0b;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.compliance-risk-reports .crr-callout p {
+  margin: 0;
+  color: #79521a;
+  line-height: 1.7;
+}
+
+/* ---------- Two-column content sections ---------- */
+
+.compliance-risk-reports .crr-section.compliance-section,
+.compliance-risk-reports .crr-section.audit-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.9fr);
+  align-items: start;
+  gap: 26px;
+}
+
+.compliance-risk-reports .crr-main-column {
+  min-width: 0;
+}
+
+.compliance-risk-reports .crr-main-column ul {
+  margin: 14px 0 0;
+  padding-left: 22px;
+}
+
+.compliance-risk-reports .crr-main-column ul li {
+  margin-bottom: 9px;
+  padding-left: 3px;
+}
+
+.compliance-risk-reports .crr-main-column ul li::marker {
+  color: #3478d4;
+}
+
+/* ---------- Supported scopes card ---------- */
+
+.compliance-risk-reports .crr-action-card {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid #bcebd5;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #f0fdf6, #ffffff);
+}
+
+.compliance-risk-reports .crr-action-card h3 {
+  margin: 0 0 15px;
+  color: #126344;
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.compliance-risk-reports .green-card .check-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.compliance-risk-reports .green-card .check-list li {
+  position: relative;
+  margin: 0;
+  padding: 8px 10px 8px 35px;
+  border: 1px solid #d6f3e4;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #24664d;
+}
+
+.compliance-risk-reports .green-card .check-list li::before {
+  position: absolute;
+  top: 10px;
+  left: 11px;
+  color: #10a66b;
+  content: "✓";
+  font-weight: 800;
+}
+
+.compliance-risk-reports .crr-action-card > p {
+  margin-bottom: 0;
+  color: #536b60;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ---------- Workflow numbered list ---------- */
+
+.compliance-risk-reports .security-numbered-list {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: security-step;
+}
+
+.compliance-risk-reports .security-numbered-list li {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  padding: 14px 16px 14px 54px;
+  border: 1px solid #dce7f4;
+  border-radius: 9px;
+  background: linear-gradient(110deg, #f7faff, #ffffff);
+  counter-increment: security-step;
+  line-height: 1.7;
+}
+
+.compliance-risk-reports .security-numbered-list li::before {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: #e2edff;
+  color: #2058a8;
+  content: counter(security-step);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* ---------- Audit card ---------- */
+
+.compliance-risk-reports .audit-webhook-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  min-width: 0;
+  padding: 21px;
+  border: 1px solid #cce8e8;
+  border-radius: 11px;
+  background: linear-gradient(145deg, #f0fdfa, #ffffff);
+}
+
+.compliance-risk-reports .webhook-icon {
+  display: flex;
+  flex: 0 0 38px;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #d5f5ee;
+  color: #0f766e;
+  font-size: 25px;
+}
+
+.compliance-risk-reports .audit-webhook-card p {
+  margin: 0;
+  color: #45645f;
+  line-height: 1.75;
+}
+
+/* ---------- Links ---------- */
+
+.compliance-risk-reports a {
+  color: #1d5db5;
+  font-weight: 600;
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+.compliance-risk-reports a:hover {
+  color: #0b3d83;
+  text-decoration: underline;
+}
+
+/* ---------- Responsive layout ---------- */
+
+@media (max-width: 900px) {
+  .compliance-risk-reports .crr-section.compliance-section,
+  .compliance-risk-reports .crr-section.audit-section {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .compliance-risk-reports .crr-action-card,
+  .compliance-risk-reports .audit-webhook-card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 640px) {
+  .compliance-risk-reports {
+    font-size: 14px;
+  }
+
+  .compliance-risk-reports .crr-page-header {
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  .compliance-risk-reports .crr-page-header h1 {
+    font-size: 28px;
+  }
+
+  .compliance-risk-reports .crr-page-header p {
+    font-size: 14px;
+  }
+
+  .compliance-risk-reports .crr-section {
+    margin-bottom: 20px;
+    padding: 16px;
+  }
+
+  .compliance-risk-reports .crr-section > h2,
+  .compliance-risk-reports .crr-section-title h2 {
+    font-size: 20px;
+  }
+
+  .compliance-risk-reports .crr-table {
+    display: block;
+    overflow-x: auto;
+    font-size: 13px;
+  }
+
+  .compliance-risk-reports .crr-table th,
+  .compliance-risk-reports .crr-table td {
+    min-width: 120px;
+    padding: 10px 12px;
+  }
+
+  .compliance-risk-reports .security-numbered-list li {
+    padding: 12px 12px 12px 48px;
+  }
+
+  .compliance-risk-reports .security-numbered-list li::before {
+    left: 11px;
+  }
+
+  .compliance-risk-reports .crr-action-card {
+    padding: 17px;
+  }
+}

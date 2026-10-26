@@ -15,7 +15,7 @@ permalink: /axio/operations/technical-debt/technical-debt-trends/
   <header class="td-trends-header">
     <h1>Technical Debt — Trends &amp; Historical Analytics</h1>
     <p class="td-trends-subtitle">Track trends, measure impact and understand historical patterns</p>
-    <p>Phase 4 introduces historical tracking and trend analytics for technical debt. Observations are recorded from successful reconciliations and provide time-series visibility, lifecycle activity, and financial history.</p>
+    <p>It introduces historical tracking and trend analytics for technical debt. Observations are recorded from successful reconciliations and provide time-series visibility, lifecycle activity, and financial history.</p>
   </header>
 
   <section class="td-trends-metrics" aria-label="Technical debt trend metrics">
@@ -41,7 +41,7 @@ permalink: /axio/operations/technical-debt/technical-debt-trends/
     <article class="td-trends-panel">
       <div class="td-trends-panel-heading">
         <h2>Technical debt trends</h2>
-        <span class="td-trends-select">Last 6 months⌄</span>
+        <span class="td-trends-select">Last 6 months</span>
       </div>
       <div class="td-trends-line-chart" role="img" aria-label="Illustrative trend chart for critical, medium, and low technical debt items">
         <div class="td-trends-y-labels"><span>200</span><span>150</span><span>100</span><span>50</span><span>0</span></div>
@@ -126,3 +126,19 @@ permalink: /axio/operations/technical-debt/technical-debt-trends/
     </div>
   </div>
 </div>
+
+
+ <nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/operations/technical-debt/technical-debt-aws-phase/' | relative_url }}">
+       ← AWS account assessment
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/operations/technical-debt/technical-debt-remediation/' | relative_url }}">
+       Technical Debt — Remediation & Workflows →
+    </a>
+
+  </nav>
+

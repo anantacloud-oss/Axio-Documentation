@@ -142,7 +142,7 @@ permalink: /axio/operations/technical-debt/overview/
           <div class="td-source">
             <span>⬟</span>
             <strong>Security</strong>
-            <small>Findings &amp;<br>vulnerabilities</small>
+            <small>Findings</small>
           </div>
 
           <div class="td-source">
@@ -160,7 +160,7 @@ permalink: /axio/operations/technical-debt/overview/
           <div class="td-source">
             <span>▤</span>
             <strong>Cost</strong>
-            <small>Billing<br>recommendations</small>
+            <small>Billing</small>
           </div>
 
           <div class="td-source">
@@ -170,21 +170,14 @@ permalink: /axio/operations/technical-debt/overview/
           </div>
         </div>
 
-        <div class="td-flow-line">↓ &nbsp; ↓ &nbsp; ↓ &nbsp; ↓ &nbsp; ↓ &nbsp; ↓</div>
 
         <div class="td-axio-node">
-          <span class="td-axio-mark">A</span>
           <div>
             <strong>Axio</strong>
             <small>Technical Debt</small>
           </div>
         </div>
 
-        <div class="td-down-line">
-          ↓ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ↓
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ↓
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ↓
-        </div>
 
         <div class="td-output-grid">
           <div>
@@ -250,7 +243,7 @@ permalink: /axio/operations/technical-debt/overview/
       </section>
 
       <section class="td-section td-source-types">
-        <h2>Supported source types (Phase 1)</h2>
+        <h2>Supported source types</h2>
 
         <div class="td-table-wrap">
           <table>
@@ -292,3 +285,18 @@ permalink: /axio/operations/technical-debt/overview/
     </div>
   </div>
 </div>
+
+
+<nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/operations/cost/' | relative_url }}">
+       ← Cost Explorer
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/operations/technical-debt/technical-debt-aws-phase/' | relative_url }}">
+       AWS account assessment →
+    </a>
+
+  </nav>

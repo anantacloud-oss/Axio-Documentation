@@ -6,6 +6,8 @@ nav_order: 6
 permalink: /axio/security-governance/break-glass/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/break-glass.css' | relative_url }}">
+
 <div class="compliance-risk-reports">
 
   <header class="crr-page-header">

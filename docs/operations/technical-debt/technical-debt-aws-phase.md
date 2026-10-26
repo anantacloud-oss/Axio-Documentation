@@ -59,3 +59,21 @@ permalink: /axio/operations/technical-debt/technical-debt-aws-phase/
     </div>
   </div>
 </div>
+
+
+
+ <nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/operations/technical-debt/overview/' | relative_url }}">
+       ← Technical Debt
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/operations/technical-debt/technical-debt-trends/' | relative_url }}">
+       Trends & Historical Analytics →
+    </a>
+
+  </nav>
+
+

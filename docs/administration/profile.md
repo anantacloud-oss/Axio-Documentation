@@ -6,6 +6,8 @@ nav_order: 1
 permalink: /axio/administration/profile/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/profile.css' | relative_url }}">
+
 <div class="profile-page">
 
 <h1>Administration — My Profile</h1>
@@ -13,9 +15,8 @@ permalink: /axio/administration/profile/
 
 <div class="profile-banner">
 <span>ⓘ</span>
-Open from the <strong>user account menu</strong> (avatar / name) → <strong>My profile</strong>, or go to <code>/administration/profile</code>.
-Legacy <code>/admin/platform/profile</code> redirects here.
-Org-wide MFA policy: <code>/administration/mfa</code> (administrators only).
+Open from the <strong>user account menu</strong> (avatar / name) → <strong>My profile</strong>.
+Org-wide MFA policy is managed separately by administrators.
 </div>
 
 <h2>What it does</h2>
@@ -32,33 +33,32 @@ Org-wide MFA policy: <code>/administration/mfa</code> (administrators only).
 
 <h2>How to access</h2>
 <p>
-  <strong>My Profile</strong> lives under the <code>/administration/profile</code> URL but is categorized as <strong>Account</strong> in navigation —
-  it is opened from the top-bar <strong>user account menu</strong>, not from the Administration sidebar.
+  <strong>My Profile</strong> is categorized as <strong>Account</strong> in navigation and is opened from the top-bar <strong>user account menu</strong>, not from the Administration sidebar.
   Any authenticated organization member can open the page.
 </p>
 
 <h2>Prerequisites &amp; permissions</h2>
 <div class="profile-table">
 <div class="profile-head"><b>Requirement</b><b>Detail</b></div>
-<div><strong>Sign-in</strong><span>Must be authenticated; unauthenticated users are redirected to login with a <code>next</code> return URL</span></div>
+<div><strong>Sign-in</strong><span>Must be authenticated; unauthenticated users are redirected to login</span></div>
 <div><strong>Organization context</strong><span>MFA status and audit activity are scoped to the <strong>current organization</strong></span></div>
-<div><strong>Route gate</strong><span>No special admin permission is required on the route itself — unlike pages such as Users or org-wide MFA policy</span></div>
+<div><strong>Route gate</strong><span>No special admin permission is required on the page itself — unlike pages such as Users or organization-wide MFA policy</span></div>
 </div>
 
 <p class="profile-subtitle">
   Password changes are not performed on this page — use your identity provider or contact an organization administrator.
-  <strong>Notification preferences</strong> are managed separately at <code>/notifications</code>.
+  <strong>Notification preferences</strong> are managed separately.
 </p>
 
 <h2>Sections</h2>
 <div class="profile-table">
 <div class="profile-head"><b>Section</b><b>Content</b></div>
 <div><strong>Overview</strong><span>Signed-in account summary (name, email, org role, org name), operational alerts, clickable KPIs, and <strong>Refresh</strong></span></div>
-<div><strong>♙　Personal Information</strong><span>First name, last name, profile picture URL — <code>PATCH /users/me</code></span></div>
-<div><strong>♢　Account Security</strong><span>Email verification status; <strong>Resend verification email</strong> — <code>POST /auth/resend-verification</code></span></div>
-<div><strong>▣　Multi-Factor Authentication</strong><span>TOTP enrollment (Google / Microsoft Authenticator), recovery codes — <code>/users/me/mfa</code></span></div>
-<div><strong>▣　Active sessions</strong><span>List sessions; revoke one; sign out other devices or everywhere — <code>/users/me/sessions</code></span></div>
-<div><strong>⌁　Activity &amp; insights</strong><span>Account activity trend (7d / 30d / 90d), security posture, sessions &amp; API activity, API key activity, top actions; <strong>Recent sign-ins</strong> from org audit logs</span></div>
+<div><strong>♙　Personal Information</strong><span>First name, last name, and profile picture URL</span></div>
+<div><strong>♢　Account Security</strong><span>Email verification status and <strong>Resend verification email</strong></span></div>
+<div><strong>▣　Multi-Factor Authentication</strong><span>TOTP enrollment (Google / Microsoft Authenticator) and recovery codes</span></div>
+<div><strong>▣　Active sessions</strong><span>List sessions; revoke one; sign out other devices or everywhere</span></div>
+<div><strong>⌁　Activity &amp; insights</strong><span>Account activity trend (7d / 30d / 90d), security posture, sessions &amp; API activity, API key activity, top actions, and <strong>Recent sign-ins</strong> from organization audit logs</span></div>
 <div><strong>Security recommendations</strong><span>Actionable personal security items when applicable</span></div>
 </div>
 
@@ -89,15 +89,15 @@ Org-wide MFA policy: <code>/administration/mfa</code> (administrators only).
 <div class="profile-panel compact"><div class="panel-title">♢　<strong>Account Security</strong><em>Verified / Not verified</em><span>⌄</span></div></div>
 <p class="profile-subtitle">
   When email is not verified, the page explains that you can use the sign-up verification link or complete email verification through MFA enrollment.
-  A note links to <strong>Notification preferences</strong> (<code>/notifications</code>) for alert settings — not API key management.
+  A note links to <strong>Notification preferences</strong> for alert settings — not API key management.
 </p>
 
 <div class="profile-panel compact"><div class="panel-title">▣　<strong>Multi-Factor Authentication</strong><em>Enabled / Disabled</em><span>⌄</span></div></div>
 <p class="profile-subtitle">
   Enrollment supports <strong>Google Authenticator</strong> and <strong>Microsoft Authenticator</strong> (TOTP): QR code or manual setup key, verification code, then one-time recovery codes.
   When MFA is enabled, you can regenerate recovery codes with your current MFA code.
-  If the organization enforces MFA (<code>/administration/mfa</code>), an info banner explains that administrators manage policy.
-  When MFA is enabled without org enforcement, users may see guidance to contact an administrator to disable MFA.
+  If the organization enforces MFA, an info banner explains that administrators manage the policy.
+  When MFA is enabled without organization enforcement, users may see guidance to contact an administrator to disable MFA.
 </p>
 
 <div class="profile-panel">
@@ -112,20 +112,19 @@ Org-wide MFA policy: <code>/administration/mfa</code> (administrators only).
   <strong>Sign out other devices</strong> keeps the current browser signed in.
   <strong>Sign out everywhere</strong> revokes all sessions including this one and returns you to the sign-in page.
   The current session shows a <em>This device</em> chip instead of a Revoke button.
-  Sessions are paginated (10 per page). Loading refreshes the current session heartbeat via <code>POST /users/me/sessions/heartbeat</code>.
+  Sessions are paginated (10 per page). Loading refreshes the current session heartbeat.
 </p>
 </div>
 
 <div class="profile-panel compact"><div class="panel-title">⌁　<strong>Activity &amp; insights</strong><small>Personal sign-in trends, security posture, and platform activity</small><span>⌄</span></div></div>
 <div class="profile-table">
 <div class="profile-head"><b>Chart</b><b>Description</b></div>
-<div><strong>Account activity</strong><span>All events, sign-ins, and security events over 7 / 30 / 90 days (from org audit logs for the current organization)</span></div>
+<div><strong>Account activity</strong><span>All events, sign-ins, and security events over 7 / 30 / 90 days (from organization audit logs for the current organization)</span></div>
 <div><strong>Security posture</strong><span>Email, MFA, and recovery-code status distribution</span></div>
 <div><strong>Sessions &amp; API activity</strong><span>Authentication sessions and API token usage trend</span></div>
-<div><strong>API key activity</strong><span>Active, rotated, and expired keys (org dashboard summary — keys are not created on this page)</span></div>
+<div><strong>API key activity</strong><span>Active, rotated, and expired keys (organization dashboard summary — keys are not created on this page)</span></div>
 <div><strong>Top actions</strong><span>Most frequent account-related audit events</span></div>
 <div><strong>Recent sign-ins</strong><span>Latest authentication events derived from audit logs</span></div>
 </div>
-
 
 </div>

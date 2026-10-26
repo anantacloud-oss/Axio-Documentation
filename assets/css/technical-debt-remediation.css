@@ -36,8 +36,18 @@
   line-height: 1.2;
   letter-spacing: -0.02em;
 }
-.td-rem-page p { margin: 0 0 8px; }
-.td-rem-page code { color: #17396c; font-size: 0.9em; overflow-wrap: anywhere; }
+
+
+.td-rem-page p { 
+   margin: 0 0 8px; 
+}
+
+
+.td-rem-page code { 
+   color: #17396c; 
+   font-size: 15px; 
+   overflow-wrap: anywhere; 
+}
 
 /* Breadcrumb and heading */
 .td-rem-breadcrumb {
@@ -49,6 +59,8 @@
   color: #62799b;
   font-size: 12px;
 }
+
+
 .td-rem-home { color: var(--rem-blue); font-size: 17px; }
 .td-rem-breadcrumb strong { font-weight: 600; }
 .td-rem-header { margin-bottom: 17px; }
@@ -74,6 +86,7 @@
   gap: 21px;
   margin: 17px 0 20px;
 }
+
 .td-rem-metric {
   display: flex;
   align-items: center;
@@ -84,6 +97,7 @@
   border: 1px solid var(--rem-border);
   border-radius: 7px;
 }
+
 .td-rem-metric-icon {
   display: grid;
   flex: 0 0 66px;
@@ -95,11 +109,29 @@
   font-size: 27px;
   font-weight: 750;
 }
-.td-rem-metric p { margin: 0 0 3px; font-size: 12px; }
-.td-rem-metric strong { margin-right: 10px; font-size: 27px; line-height: 1.1; }
-.td-rem-metric small { display: block; margin-top: 2px; color: var(--rem-muted); font-size: 11px; }
-.td-rem-change { font-size: 12px; font-weight: 750; white-space: nowrap; }
+
+.td-rem-metric p { 
+   margin: 0 0 3px;  
+   font-size: 15px; 
+}
+
+.td-rem-metric strong { 
+   margin-right: 10px; 
+   font-size: 27px;  
+   line-height: 1.1; 
+}
+
+.td-rem-metric small { 
+   display: block; 
+   margin-top: 2px; 
+   color: var(--rem-muted); 
+   font-size: 15px; 
+}
+
+.td-rem-change { font-size: 15px; font-weight: 750; white-space: nowrap; }
+
 .td-rem-good { color: #00a86b; }
+
 .td-rem-bad { color: #ef4444; }
 
 .td-rem-red { border-color: #ffdddd; background: linear-gradient(110deg, #fff6f6, #fff); }
@@ -114,8 +146,16 @@
 .td-rem-green .td-rem-metric-icon { color: #08a86a; background: #d9f8e9; }
 
 /* Sections and workflow */
-.td-rem-section { min-width: 0; margin-bottom: 19px; }
-.td-rem-section > p { margin-bottom: 9px; }
+.td-rem-section { 
+   min-width: 0; 
+   margin-bottom: 19px; 
+}
+
+.td-rem-section > p { 
+   margin-bottom: 9px;
+   font-size: 15px; 
+}
+
 .td-rem-workflow {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 18px minmax(0, 1fr) 18px minmax(0, 1fr) 18px minmax(0, 1fr) 18px minmax(0, 1fr);
@@ -123,18 +163,33 @@
   gap: 6px;
   margin-top: 10px;
 }
+
 .td-rem-step {
   display: flex;
   align-items: flex-start;
   gap: 12px;
   min-width: 0;
-  min-height: 94px;
+  min-height: 120px;
+  height: 100%;
+  box-sizing: border-box;
   padding: 11px 12px;
   border: 1px solid var(--rem-border);
   border-radius: 6px;
 }
-.td-rem-step strong { display: block; margin: 1px 0 5px; font-size: 13px; }
-.td-rem-step p { margin: 0; font-size: 12px; line-height: 1.45; }
+
+
+.td-rem-step strong { 
+   display: block; 
+   margin: 1px 0 5px; 
+   font-size: 15px; 
+}
+
+.td-rem-step p { 
+   margin: 0; 
+   font-size: 15px; 
+   line-height: 1.45; 
+}
+
 .td-rem-step-icon {
   display: grid;
   flex: 0 0 46px;
@@ -244,7 +299,12 @@
   gap: 12px;
   margin-bottom: 8px;
 }
-.td-rem-plan-heading h3 { margin: 0; font-size: 13px; font-weight: 760; }
+.td-rem-plan-heading h3 { 
+   margin: 0; 
+   font-size: 13px !important; 
+   font-weight: 760; 
+}
+
 .td-rem-plan-heading > span {
   flex: 0 0 auto;
   padding: 4px 10px;
@@ -252,24 +312,39 @@
   border-radius: 5px;
   color: #e11d48;
   background: #ffe7e7;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 750;
 }
+
 .td-rem-plan dl {
   display: grid;
   grid-template-columns: 85px minmax(0, 1fr);
   gap: 4px 10px;
   margin: 0;
-  font-size: 12px;
+  font-size: 15px;
 }
-.td-rem-plan dt { color: var(--rem-ink); font-weight: 500; }
-.td-rem-plan dd { min-width: 0; margin: 0; overflow-wrap: anywhere; }
+
+
+.td-rem-plan dt { 
+   color: var(--rem-ink); 
+   font-weight: 500;
+}
+
+
+.td-rem-plan dd { 
+   min-width: 0; 
+   margin: 0; 
+   overflow-wrap: anywhere; 
+}
+
 .td-rem-execution {
   margin-top: 12px;
   padding-top: 9px;
   border-top: 1px solid #e3edf8;
 }
+
 .td-rem-execution > strong { font-size: 12px; }
+
 .td-rem-execution ol {
   display: grid;
   gap: 7px;
@@ -277,6 +352,7 @@
   padding: 0;
   list-style: none;
 }
+
 .td-rem-execution li {
   display: flex;
   align-items: center;
@@ -284,6 +360,7 @@
   margin: 0;
   font-size: 12px;
 }
+
 .td-rem-execution li span {
   display: grid;
   flex: 0 0 22px;

@@ -14,7 +14,7 @@ permalink: /axio/operations/technical-debt/technical-debt-remediation/
   <header class="td-rem-header">
     <h1>Technical Debt — Remediation &amp; Workflows</h1>
     <p class="td-rem-subtitle">Plan, approve, execute and verify remediation at scale</p>
-    <p>Phase 4 provides automated and manual remediation workflows for technical debt items with approval gates, change management, and verification. It helps you reduce risk, lower costs and improve compliance by addressing issues across cloud and code.</p>
+    <p>It provides automated and manual remediation workflows for technical debt items with approval gates, change management, and verification. It helps you reduce risk, lower costs and improve compliance by addressing issues across cloud and code.</p>
   </header>
 
   <section class="td-rem-metrics" aria-label="Remediation metrics">

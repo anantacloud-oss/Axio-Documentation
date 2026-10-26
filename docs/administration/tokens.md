@@ -58,7 +58,7 @@ permalink: /axio/administration/runner/tokens/
 
            <td>Customer / self-hosted</td>
 
-           <td>Tenant admin on <a href="{{ '/runners/setup' | relative_url }}">Setup</a></td>
+           <td>Tenant admin on Setup</td>
 
            <td>Bound to a runner group</td>
 
@@ -70,7 +70,7 @@ permalink: /axio/administration/runner/tokens/
 
            <td>Provider / hosted fleet</td>
 
-           <td>Platform provider on <a href="{{ '/runners/hosted-fleet' | relative_url }}">Hosted fleet</a></td>
+           <td>Platform provider on Hosted fleet</td>
 
            <td>Bound to a hosted group</td>
 
@@ -386,7 +386,7 @@ permalink: /axio/administration/runner/tokens/
 
        <p>
 
-         See <a href="{{ '/runners/security' | relative_url }}">Security</a>.
+         See Security.
 
        </p>
 

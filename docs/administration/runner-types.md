@@ -116,7 +116,7 @@ permalink: /axio/administration/runner/runner-types/
 
      </div>
 
-     <div class="info">ⓘ &nbsp; See <a href="#">setup-and-registration</a> and <a href="#">deployment</a> for detailed steps.</div>
+     <div class="info">ⓘ &nbsp; See setup-and-registration and deployment for detailed steps.</div>
 
    </section>
 
@@ -174,7 +174,7 @@ permalink: /axio/administration/runner/runner-types/
 
      <p>Operators use Runners → <code>Hosted fleet</code> (or <code>scripts/setup-hosted-runner-fleet.ts</code> locally).</p>
 
-     <div class="info">ⓘ &nbsp; See <a href="#">hosted-fleet</a> for more details.</div>
+     <div class="info">ⓘ &nbsp; See hosted-fleet for more details.</div>
 
    </section>
 

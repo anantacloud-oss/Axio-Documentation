@@ -483,7 +483,7 @@ permalink: /axio/administration/runner/isolation/
 
          <p>
 
-           See <a href="{{ '/runners/hosted-fleet' | relative_url }}">hosted-fleet</a> for more details.
+           See hosted-fleet for more details.
 
          </p>
 

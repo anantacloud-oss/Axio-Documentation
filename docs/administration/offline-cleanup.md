@@ -368,7 +368,7 @@ permalink: /axio/administration/runner/offline-cleanup/
 
          <h3>Graceful stop</h3>
 
-         <p>Keeps the row unless <a href="#">deregister on shutdown</a> is enabled.</p>
+         <p>Keeps the row unless deregister on shutdown is enabled.</p>
 
        </div>
 

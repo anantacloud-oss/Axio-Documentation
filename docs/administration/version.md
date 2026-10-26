@@ -311,9 +311,9 @@ permalink: /axio/administration/runner/version/
 
        <p>
 
-         See <a href="{{ '/runners/runner-enterprise' | relative_url }}">RUNNER_ENTERPRISE</a>
+         See RUNNER_ENTERPRISE
 
-         and <a href="{{ '/runners/runner-release' | relative_url }}">RUNNER_RELEASE</a>
+         and RUNNER_RELEASE
 
          for more details.
 

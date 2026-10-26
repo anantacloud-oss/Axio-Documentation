@@ -479,11 +479,11 @@ permalink: /axio/administration/runner/targeting/
 
          See
 
-         <a href="{{ '/runners/troubleshooting' | relative_url }}">troubleshooting</a>
+         troubleshooting
 
          and
 
-         <a href="{{ '/runners/iac-requirements' | relative_url }}">IaC requirements</a>.
+         IaC requirements
 
        </p>
 

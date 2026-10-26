@@ -20,7 +20,7 @@ permalink: /axio/administration/runner/registration/
 
    <strong>Administration → Runners → Setup</strong>
 
-   <code>/admin/runners?tab=setup</code> is the two-step flow for self-hosted agents.
+   is the two-step flow for self-hosted agents.
 
  </p>
 
@@ -36,7 +36,7 @@ permalink: /axio/administration/runner/registration/
 
        <p>
 
-         See <a href="{{ '/runners/groups' | relative_url }}">Groups</a>.
+         See Groups
 
          You must have at least one enabled group before you can generate an install command.
 
@@ -84,7 +84,7 @@ permalink: /axio/administration/runner/registration/
 
          Select a <strong>platform</strong>: Linux, Windows, Docker, or Kubernetes.
 
-         See <a href="{{ '/runners/platforms' | relative_url }}">Platforms</a>.
+         See Platforms
 
        </li>
 
@@ -138,7 +138,7 @@ permalink: /axio/administration/runner/registration/
 
            <code>runner:customer:register</code>.
 
-           See <a href="{{ '/runners/permissions' | relative_url }}">Permissions</a>.
+           See Permissions.
 
          </p>
 
@@ -200,7 +200,7 @@ permalink: /axio/administration/runner/registration/
 
              Docker and Kubernetes lock isolation automatically.
 
-             See <a href="{{ '/runners/platforms' | relative_url }}">Platforms</a>.
+             See Platforms
 
            </p>
 
@@ -308,7 +308,7 @@ permalink: /axio/administration/runner/registration/
 
            registers uniquely. See
 
-           <a href="{{ '/runners/kubernetes' | relative_url }}">Kubernetes</a>.
+          Kubernetes
 
          </p>
 
@@ -332,7 +332,7 @@ permalink: /axio/administration/runner/registration/
 
        You can edit them later from Overview. Do not assign <code>axio-\*</code> to self-hosted runners.
 
-       See <a href="{{ '/runners/labels' | relative_url }}">Labels</a>.
+       See Labels
 
      </p>
 
@@ -436,7 +436,7 @@ permalink: /axio/administration/runner/registration/
 
        Historical revoked or obsolete tokens can be cleaned without affecting the command you
 
-       just copied. See <a href="{{ '/runners/tokens' | relative_url }}">Tokens</a>.
+       just copied. See Tokens
 
      </p>
 

@@ -334,7 +334,7 @@ permalink: /axio/administration/runner/labels/
 
        <span class="callout-icon">i</span>
 
-       <p>See <a href="{{ '/runners/targeting' | relative_url }}">Targeting</a> for more details.</p>
+       <p>See Targeting for more details.</p>
 
      </div>
 

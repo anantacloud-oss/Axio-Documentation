@@ -344,9 +344,9 @@ permalink: /axio/administration/runner/capacity/
 
      <p class="small-note">
 
-       See <a href="{{ '/runners/deployment' | relative_url }}">deployment</a>
+       See deployment
 
-       and <a href="{{ '/runners/runner-deployment' | relative_url }}">RUNNER_DEPLOYMENT</a>.
+       and RUNNER_DEPLOYMENT
 
      </p>
 

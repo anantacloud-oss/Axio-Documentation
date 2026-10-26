@@ -489,11 +489,10 @@ permalink: /axio/administration/runner/lifecycle/
 
          Deep dive:
 
-         <a href="{{ '/runners/status-and-troubleshooting' | relative_url }}">
+ 
 
            RUNNER_STATUS_AND_TROUBLESHOOTING
 
-         </a>.
 
        </p>
 

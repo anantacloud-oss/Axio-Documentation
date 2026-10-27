@@ -423,3 +423,12 @@
   .td-rem-code-toolbar > span { flex-basis: 60px; }
   .td-rem-code-toolbar code { overflow-wrap: anywhere; }
 }
+
+
+.main-content ol > li::before {
+    position: absolute;
+    left: -1.6em;
+    color: #959396;
+    content: none !important;
+    counter-increment: none !important;
+}

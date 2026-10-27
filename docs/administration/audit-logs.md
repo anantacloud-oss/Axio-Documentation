@@ -6,6 +6,8 @@ nav_order: 9
 permalink: /axio/administration/audit-logs/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/audit-logs.css' | relative_url }}">
+
 <div class="audit-page">
 
   <header class="audit-hero">
@@ -15,11 +17,9 @@ permalink: /axio/administration/audit-logs/
 
   <div class="audit-info">
     <span class="audit-info-icon">i</span>
-    <span>Open <strong>Administration → Audit Logs</strong> at <code>/administration/audit-logs</code></span>
+    <span>Open <strong>Administration → Audit Logs</strong></span>
     <b>•</b>
-    <span>Legacy <code>?section=audit</code> under Roles &amp; Access redirects here</span>
-    <b>•</b>
-    <span>Personal recent sign-ins: <a href="{{ '/axio/administration/profile/' | relative_url }}">My Profile</a> → Activity &amp; insights</span>
+    <span>Personal recent sign-ins are available under <strong>My Profile → Activity &amp; insights</strong></span>
   </div>
 
   <section>
@@ -35,7 +35,6 @@ permalink: /axio/administration/audit-logs/
         </tbody>
       </table>
     </div>
-    <p class="note">Legacy paths <code>/audit</code>, <code>/operations/activity</code>, and <code>/operations/events</code> redirect to this page.</p>
   </section>
 
   <section class="audit-toolbar-actions">
@@ -54,35 +53,35 @@ permalink: /axio/administration/audit-logs/
 
     <div class="audit-kpi">
       <div class="audit-kpi-icon blue">▣</div>
-      <div><span>Total events</span><strong>—</strong><small>All time (clears KPI filters)</small></div>
+      <div><span>Total events</span><small>All time (clears KPI filters)</small></div>
     </div>
     <div class="audit-kpi">
       <div class="audit-kpi-icon green">□</div>
-      <div><span>Events today</span><strong>—</strong><small>Custom date range: today only</small></div>
+      <div><span>Events today</span><small>Custom date range: today only</small></div>
     </div>
     <div class="audit-kpi">
       <div class="audit-kpi-icon red">!</div>
-      <div><span>Failed operations</span><strong>—</strong><small>Status = FAILURE</small></div>
+      <div><span>Failed operations</span><small>Status = FAILURE</small></div>
     </div>
     <div class="audit-kpi">
       <div class="audit-kpi-icon orange">◇</div>
-      <div><span>Security events</span><strong>—</strong><small>Security KPI preset</small></div>
+      <div><span>Security events</span><small>Security KPI preset</small></div>
     </div>
     <div class="audit-kpi">
       <div class="audit-kpi-icon purple">♙</div>
-      <div><span>Authentication</span><strong>—</strong><small>Authentication KPI preset</small></div>
+      <div><span>Authentication</span><small>Authentication KPI preset</small></div>
     </div>
     <div class="audit-kpi">
       <div class="audit-kpi-icon blue">⚙</div>
-      <div><span>Configuration changes</span><strong>—</strong><small>Configuration KPI preset</small></div>
+      <div><span>Configuration changes</span><small>Configuration KPI preset</small></div>
     </div>
 
-    <p class="note">Counts come from <code>GET /organizations/:orgId/audit-logs/dashboard</code>. Click again to toggle off a KPI filter (except Total events).</p>
+    <p class="note">Click a KPI card to apply its filter. Click it again to toggle off the filter (except Total events).</p>
   </section>
 
   <section class="audit-analytics">
     <h2>Analytics <small>(Last 30 days)</small></h2>
-    <p>Loaded from <code>GET /organizations/:orgId/audit-logs/analytics?days=30</code>:</p>
+    <p>Analytics summarize audit activity over the selected period.</p>
 
     <div class="audit-chart-grid">
 
@@ -126,7 +125,7 @@ permalink: /axio/administration/audit-logs/
         </thead>
         <tbody>
           <tr><td>Search</td><td>Events, users, resources, correlation IDs</td></tr>
-          <tr><td>Category</td><td>Dynamic list from API + built-in categories (Authentication, Stacks, Deployments, RBAC, …)</td></tr>
+          <tr><td>Category</td><td>Dynamic list from available categories (Authentication, Stacks, Deployments, RBAC, …)</td></tr>
           <tr><td>Date range</td><td>7 / 30 / 60 / 90 / 180 / 365 days, current month, previous month, custom from/to</td></tr>
           <tr><td>Action</td><td>CREATE, UPDATE, DELETE, LOGIN, LOGOUT, ACCESS, INVITE, REVOKE, SECURITY_VIOLATION</td></tr>
           <tr><td>Status</td><td>SUCCESS, FAILURE</td></tr>
@@ -138,9 +137,6 @@ permalink: /axio/administration/audit-logs/
       </table>
     </div>
 
-    <div class="audit-export">
-      <p><strong>Export</strong> opens a dialog — choose CSV or JSON and the same date presets as search (not separate always-visible export buttons).</p>
-    </div>
 
     <h3>Table columns</h3>
     <p>Sortable, configurable via column settings (persisted in browser storage). Defaults:</p>
@@ -158,7 +154,7 @@ permalink: /axio/administration/audit-logs/
       </ul>
     </div>
 
-    <p class="note">Server-side pagination with adjustable page size. Default sort: <code>createdAt</code> descending.</p>
+    <p class="note">Server-side pagination with adjustable page size. Default sort: newest events first.</p>
 
   </section>
 
@@ -175,3 +171,19 @@ permalink: /axio/administration/audit-logs/
   </section>
 
 </div>
+
+
+<nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/administration/integrations/' | relative_url }}">
+       ← Integrations
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/administration/iac-engines/' | relative_url }}">
+       IaC Engines →
+    </a>
+
+</nav>
+

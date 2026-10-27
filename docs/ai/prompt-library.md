@@ -24,7 +24,7 @@ permalink: /axio/ai/prompt-library/
     <span>
       <strong>Use in Assistant</strong> opens the AI Assistant with hidden system guidance from the selected template.
       Custom org prompts (draft → new version → approve) are managed separately on the
-      <a href="{{ '/axio/ai/model-platform/' | relative_url }}">Model Platform</a>
+      Model Platform
       and do not replace these built-in library entries.
     </span>
   </div>
@@ -92,7 +92,7 @@ permalink: /axio/ai/prompt-library/
     </div>
     <div class="prompt-check-column">
       <div>✓ <span>Stack wizard links to engine-specific prompts (Terraform, OpenTofu, Pulumi, Crossplane, …)</span></div>
-      <div>✓ <span>Hand-off URL: <code>/ai/assistant?librarySlug=&lt;slug&gt;</code></span></div>
+      <div>✓ <span>Hand-off to the Assistant with the selected prompt</span></div>
     </div>
   </div>
 
@@ -193,3 +193,19 @@ permalink: /axio/ai/prompt-library/
   </p>
 
 </div>
+
+
+
+<nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/ai/assistant/' | relative_url }}">
+       ← Assistant
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/ai/model-platform/' | relative_url }}">
+       Model Platform →
+    </a>
+
+  </nav>

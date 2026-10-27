@@ -507,6 +507,8 @@ permalink: /axio/operations/cost/
 
   </section>
 
+</div>
+
   <nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
 
     <a class="nav-button previous"
@@ -521,4 +523,3 @@ permalink: /axio/operations/cost/
 
   </nav>
 
-</div>

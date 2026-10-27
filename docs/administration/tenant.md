@@ -6,6 +6,8 @@ nav_order: 2
 permalink: /axio/administration/tenant/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/tenant.css' | relative_url }}">
+
 <div class="tenant-page">
 
   <div class="tenant-hero">
@@ -16,9 +18,8 @@ permalink: /axio/administration/tenant/
   <div class="tenant-info-banner">
     <span class="tenant-info-icon">ⓘ</span>
     <span>
-      Open <strong>Administration → Tenant</strong> at <code>/administration/tenant</code>.
-      Resource hierarchy (projects, workspaces, environments, business units) lives under
-      <a href="{{ '/axio/organization/overview/' | relative_url }}"><strong>Organization</strong></a>, not on this page.
+      Open <strong>Administration → Tenant</strong> from the Administration navigation.
+      Resource hierarchy (projects, workspaces, environments, business units) lives under <strong>Organization</strong>, not on this page.
     </span>
   </div>
 
@@ -64,7 +65,7 @@ permalink: /axio/administration/tenant/
       </div>
     </div>
     <p class="tenant-signin-note">
-      Users without <code>org:update</code> are redirected away from this route (typically to <code>/organization</code>).
+      Users without <code>org:update</code> cannot access this page.
     </p>
   </section>
 
@@ -74,7 +75,6 @@ permalink: /axio/administration/tenant/
     <div class="tenant-identity-card">
       <div class="tenant-identity-top">
         <div class="tenant-org-brand">
-          <div class="tenant-avatar">—</div>
           <div>
             <div class="tenant-org-name">
               (organization name)
@@ -83,7 +83,6 @@ permalink: /axio/administration/tenant/
             <p>Summary chips: <strong>Your role</strong> (e.g. OWNER), <strong>Created</strong> date.</p>
           </div>
         </div>
-        <button class="tenant-outline-button">⟳ &nbsp; Refresh</button>
       </div>
       <p><small>Reloads organization details and the admin dashboard metrics used by KPI cards and charts.</small></p>
     </div>
@@ -91,28 +90,25 @@ permalink: /axio/administration/tenant/
 
   <section class="tenant-section">
     <h2>Overview KPIs</h2>
-    <p>Three clickable summary cards (counts from <code>GET /organizations/:id</code>; subtitles from the admin dashboard when available):</p>
+    <p>Three clickable summary cards with counts and subtitles from the admin dashboard when available:</p>
 
     <div class="tenant-kpi-grid">
       <div class="tenant-kpi-card">
         <div class="tenant-kpi-icon purple">♙</div>
         <span>Members</span>
-        <strong>—</strong>
-        <small>Subtitle: <em>N groups</em> · navigates to <code>/administration/users</code></small>
+        <small>Subtitle: <em>N groups</em></small>
       </div>
 
       <div class="tenant-kpi-card">
         <div class="tenant-kpi-icon green">◇</div>
         <span>Projects</span>
-        <strong>—</strong>
-        <small>Subtitle: <em>N workspaces</em> · navigates to <code>/projects</code></small>
+        <small>Subtitle: <em>N workspaces</em></small>
       </div>
 
       <div class="tenant-kpi-card">
         <div class="tenant-kpi-icon blue">♧</div>
         <span>Groups</span>
-        <strong>—</strong>
-        <small>Subtitle: <em>N% deploy success</em> · navigates to <code>/administration/groups</code></small>
+        <small>Subtitle: <em>N% deploy success</em></small>
       </div>
     </div>
     <p><small>Team membership is labeled <strong>Groups</strong> on this page (backed by organization team counts).</small></p>
@@ -123,7 +119,7 @@ permalink: /axio/administration/tenant/
     <p>Quick links to adjacent admin surfaces (not a full IAM catalog):</p>
 
     <div class="tenant-links-grid">
-      <a class="tenant-link-card" href="{{ '/axio/administration/roles-access/' | relative_url }}">
+      <a class="tenant-link-card">
         <span class="link-icon">♢</span>
         <span><b>Roles &amp; Access</b><small>Manage members, groups, and permissions</small></span>
         <strong>→</strong>
@@ -133,18 +129,18 @@ permalink: /axio/administration/tenant/
         <span><b>Subscription &amp; Billing</b><small>Plans, usage limits, and invoices</small></span>
         <strong>→</strong>
       </a>
-      <a class="tenant-link-card" href="{{ '/axio/organization/overview/' | relative_url }}">
+      <a class="tenant-link-card">
         <span class="link-icon">⌁</span>
         <span><b>Organization overview</b><small>Operational dashboard and health metrics</small></span>
         <strong>→</strong>
       </a>
     </div>
-    <p><small>Routes: <code>/administration/roles-access</code>, <code>/admin/subscription-billing</code>, <code>/organization</code>.</small></p>
+
   </section>
 
   <section class="tenant-section">
     <h2>Tenant insights</h2>
-    <p>Analytics from <code>GET /admin/organizations/dashboard?organizationId=…</code> (v2 admin API). Charts appear once the tenant has deployment and runner activity.</p>
+    <p>Analytics from the admin dashboard. Charts appear once the tenant has deployment and runner activity.</p>
 
     <div class="tenant-analytics-grid">
       <div class="tenant-chart-card">
@@ -204,7 +200,7 @@ permalink: /axio/administration/tenant/
       </div>
 
       <div class="tenant-description">
-        <p><strong>Save changes</strong> / <strong>Cancel</strong> appear only while editing. Updates via <code>PATCH /organizations/:id</code> with <code>{ name, description }</code>.</p>
+        <p><strong>Save changes</strong> / <strong>Cancel</strong> appear only while editing. Changes are saved when the user confirms the edit.</p>
       </div>
     </div>
   </section>
@@ -227,7 +223,7 @@ permalink: /axio/administration/tenant/
         <div class="tenant-copy-field">
           <code>abcd-corp</code>
         </div>
-        <small>Read-only display. Used internally in URLs and invitations — <strong>not</strong> used at sign-in. No copy button on this field.</small>
+        <small>Read-only display. Used internally and in invitations — <strong>not</strong> used at sign-in. No copy button on this field.</small>
       </div>
 
       <div class="tenant-field">
@@ -240,7 +236,7 @@ permalink: /axio/administration/tenant/
   <div class="tenant-warning">
     <strong>♧ &nbsp; Safeguards</strong>
     <ul>
-      <li>Only holders of <code>org:update</code> may open this page and PATCH organization name/description (OWNER in the default matrix).</li>
+      <li>Only holders of <code>org:update</code> may open this page and PATCH organization name and description (OWNER in the default matrix).</li>
       <li>Organization delete requires <code>org:delete</code> (OWNER only) and is not offered on this page.</li>
       <li>Slug and organization ID are not editable here; the 8-character organization ID is allocated at org creation.</li>
       <li>An organization must always retain at least one OWNER.</li>
@@ -253,3 +249,18 @@ permalink: /axio/administration/tenant/
   </div>
 
 </div>
+
+
+ <nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/administration/profile/' | relative_url }}">
+       ← Profile
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/administration/groups/' | relative_url }}">
+       Groups →
+    </a>
+
+  </nav>

@@ -6,6 +6,9 @@ nav_order: 6
 permalink: /axio/administration/mfa/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/mfa.css' | relative_url }}">
+
+
 <div class="admin-mfa-page">
 
   <div class="mfa-hero">
@@ -15,9 +18,9 @@ permalink: /axio/administration/mfa/
 
       <div class="mfa-info-banner">
         <span class="mfa-info-icon">i</span>
-        <span>Open <strong>Administration → MFA</strong> at <code>/administration/mfa</code></span>
+        <span>Open <strong>Administration → MFA</strong> from the Administration navigation</span>
         <span class="mfa-dot">•</span>
-        <span>Personal enrollment: <a href="{{ '/axio/administration/profile/' | relative_url }}">My Profile</a></span>
+        <span>Personal enrollment: <strong>My Profile</strong></span>
         <span class="mfa-dot">•</span>
         <span>Per-user MFA actions: <strong>Roles &amp; Access → Users</strong></span>
       </div>
@@ -84,7 +87,7 @@ permalink: /axio/administration/mfa/
       <div class="summary-icon green">♙</div>
       <div class="adoption-copy">
         <h2>MFA adoption</h2>
-        <p>Calculated from <strong>internal users</strong> returned by the admin user directory (<code>GET /admin/users</code>), not synced IdP-only accounts.</p>
+        <p>Calculated from <strong>internal users</strong> returned by the admin user directory, not synced IdP-only accounts.</p>
         <p><strong>Pending enrollment</strong> includes users with <code>enrollmentRequired</code> or policy-enforced users without MFA enabled.</p>
         <p>Coverage = enrolled ÷ total internal users (rounded percentage).</p>
       </div>
@@ -106,7 +109,6 @@ permalink: /axio/administration/mfa/
     </ul>
 
     <div class="callout callout-warning">
-      <div class="callout-icon">!</div>
       <p>
         Disabling enforcement is destructive: member MFA enrollments for this organization are reset.
         Plan communications before toggling enforcement off in production.
@@ -152,7 +154,6 @@ permalink: /axio/administration/mfa/
     </div>
 
     <div class="callout callout-info">
-      <div class="callout-icon">i</div>
       <p>
         <strong>SMS</strong> and <strong>Email</strong> OTP methods are not configurable on this page today.
         The API persists <code>allowSms: false</code> and <code>allowEmail: false</code>.
@@ -166,8 +167,8 @@ permalink: /axio/administration/mfa/
   <section>
     <h2>Member MFA management</h2>
     <p>
-      The side panel links to <strong>Manage user MFA</strong> →
-      <code>/administration/roles-access?section=users</code>.
+      The side panel provides <strong>Manage user MFA</strong> under
+      <strong>Roles &amp; Access → Users</strong>.
       From there, administrators with <code>org:members:manage</code> can reset MFA, force re-enrollment,
       disable MFA, or invalidate recovery codes for individual users (audit reason required).
     </p>
@@ -191,7 +192,7 @@ permalink: /axio/administration/mfa/
         <h2>Prefer directory / SSO MFA?</h2>
         <p>
           Enforce MFA at your identity provider and configure SSO under
-          <code>/admin/integrations/identity-providers</code>.
+          <strong>Administration → Integrations → Identity Providers</strong>.
           Axio org MFA policy applies to native Axio sign-in and enrollment flows.
         </p>
       </div>
@@ -203,7 +204,7 @@ permalink: /axio/administration/mfa/
         <h2>Personal enrollment</h2>
         <p>
           Each user enrolls MFA on
-          <a href="{{ '/axio/administration/profile/' | relative_url }}">My Profile</a>
+          <strong>My Profile</strong>
           using the authenticator app selected on this page.
         </p>
       </div>
@@ -212,3 +213,19 @@ permalink: /axio/administration/mfa/
   </div>
 
 </div>
+
+
+
+<nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/administration/role-and-access/users/' | relative_url }}">
+       ← Users 
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/administration/runner/overview-runner/' | relative_url }}">
+       Runner →
+    </a>
+
+</nav>

@@ -6,6 +6,8 @@ nav_order: 8
 permalink: /axio/administration/integrations/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/integration.css' | relative_url }}">
+
 <div class="integrations-page">
 
   <header class="integrations-hero">
@@ -17,14 +19,7 @@ permalink: /axio/administration/integrations/
 
   <div class="info-banner">
     <span class="info-icon">ⓘ</span>
-    <span>
-      Open <strong>Administration → Integrations</strong> at <code>/admin/integrations</code>
-      <span class="separator">•</span>
-      Legacy <code>/administration/integrations</code> redirects here
-      <span class="separator">•</span>
-      After AI credentials are saved, configure routing on
-      <a href="{{ '/axio/ai/model-platform/' | relative_url }}">Model Platform</a>
-    </span>
+    <span>Open <strong>Administration → Integrations</strong> from the Administration navigation <span class="separator">•</span> Legacy integration links redirect to this page <span class="separator">•</span> After AI credentials are saved, configure routing in <strong>Model Platform</strong></span>
   </div>
 
   <section>
@@ -37,13 +32,13 @@ permalink: /axio/administration/integrations/
         </thead>
         <tbody>
           <tr>
-            <td>Open Integrations hub (any category page under <code>/admin/integrations</code>)</td>
+            <td>Open Integrations hub (any category page under the Integrations hub)</td>
             <td>Any of: <code>enterprise:manage</code>, <code>identity:manage</code>, <code>api_key:manage</code>, <code>ai_gateway:manage</code>, <code>vcs:manage</code>, <code>git:manage</code>, <code>chatops:manage</code>, <code>communication:manage</code>, <code>cloud:manage</code></td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p class="note">Org API keys are not an Integrations hub category. The <code>api_key:manage</code> permission unlocks hub access and is used elsewhere (for example platform administration). Integration changes are recorded in <a href="{{ '/axio/administration/audit-logs/' | relative_url }}">Audit Logs</a>.</p>
+    <p class="note">Org API keys are not an Integrations hub category. The <code>api_key:manage</code> permission unlocks hub access and is used elsewhere (for example platform administration). Integration changes are recorded in <strong>Audit Logs</strong>.</p>
   </section>
 
   <section class="integration-hub">
@@ -78,7 +73,7 @@ permalink: /axio/administration/integrations/
         <div class="card-content">
           <h3>Source Control <span>›</span></h3>
           <p>GitHub, GitLab, Bitbucket, Azure DevOps — repository browsing, stack provisioning, webhooks, GitOps.</p>
-          <small><code>git:manage</code> or <code>vcs:manage</code> · <code>/admin/integrations/source-control</code></small>
+          <small><code>git:manage</code> or <code>vcs:manage</code></small>
         </div>
       </div>
 
@@ -87,7 +82,7 @@ permalink: /axio/administration/integrations/
         <div class="card-content">
           <h3>Secret Management <span>›</span></h3>
           <p>Platform Secrets, AWS Secrets Manager, Azure Key Vault, Google Secret Manager, Oracle Cloud Vault, HashiCorp Vault.</p>
-          <small><code>enterprise:manage</code> · <code>/admin/integrations/secret-providers</code></small>
+          <small><code>enterprise:manage</code></small>
         </div>
       </div>
 
@@ -96,7 +91,7 @@ permalink: /axio/administration/integrations/
         <div class="card-content">
           <h3>Cloud Providers <span>›</span></h3>
           <p>AWS, Azure, GCP, OCI, DigitalOcean — discovery, provisioning, and cloud account sync.</p>
-          <small><code>cloud:manage</code> · <code>/admin/integrations/cloud-providers</code></small>
+          <small><code>cloud:manage</code></small>
         </div>
       </div>
 
@@ -105,7 +100,7 @@ permalink: /axio/administration/integrations/
         <div class="card-content">
           <h3>Authentication Providers <span>›</span></h3>
           <p>Microsoft Entra ID, LDAP, Okta, Google Workspace, GitHub, GitLab, generic OIDC, generic SAML 2.0.</p>
-          <small><code>identity:manage</code> or <code>enterprise:manage</code> · <code>/admin/integrations/identity-providers</code></small>
+          <small><code>identity:manage</code> or <code>enterprise:manage</code></small>
         </div>
       </div>
 
@@ -114,7 +109,7 @@ permalink: /axio/administration/integrations/
         <div class="card-content">
           <h3>AI Providers <span>›</span></h3>
           <p>OpenAI, Google Gemini, AWS Bedrock, Ollama, Vertex AI, Azure AI Foundry — credentials via platform secret references.</p>
-          <small><code>ai_gateway:manage</code> · <code>/admin/integrations/ai-providers</code></small>
+          <small><code>ai_gateway:manage</code></small>
         </div>
       </div>
 
@@ -123,7 +118,7 @@ permalink: /axio/administration/integrations/
         <div class="card-content">
           <h3>ChatOps <span>›</span></h3>
           <p>Slack, Microsoft Teams, Google Chat, generic webhooks — infrastructure card delivery.</p>
-          <small><code>chatops:manage</code> · <code>/admin/integrations/chatops</code></small>
+          <small><code>chatops:manage</code></small>
         </div>
       </div>
 
@@ -132,7 +127,7 @@ permalink: /axio/administration/integrations/
         <div class="card-content">
           <h3>Infracost <span>›</span></h3>
           <p>Infracost CLI token for cost estimation and pipeline runs (built-in pricing remains available).</p>
-          <small><code>cost:manage</code> · <code>/admin/integrations/infracost</code></small>
+          <small><code>cost:manage</code></small>
         </div>
       </div>
 
@@ -141,7 +136,7 @@ permalink: /axio/administration/integrations/
         <div class="card-content">
           <h3>Change Management <span>›</span></h3>
           <p>Jira — governance remediation tickets and ITSM sync.</p>
-          <small><code>governance:manage</code> · <code>/admin/integrations/change-management</code></small>
+          <small><code>governance:manage</code></small>
         </div>
       </div>
 
@@ -150,7 +145,7 @@ permalink: /axio/administration/integrations/
         <div class="card-content">
           <h3>Container Registry <span>›</span></h3>
           <p>Generic, ECR, ACR, GCR (Artifact Registry), GHCR, Docker Hub — private IaC runtime images.</p>
-          <small><code>execution:manage</code> or <code>runner:manage</code> · <code>/admin/integrations/container-registries</code></small>
+          <small><code>execution:manage</code> or <code>runner:manage</code></small>
         </div>
       </div>
 
@@ -159,7 +154,7 @@ permalink: /axio/administration/integrations/
         <div class="card-content">
           <h3>Communication <span>›</span></h3>
           <p>SMTP, SendGrid (email), AWS SNS (SMS) — verification, MFA delivery, and notifications.</p>
-          <small><code>communication:manage</code> · <code>/admin/integrations/communication</code></small>
+          <small><code>communication:manage</code></small>
         </div>
       </div>
 
@@ -168,7 +163,7 @@ permalink: /axio/administration/integrations/
         <div class="card-content">
           <h3>Payments <span>›</span></h3>
           <p>Platform-wide payment processing for billing and subscription checkout.</p>
-          <small>Platform provider org only · <code>subscription:manage</code> or <code>enterprise:manage</code> · <code>/admin/integrations/payments</code></small>
+          <small>Platform provider org only · <code>subscription:manage</code> or <code>enterprise:manage</code></small>
         </div>
       </div>
 
@@ -182,27 +177,27 @@ permalink: /axio/administration/integrations/
     <div class="audit-kpis">
       <div class="audit-kpi">
         <div class="audit-kpi-icon green">▣</div>
-        <div><span>Connected</span><strong>—</strong><small>Categories with at least one configured integration</small></div>
+        <div><span>Connected</span><small>Categories with at least one configured integration</small></div>
       </div>
       <div class="audit-kpi">
         <div class="audit-kpi-icon blue">▣</div>
-        <div><span>Categories</span><strong>—</strong><small>Visible categories for your permissions</small></div>
+        <div><span>Categories</span><small>Visible categories for your permissions</small></div>
       </div>
       <div class="audit-kpi">
         <div class="audit-kpi-icon blue">☁</div>
-        <div><span>Cloud Providers</span><strong>—</strong><small>Configured cloud connections</small></div>
+        <div><span>Cloud Providers</span><small>Configured cloud connections</small></div>
       </div>
       <div class="audit-kpi">
         <div class="audit-kpi-icon purple">⌘</div>
-        <div><span>Source Control</span><strong>—</strong><small>Configured Git connections</small></div>
+        <div><span>Source Control</span><small>Configured Git connections</small></div>
       </div>
       <div class="audit-kpi">
         <div class="audit-kpi-icon green">✓</div>
-        <div><span>Healthy</span><strong>—</strong><small>Categories in healthy state with config</small></div>
+        <div><span>Healthy</span><small>Categories in healthy state with config</small></div>
       </div>
       <div class="audit-kpi">
         <div class="audit-kpi-icon orange">!</div>
-        <div><span>Pending Auth</span><strong>—</strong><small>Categories needing authentication or setup</small></div>
+        <div><span>Pending Auth</span><small>Categories needing authentication or setup</small></div>
       </div>
     </div>
 
@@ -246,3 +241,19 @@ permalink: /axio/administration/integrations/
   </section>
 
 </div>
+
+
+<nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/administration/runner/runner-types/' | relative_url }}">
+       ← Runner Types 
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/administration/audit-logs/' | relative_url }}">
+       Audit Logs →
+    </a>
+
+</nav>
+

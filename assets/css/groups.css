@@ -1,0 +1,818 @@
+/* ==========================================
+   Axio Documentation — Administration Groups
+   File: assets/css/admin-groups.css
+   Content font size: 15px
+   ========================================== */
+
+.admin-groups-page {
+  --groups-text: #334155;
+  --groups-heading: #172554;
+  --groups-muted: #64748b;
+  --groups-border: #dbe3ee;
+  --groups-surface: #ffffff;
+  --groups-soft: #f8fafc;
+  --groups-primary: #4f46e5;
+  --groups-primary-soft: #eef2ff;
+  --groups-green: #15803d;
+  --groups-green-soft: #dcfce7;
+  --groups-orange: #c2410c;
+  --groups-orange-soft: #fff7ed;
+
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  color: var(--groups-text);
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.65;
+  box-sizing: border-box;
+}
+
+.admin-groups-page *,
+.admin-groups-page *::before,
+.admin-groups-page *::after {
+  box-sizing: border-box;
+}
+
+/* Keep all page content text at 15px */
+.admin-groups-page h1,
+.admin-groups-page h2,
+.admin-groups-page h3,
+.admin-groups-page p,
+.admin-groups-page li,
+.admin-groups-page label,
+.admin-groups-page small,
+.admin-groups-page th,
+.admin-groups-page td,
+.admin-groups-page button,
+.admin-groups-page span,
+.admin-groups-page strong,
+.admin-groups-page b {
+  font-size: 15px;
+}
+
+.admin-groups-page h1,
+.admin-groups-page h2,
+.admin-groups-page h3 {
+  color: var(--groups-heading);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.admin-groups-page h1 {
+  margin: 0 0 10px;
+}
+
+.admin-groups-page h2 {
+  margin: 26px 0 12px;
+}
+
+.admin-groups-page h3 {
+  margin: 0 0 8px;
+}
+
+.admin-groups-page p {
+  margin: 0 0 14px;
+  line-height: 1.7;
+}
+
+.admin-groups-page ul,
+.admin-groups-page ol {
+  margin: 10px 0 16px;
+  padding-left: 24px;
+}
+
+.admin-groups-page li {
+  margin: 6px 0;
+  line-height: 1.65;
+}
+
+.admin-groups-page strong,
+.admin-groups-page b {
+  font-weight: 650;
+}
+
+.admin-groups-page code {
+  padding: 2px 6px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  background: #f1f5f9;
+  color: #334155;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+/* Lead text */
+.admin-groups-page .admin-groups-lead {
+  margin-bottom: 18px;
+  color: var(--groups-muted);
+}
+
+/* Intro information banner */
+.admin-groups-page .admin-groups-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px 10px;
+  margin: 18px 0 24px;
+  padding: 14px 16px;
+  border: 1px solid #bfdbfe;
+  border-radius: 9px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  line-height: 1.7;
+}
+
+.admin-groups-page .admin-groups-info > span {
+  min-width: 0;
+}
+
+.admin-groups-page .info-dot {
+  display: inline-flex;
+  flex: 0 0 22px;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #60a5fa;
+  border-radius: 50%;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.admin-groups-page .info-separator {
+  color: #93c5fd;
+}
+
+/* Panels */
+.admin-groups-page .groups-panel,
+.admin-groups-page .groups-workspace {
+  min-width: 0;
+  margin: 20px 0;
+  border: 1px solid var(--groups-border);
+  border-radius: 10px;
+  background: var(--groups-surface);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.035);
+}
+
+.admin-groups-page .groups-panel {
+  padding: 18px;
+}
+
+.admin-groups-page .groups-panel h2 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 12px;
+}
+
+.admin-groups-page .about-groups > p {
+  margin-bottom: 10px;
+}
+
+.admin-groups-page .panel-icon {
+  display: inline-flex;
+  flex: 0 0 30px;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size:25px;
+}
+
+.admin-groups-page .green-icon {
+  background: var(--groups-green-soft);
+  color: var(--groups-green);
+}
+
+.admin-groups-page .orange-icon {
+  background: var(--groups-orange-soft);
+  color: var(--groups-orange);
+}
+
+/* Tabs */
+.admin-groups-page .groups-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0 0;
+  border-bottom: 1px solid var(--groups-border);
+}
+
+.admin-groups-page .groups-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 10px 16px;
+  border: 1px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-radius: 8px 8px 0 0;
+  background: transparent;
+  color: var(--groups-muted);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-groups-page .groups-tab:hover {
+  background: var(--groups-soft);
+  color: var(--groups-primary);
+}
+
+.admin-groups-page .groups-tab.active {
+  border-color: var(--groups-border);
+  border-bottom-color: var(--groups-primary);
+  background: var(--groups-primary-soft);
+  color: var(--groups-primary);
+}
+
+.admin-groups-page .tab-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.admin-groups-page .tab-icon.cloud {
+  color: #2563eb;
+}
+
+/* Workspace and toolbar */
+.admin-groups-page .groups-workspace {
+  margin-top: 0;
+  padding: 18px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.admin-groups-page .groups-toolbar {
+  margin: -18px -18px 20px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--groups-border);
+  border-radius: 10px 10px 0 0;
+  background: var(--groups-soft);
+}
+
+.admin-groups-page .groups-toolbar p {
+  margin: 0;
+}
+
+/* Tables */
+.admin-groups-page .table-wrap {
+  width: 100%;
+  max-width: 100%;
+  margin: 14px 0 18px;
+  overflow-x: auto;
+  border: 1px solid var(--groups-border);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.admin-groups-page table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: var(--groups-text);
+  font-size: 15px;
+}
+
+.admin-groups-page th,
+.admin-groups-page td {
+  padding: 12px 14px;
+  border-right: 1px solid var(--groups-border);
+  border-bottom: 1px solid var(--groups-border);
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.admin-groups-page th:last-child,
+.admin-groups-page td:last-child {
+  border-right: 0;
+}
+
+.admin-groups-page tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.admin-groups-page thead th {
+  background: #f8fafc;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.admin-groups-page tbody tr:hover {
+  background: #fbfdff;
+}
+
+/* Notes and callouts */
+.admin-groups-page .note {
+  margin: 12px 0 18px;
+  padding: 11px 14px;
+  border-left: 3px solid #cbd5e1;
+  border-radius: 0 6px 6px 0;
+  background: var(--groups-soft);
+  color: var(--groups-muted);
+}
+
+.admin-groups-page .callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 16px 0;
+  padding: 14px 16px;
+  border: 1px solid var(--groups-border);
+  border-radius: 8px;
+}
+
+.admin-groups-page .callout-info {
+  border-color: #bfdbfe;
+  background: #eff6ff;
+  color: #1e40af;
+}
+
+.admin-groups-page .callout-icon {
+  display: inline-flex;
+  flex: 0 0 24px;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+.admin-groups-page .callout p {
+  margin: 0;
+}
+
+/* Operation cards */
+.admin-groups-page .operation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.admin-groups-page .operation-grid > div {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--groups-border);
+  border-radius: 10px;
+  background: var(--groups-surface);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+}
+
+.admin-groups-page .operation-grid h2 {
+  margin: 0 0 12px;
+}
+
+.admin-groups-page .steps {
+  padding-left: 22px;
+}
+
+.admin-groups-page .steps li::marker {
+  color: var(--groups-primary);
+  font-weight: 700;
+}
+
+/* Pagination footer */
+.admin-groups-page .groups-pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 12px 0 0;
+  padding: 12px 14px;
+  border: 1px solid var(--groups-border);
+  border-radius: 7px;
+  background: var(--groups-soft);
+  color: var(--groups-muted);
+}
+
+/* Bottom panels */
+.admin-groups-page .groups-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 24px 0;
+}
+
+.admin-groups-page .groups-bottom .groups-panel {
+  margin: 0;
+  min-width: 0;
+}
+
+.admin-groups-page .panel-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid var(--groups-border);
+  border-radius: 8px;
+  line-height: 1.65;
+  font-size:15px;
+}
+
+.admin-groups-page .green-note {
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.admin-groups-page .panel-note > span {
+  flex: 0 0 auto;
+}
+
+.admin-groups-page .tab-explanation {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 12px 0;
+  padding: 13px;
+  border: 1px solid var(--groups-border);
+  border-radius: 8px;
+  background: #fff;
+  line-height: 1.65;
+}
+
+.admin-groups-page .explain-icon {
+  display: flex;
+  flex: 0 0 34px;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  font-size: 25px;
+}
+
+.admin-groups-page .internal-icon {
+  background: var(--groups-primary-soft);
+  color: var(--groups-primary);
+}
+
+.admin-groups-page .synced-icon {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.admin-groups-page .synced-explanation {
+  background: #f8fbff;
+}
+
+/* Generic section spacing */
+.admin-groups-page > section {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.admin-groups-page > section > h2 {
+  margin-top: 0;
+}
+
+/* Responsive: tablet */
+@media (max-width: 1000px) {
+  .admin-groups-page .operation-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-groups-page .groups-bottom {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Responsive: mobile */
+@media (max-width: 640px) {
+  .admin-groups-page .admin-groups-info {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-groups-page .info-separator {
+    display: none;
+  }
+
+  .admin-groups-page .groups-panel,
+  .admin-groups-page .groups-workspace {
+    padding: 13px;
+  }
+
+  .admin-groups-page .groups-toolbar {
+    margin: -13px -13px 16px;
+    padding: 12px 13px;
+  }
+
+  .admin-groups-page .operation-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .admin-groups-page .groups-tabs {
+    gap: 4px;
+  }
+
+  .admin-groups-page .groups-tab {
+    flex: 1 1 auto;
+    padding: 9px 10px;
+  }
+
+  .admin-groups-page .table-wrap table {
+    min-width: 480px;
+  }
+
+  .admin-groups-page .groups-pagination {
+    justify-content: flex-start;
+  }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .admin-groups-page *,
+  .admin-groups-page *::before,
+  .admin-groups-page *::after {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+
+.admin-groups-page .panel-note.green-note {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+  white-space: nowrap;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  font-size: 15px;
+}
+
+.admin-groups-page .panel-note.green-note > span {
+  flex-shrink: 0;
+}
+
+.admin-groups-page .panel-note.green-note strong {
+  display: inline;
+  white-space: nowrap;
+}
+
+
+
+
+.admin-groups-page .panel-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid var(--groups-border);
+  border-radius: 8px;
+  line-height: 1.65;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.admin-groups-page .panel-note > span {
+  flex: 0 0 auto;
+}
+
+.admin-groups-page .panel-note.green-note {
+  flex-wrap: nowrap;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.admin-groups-page .panel-note.green-note strong {
+  display: inline;
+  white-space: normal;
+}
+
+
+
+.admin-groups-page .panel-note.green-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  background: #f0fdf4;
+  color: #166534;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.admin-groups-page .panel-note.green-note .panel-note-icon {
+  flex: 0 0 auto;
+}
+
+.admin-groups-page .panel-note.green-note p {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-size: 15px;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.admin-groups-page .panel-note.green-note strong {
+  display: inline;
+  white-space: normal;
+}
+
+
+
+/* Align Groups page content with the Approvals page */
+.admin-groups-page {
+  width: 100%;
+  max-width: none;
+  margin: -12px 0 0;
+  padding: 0;
+  position: relative;
+  left: -20px;
+  box-sizing: border-box;
+}
+
+/* Remove extra spacing above the page heading */
+.admin-groups-page h1 {
+  margin-top: 0;
+}
+
+/* Keep the page content aligned to the left */
+.admin-groups-page > * {
+  max-width: 100%;
+}
+
+/* Prevent horizontal overflow on smaller screens */
+@media (max-width: 640px) {
+  .admin-groups-page {
+    left: 0;
+    margin-top: -6px;
+  }
+}
+
+
+
+
+/* Match the left alignment of My Profile */
+.admin-groups-page {
+  position: static;
+  width: 100%;
+  max-width: none;
+  margin: -12px 0 0;
+  padding: 0;
+  box-sizing: border-box;
+  left: auto;
+}
+
+/* Keep all sections aligned consistently */
+.admin-groups-page > * {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.admin-groups-page h1 {
+  margin-top: 0;
+}
+
+/* Responsive layout */
+@media (max-width: 640px) {
+  .admin-groups-page {
+    margin-top: -6px;
+  }
+}
+
+
+
+/* About the tabs panel */
+.admin-groups-page .about-tabs {
+  width: 100%;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid var(--groups-border, #dbe4f0);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+/* Panel heading */
+.admin-groups-page .about-tabs h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 18px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #10264a;
+}
+
+/* Heading icon */
+.admin-groups-page .about-tabs .panel-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.admin-groups-page .about-tabs .orange-icon {
+  color: #c2410c;
+  background: #fff7ed;
+}
+
+/* Individual tab explanation cards */
+.admin-groups-page .about-tabs .tab-explanation {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  padding: 14px;
+  margin: 0 0 12px;
+  border: 1px solid #dbe4f0;
+  border-radius: 9px;
+  background: #ffffff;
+  box-sizing: border-box;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #334155;
+}
+
+.admin-groups-page .about-tabs .tab-explanation:last-child {
+  margin-bottom: 0;
+}
+
+/* Icon inside each explanation */
+.admin-groups-page .about-tabs .explain-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  font-size: 25px;
+}
+
+/* Internal groups icon */
+.admin-groups-page .about-tabs .internal-icon {
+  color: #4f46e5;
+  background: #eef2ff;
+}
+
+/* Synced groups card */
+.admin-groups-page .about-tabs .synced-explanation {
+  background: #f8fbff;
+}
+
+.admin-groups-page .about-tabs .synced-icon {
+  color: #2563eb;
+  background: #dbeafe;
+}
+
+/* Text styling */
+.admin-groups-page .about-tabs .tab-explanation > div:last-child {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 15px;
+}
+
+.admin-groups-page .about-tabs .tab-explanation strong {
+  color: #10264a;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* Mobile layout */
+@media (max-width: 640px) {
+  .admin-groups-page .about-tabs {
+    padding: 14px;
+  }
+
+  .admin-groups-page .about-tabs .tab-explanation {
+    padding: 12px;
+    gap: 10px;
+  }
+}

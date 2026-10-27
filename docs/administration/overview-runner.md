@@ -124,7 +124,6 @@ permalink: /axio/administration/runner/overview-runner/
           <tr>
             <th>Runner ID</th>
             <th>Name</th>
-            <th>Hostname</th>
             <th>Execution profile</th>
             <th>Scope name</th>
             <th>Version</th>
@@ -138,7 +137,6 @@ permalink: /axio/administration/runner/overview-runner/
           <tr>
             <td>axrun_1a2b3c</td>
             <td>runner-prod-1</td>
-            <td>ip-172-31-1-135</td>
             <td>Linux · Docker</td>
             <td>Acme Corporation</td>
             <td>
@@ -152,7 +150,6 @@ permalink: /axio/administration/runner/overview-runner/
           <tr>
             <td>axrun_3c4d5e</td>
             <td>runner-ci-1</td>
-            <td>runner-01</td>
             <td>Linux · Process</td>
             <td>Axio</td>
             <td>
@@ -166,7 +163,6 @@ permalink: /axio/administration/runner/overview-runner/
           <tr>
             <td>axrun_5e6f7g</td>
             <td>runner-k8s-1</td>
-            <td>axio-runner-7</td>
             <td>Kubernetes</td>
             <td>prod</td>
             <td>
@@ -180,7 +176,6 @@ permalink: /axio/administration/runner/overview-runner/
           <tr>
             <td>axrun_7g8h9i</td>
             <td>runner-dev-1</td>
-            <td>ip-172-31-5-22</td>
             <td>Linux · Process</td>
             <td>dev-team</td>
             <td>
@@ -194,7 +189,6 @@ permalink: /axio/administration/runner/overview-runner/
           <tr>
             <td>axrun_9i0j1k</td>
             <td>runner-test-1</td>
-            <td>ip-172-31-6-44</td>
             <td>Linux · Docker</td>
             <td>Trustary</td>
             <td>

@@ -71,8 +71,6 @@ permalink: /axio/administration/groups/
       </table>
     </div>
 
-    <p class="note">Paginated client-side table with adjustable page size. There is no search or filter bar on this page today.</p>
-
     <h2>Synced groups tab</h2>
     <div class="callout callout-info">
       <div class="callout-icon">i</div>
@@ -92,7 +90,6 @@ permalink: /axio/administration/groups/
       </table>
     </div>
 
-    <div class="groups-pagination"><span>Pagination footer on both tabs (page + page size)</span></div>
   </section>
 
   <section class="operation-grid">

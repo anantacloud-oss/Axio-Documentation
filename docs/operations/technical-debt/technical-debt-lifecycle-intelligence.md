@@ -14,7 +14,7 @@ permalink: /axio/operations/technical-debt/technical-debt-lifecycle/
   <header class="td-life-header">
     <h1>Technical Debt — Lifecycle Intelligence</h1>
     <p class="td-life-subtitle">Track end-of-life, version risks and upgrade opportunities</p>
-    <p>Phase 5 provides lifecycle intelligence for cloud and code components. It helps you identify end-of-life (EOL) dates, unsupported versions and upgrade recommendations to reduce security and operational risk.</p>
+    <p>It provides lifecycle intelligence for cloud and code components. It helps you identify end-of-life (EOL) dates, unsupported versions and upgrade recommendations to reduce security and operational risk.</p>
   </header>
 
   <section class="td-life-metrics" aria-label="Lifecycle metrics">
@@ -99,7 +99,7 @@ permalink: /axio/operations/technical-debt/technical-debt-lifecycle/
       </section>
 
       <section class="td-life-benefits">
-        <h2><span>✓</span> Benefits</h2>
+        <h2>Benefits</h2>
         <ul>
           <li>Proactive identification of end-of-life components</li>
           <li>Reduced security and operational risk</li>
@@ -112,3 +112,19 @@ permalink: /axio/operations/technical-debt/technical-debt-lifecycle/
     </div>
   </div>
 </div>
+
+
+
+ <nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/operations/technical-debt/technical-debt-github-integration/' | relative_url }}">
+       ← GitHub Integration & Maintenance
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/operations/technical-debt/technical-debt-governed-agents-mcp/' | relative_url }}">
+       Governed Agents & MCP →
+    </a>
+
+  </nav>

@@ -83,6 +83,8 @@
   border: 1px solid var(--gov-border);
   border-radius: 7px;
 }
+
+
 .td-gov-metric-icon {
   display: grid;
   flex: 0 0 66px;
@@ -94,11 +96,38 @@
   font-size: 27px;
   font-weight: 750;
 }
-.td-gov-metric p { margin: 0 0 3px; font-size: 12px; }
-.td-gov-metric strong { margin-right: 10px; font-size: 27px; line-height: 1.1; }
-.td-gov-metric small { display: block; margin-top: 2px; color: var(--gov-muted); font-size: 11px; }
-.td-gov-change { font-size: 12px; font-weight: 750; white-space: nowrap; }
+
+
+.td-gov-metric p { 
+   margin: 0 0 3px; 
+   font-size: 15px; 
+}
+
+
+.td-gov-metric strong { 
+   margin-right: 10px; 
+   font-size: 27px; 
+   line-height: 1.1; 
+}
+
+.td-gov-metric small { 
+   display: block; 
+   margin-top: 2px; 
+   color: var(--gov-muted); 
+   font-size: 15px; 
+}
+
+
+.td-gov-change { 
+   font-size: 15px; 
+   font-weight: 750; 
+   white-space: nowrap; 
+}
+
+
 .td-gov-good { color: #00a86b; }
+
+
 .td-gov-bad { color: #ef4444; }
 
 .td-gov-blue { border-color: #d9eaff; background: linear-gradient(110deg, #f1f8ff, #fff); }
@@ -117,11 +146,23 @@
   align-items: start;
   gap: 24px;
 }
+
+
 .td-gov-section { min-width: 0; margin-bottom: 19px; }
-.td-gov-section > p { margin-bottom: 9px; }
+
+
+.td-gov-section > p { 
+   margin-bottom: 9px; 
+   font-size: 15px;
+}
 
 /* Tables */
-.td-gov-table-wrap { overflow-x: auto; border: 1px solid #d4e0ee; border-radius: 6px; }
+.td-gov-table-wrap {
+   border-radius: 6px; 
+   border-left: 1px solid var(--gov-border);
+}
+
+
 .td-gov-table {
   width: 100%;
   margin: 0;
@@ -129,19 +170,29 @@
   font-size: 12px;
   line-height: 1.35;
 }
+
+
 .td-gov-table thead { background: #edf3f9; }
+
+
 .td-gov-table th {
   padding: 7px 10px;
   border-bottom: 1px solid #d4e0ee;
   color: var(--gov-ink);
   font-weight: 750;
+  font-size: 15px !important;
   text-align: left;
 }
+
+
 .td-gov-table td {
   padding: 6px 10px;
   border-bottom: 1px solid #dce6f0;
   vertical-align: top;
+  font-size: 15px !important;
 }
+
+
 .td-gov-table tr:last-child td { border-bottom: 0; }
 .td-gov-table th + th,
 .td-gov-table td + td { border-left: 1px solid #dce6f0; }
@@ -171,6 +222,7 @@
   color: #edf5ff;
   background: #1d2d43;
 }
+
 .td-gov-code-toolbar {
   display: flex;
   justify-content: flex-end;
@@ -179,23 +231,31 @@
   min-height: 30px;
   padding: 5px 12px 0;
 }
+
+
 .td-gov-code-toolbar span {
   padding: 3px 8px;
   border-radius: 4px;
   color: #edf5ff;
   background: #31435d;
-  font-size: 10px;
+  font-size: 14px;
 }
+
+
 .td-gov-code-toolbar b { color: #edf5ff; font-size: 13px; }
+
+
 .td-gov-code pre {
   margin: 0;
   padding: 6px 22px 15px;
   color: #edf5ff;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.35;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
+
+
 .td-gov-code pre code { color: inherit; }
 .td-gov-code .td-yaml-key { color: #16c6d3; }
 .td-gov-code .td-yaml-key:nth-of-type(2) { color: #ff7b72; }
@@ -205,7 +265,10 @@
   padding: 10px 13px 13px;
   border: 1px solid var(--gov-border);
   border-radius: 7px;
+  min-height: 420px !important;
 }
+
+
 .td-gov-workflow {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr) 20px minmax(0, 1fr);
@@ -214,6 +277,8 @@
   gap: 0 5px;
   margin-top: 12px;
 }
+
+
 .td-gov-workflow-card {
   display: flex;
   flex-direction: column;
@@ -226,8 +291,21 @@
   border-radius: 6px;
   text-align: center;
 }
-.td-gov-workflow-card > span { font-size: 22px; font-weight: 750; }
-.td-gov-workflow-card p { margin: 3px 0 0; color: var(--gov-ink); font-size: 11px; line-height: 1.35; }
+
+.td-gov-workflow-card > span { 
+   font-size: 25px; 
+   font-weight: 750; 
+}
+
+
+.td-gov-workflow-card p { 
+   margin: 3px 0 0; 
+   color: var(--gov-ink); 
+   font-size: 15px; 
+   line-height: 1.35; 
+}
+
+
 .td-gov-workflow-blue { border-color: #d9eaff; background: #f3f9ff; }
 .td-gov-workflow-blue > span { color: #58a8fa; }
 .td-gov-workflow-purple { border-color: #e8dcff; background: #faf5ff; }
@@ -235,7 +313,15 @@
 .td-gov-workflow-amber { border-color: #ffe9bf; background: #fffaf0; }
 .td-gov-workflow-amber > span { color: #f59e0b; }
 .td-gov-flow-arrow { color: #5275a6; font-size: 19px; text-align: center; }
-.td-gov-flow-down { grid-column: 2 / 5; grid-row: 2; color: #5275a6; text-align: center; }
+
+.td-gov-flow-down { 
+   grid-column: 2 / 5; 
+   grid-row: 2; 
+   color: #5275a6; 
+   text-align: center; 
+}
+
+
 .td-gov-decision {
   grid-column: 2 / 5;
   grid-row: 3;
@@ -248,12 +334,31 @@
   background: #edf6ff;
   color: var(--gov-ink);
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 700;
 }
-.td-gov-branch { grid-row: 4; align-self: start; font-size: 11px; text-align: center; }
-.td-gov-yes { grid-column: 1 / 3; color: #00a86b; }
-.td-gov-no { grid-column: 4 / 6; color: #ef4444; }
+
+.td-gov-branch { 
+   grid-row: 4; 
+   align-self: start; 
+   font-size: 15px; 
+   text-align: center; 
+}
+
+
+.td-gov-yes { 
+   grid-column: 1 / 3; 
+   color: #00a86b; 
+}
+
+
+
+.td-gov-no { 
+   grid-column: 4 / 6;  
+   color: #ef4444; 
+}
+
+
 .td-gov-outcome {
   display: flex;
   align-items: center;
@@ -262,7 +367,9 @@
   padding: 8px;
   border: 1px solid var(--gov-border);
   border-radius: 6px;
+  margin-top: 100px !important;
 }
+
 .td-gov-outcome span {
   display: grid;
   flex: 0 0 34px;
@@ -273,7 +380,16 @@
   font-size: 19px;
   font-weight: 750;
 }
-.td-gov-outcome p { margin: 0; font-size: 11px; line-height: 1.35; }
+
+
+.td-gov-outcome p { 
+   margin: 0; 
+   font-size: 15px; 
+   line-height: 1.35; 
+   margin-top: 8px;
+}
+
+
 .td-gov-outcome-yes { grid-column: 1 / 3; grid-row: 4; margin-top: 25px; border-color: #b9f0d7; background: #f0fff8; }
 .td-gov-outcome-yes span { color: #fff; background: #10b981; }
 .td-gov-outcome-no { grid-column: 4 / 6; grid-row: 4; margin-top: 25px; border-color: #ffd1d1; background: #fff6f6; }
@@ -299,6 +415,8 @@
   background: #10b9a5;
   font-size: 15px;
 }
+
+
 .td-gov-benefits ul {
   display: grid;
   gap: 5px;
@@ -306,7 +424,15 @@
   padding: 0 0 0 25px;
   list-style: none;
 }
-.td-gov-benefits li { position: relative; margin: 0; font-size: 12px; }
+
+
+.td-gov-benefits li { 
+   position: relative; 
+   margin: 0; 
+   font-size: 15px; 
+}
+
+
 .td-gov-benefits li::before {
   position: absolute;
   left: -23px;
@@ -341,4 +467,65 @@
   .td-gov-metric { min-height: 86px; }
   .td-gov-table { min-width: 640px; }
   .td-gov-code pre { padding-right: 12px; padding-left: 12px; }
+}
+
+
+
+.td-gov-workflow-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+    height: 110px;
+    padding: 8px 5px;
+    border: 1px solid var(--gov-border);
+    border-radius: 6px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+
+.td-gov-outcome {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    min-width: 0;
+    height: 100px;
+    padding: 8px;
+    border: 1px solid var(--gov-border);
+    border-radius: 6px;
+    margin-top: 100px !important;
+    box-sizing: border-box;
+}
+
+
+/* Remove default bullets */
+.td-gov-benefits li {
+    position: relative;
+    list-style: none;
+}
+
+.td-gov-benefits li::before {
+    content: "✓" !important;
+    position: absolute;
+    left: -23px;
+    top: 1px;
+    display: block;
+    color: #10b981 !important;
+    background: transparent !important;
+    font-size: 15px;
+    font-weight: 800;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+}
+
+
+.main-content ul > li::before {
+    position: absolute;
+    margin-left: 0;
 }

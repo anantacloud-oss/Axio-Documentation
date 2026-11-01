@@ -69,6 +69,19 @@ permalink: /axio/operations/technical-debt/technical-debt-remediation/
             </tbody>
           </table>
         </div>
+
+        <section class="td-rem-section td-rem-types-section">
+        <h2>Supported remediation types</h2>
+        <div class="td-rem-types">
+          <article><span>☁</span><strong>AWS</strong><p>Configuration fixes</p></article>
+          <article><span>‹/›</span><strong>GitHub</strong><p>Dependency updates</p></article>
+          <article><span>⬟</span><strong>Policy</strong><p>Compliance enforcement</p></article>
+          <article><span>⚒</span><strong>Infrastructure</strong><p>Drift remediation</p></article>
+          <article><span>▤</span><strong>Cost</strong><p>Optimization recommendations</p></article>
+        </div>
+      </section>
+
+
       </section>
 
     </div>
@@ -96,16 +109,22 @@ permalink: /axio/operations/technical-debt/technical-debt-remediation/
         </article>
       </section>
 
-      <section class="td-rem-section td-rem-types-section">
-        <h2>Supported remediation types</h2>
-        <div class="td-rem-types">
-          <article><span>☁</span><strong>AWS</strong><p>Configuration fixes</p></article>
-          <article><span>‹/›</span><strong>GitHub</strong><p>Dependency updates</p></article>
-          <article><span>⬟</span><strong>Policy</strong><p>Compliance enforcement</p></article>
-          <article><span>⚒</span><strong>Infrastructure</strong><p>Drift remediation</p></article>
-          <article><span>▤</span><strong>Cost</strong><p>Optimization recommendations</p></article>
-        </div>
-      </section>
+      
     </div>
   </div>
 </div>
+
+
+ <nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/operations/technical-debt/technical-debt-trends/' | relative_url }}">
+       ← Trends & Historical Analytics
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/operations/technical-debt/technical-debt-governance/' | relative_url }}">
+       Governance & SLA →
+    </a>
+
+  </nav>

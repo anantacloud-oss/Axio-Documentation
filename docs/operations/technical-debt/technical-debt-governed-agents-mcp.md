@@ -15,7 +15,7 @@ permalink: /axio/operations/technical-debt/technical-debt-governed-agents-mcp/
   <header class="td-mcp-header">
     <h1>Technical Debt — Governed Agents &amp; MCP</h1>
     <p class="td-mcp-subtitle">Safe, governed automation for technical debt remediation</p>
-    <p>Phase 5 introduces governed agents and Model Context Protocol (MCP) integration to automate technical debt remediation with security, permissions and human oversight. It connects AI agents with your infrastructure, code and cloud tools to take contextual actions safely.</p>
+    <p>It introduces governed agents and Model Context Protocol (MCP) integration to automate technical debt remediation with security, permissions and human oversight. It connects AI agents with your infrastructure, code and cloud tools to take contextual actions safely.</p>
   </header>
 
   <section class="td-mcp-metrics" aria-label="Governed agent metrics">
@@ -151,3 +151,18 @@ permalink: /axio/operations/technical-debt/technical-debt-governed-agents-mcp/
     </div>
   </div>
 </div>
+
+
+ <nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/operations/technical-debt/technical-debt-lifecycle/' | relative_url }}">
+       ← Lifecycle Intelligence
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/operations/technical-debt/technical-debt-verification-readiness/' | relative_url }}">
+       Verification, Production Readiness →
+    </a>
+
+  </nav>

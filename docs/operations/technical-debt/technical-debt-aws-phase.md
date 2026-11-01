@@ -14,7 +14,7 @@ permalink: /axio/operations/technical-debt/technical-debt-aws-phase/
   <header class="td-aws-header">
     <h1>AWS account assessment</h1>
     <p class="td-aws-subtitle">Real AWS inventory, assessment run and lifecycle debt</p>
-    <p>Phase A delivers real AWS inventory (no catalog placeholders for AWS sync), an assessment run record, and lifecycle technical debt reconciled into the backlog.</p>
+    <p>It delivers real AWS inventory (no catalog placeholders for AWS sync), an assessment run record, and lifecycle technical debt reconciled into the backlog.</p>
   </header>
 
   <section class="td-aws-summary" aria-label="Assessment capabilities">

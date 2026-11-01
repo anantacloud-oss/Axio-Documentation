@@ -14,7 +14,7 @@ permalink: /axio/operations/technical-debt/technical-debt-governance/
   <header class="td-gov-header">
     <h1>Technical Debt — Governance &amp; SLA</h1>
     <p class="td-gov-subtitle">Ownership, due dates, policies and escalation for technical debt</p>
-    <p>Phase 5 introduces governance and SLA management for technical debt. It helps you define ownership, set due dates, apply policies, track exceptions and ensure timely remediation with clear escalation rules.</p>
+    <p>It introduces governance and SLA management for technical debt. It helps you define ownership, set due dates, apply policies, track exceptions and ensure timely remediation with clear escalation rules.</p>
   </header>
 
   <section class="td-gov-metrics" aria-label="Governance metrics">
@@ -75,7 +75,7 @@ permalink: /axio/operations/technical-debt/technical-debt-governance/
         <h2>Policy configuration (example)</h2>
         <p>Define custom policies for ownership, SLA and escalation.</p>
         <div class="td-gov-code">
-          <div class="td-gov-code-toolbar"><span>yaml</span><b>▢</b></div>
+          <div class="td-gov-code-toolbar"><span>yaml</span></div>
           <pre><code><span class="td-yaml-key">policy</span>:
   <span class="td-yaml-key">itemType</span>: SECURITY_FINDING
   <span class="td-yaml-key">severity</span>: CRITICAL
@@ -124,7 +124,7 @@ permalink: /axio/operations/technical-debt/technical-debt-governance/
       </section>
 
       <section class="td-gov-benefits">
-        <h2><span>✓</span> Benefits</h2>
+        <h2>Benefits</h2>
         <ul>
           <li>Clear ownership and accountability</li>
           <li>Configurable SLA policies based on risk and business impact</li>
@@ -136,3 +136,18 @@ permalink: /axio/operations/technical-debt/technical-debt-governance/
     </div>
   </div>
 </div>
+
+
+<nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/operations/technical-debt/technical-debt-remediation/' | relative_url }}">
+       ← Remediation & Workflows
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/operations/technical-debt/technical-debt-prioritization/' | relative_url }}">
+       Prioritization & Dependency Intelligence →
+    </a>
+
+  </nav>

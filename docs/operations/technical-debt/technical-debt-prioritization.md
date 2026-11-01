@@ -14,7 +14,7 @@ permalink: /axio/operations/technical-debt/technical-debt-prioritization/
   <header class="td-prio-header">
     <h1>Technical Debt — Prioritization &amp; Dependency Intelligence</h1>
     <p class="td-prio-subtitle">Explainable priority scores to focus on what matters most</p>
-    <p>Phase 5 introduces intelligent prioritization for technical debt items using risk, financial impact, lifecycle urgency and dependency analysis. It helps you focus on high-impact items and understand the blast radius before remediation.</p>
+    <p>It introduces intelligent prioritization for technical debt items using risk, financial impact, lifecycle urgency and dependency analysis. It helps you focus on high-impact items and understand the blast radius before remediation.</p>
   </header>
 
   <section class="td-prio-metrics" aria-label="Prioritization metrics">
@@ -101,7 +101,7 @@ permalink: /axio/operations/technical-debt/technical-debt-prioritization/
       </section>
 
       <section class="td-prio-benefits">
-        <h2><span>✓</span> Benefits</h2>
+        <h2>Benefits</h2>
         <ul>
           <li>Focus on high-impact items that reduce risk and cost</li>
           <li>Explainable priority scores with clear factors</li>
@@ -113,3 +113,18 @@ permalink: /axio/operations/technical-debt/technical-debt-prioritization/
     </div>
   </div>
 </div>
+
+
+ <nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/operations/technical-debt/technical-debt-governance/' | relative_url }}">
+       ←  Governance & SLA 
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/operations/technical-debt/technical-debt-github-integration/' | relative_url }}">
+       GitHub Integration & Maintenance →
+    </a>
+
+  </nav>

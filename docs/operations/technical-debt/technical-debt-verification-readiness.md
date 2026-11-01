@@ -3,7 +3,7 @@ title: Technical Debt — Verification, Production Readiness & Executive Intelli
 layout: default
 parent: Technical Debt
 nav_order: 10
-permalink: /axio/operations/technical-debt/technical-debt-governed-agents-mcp/
+permalink: /axio/operations/technical-debt/technical-debt-verification-readiness/
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/technical-debt-verification-readiness.css' | relative_url }}">
@@ -14,7 +14,7 @@ permalink: /axio/operations/technical-debt/technical-debt-governed-agents-mcp/
   <header class="td-vr-header">
     <h1>Technical Debt — Verification, Production Readiness &amp; Executive Intelligence</h1>
     <p class="td-vr-subtitle">Validate remediation, track readiness and get executive insights</p>
-    <p>Phase 5 helps you verify technical debt remediation, assess production readiness and provides executive intelligence to track progress, reduce risk and show business impact. It gives you authoritative evidence, metrics and recommendations with easy exports.</p>
+    <p>It helps you verify technical debt remediation, assess production readiness and provides executive intelligence to track progress, reduce risk and show business impact. It gives you authoritative evidence, metrics and recommendations with easy exports.</p>
   </header>
 
   <section class="td-vr-metrics" aria-label="Verification and readiness metrics">
@@ -113,7 +113,7 @@ permalink: /axio/operations/technical-debt/technical-debt-governed-agents-mcp/
       </section>
 
       <section class="td-vr-benefits">
-        <div class="td-vr-benefits-head"><h2><span>✓</span> Benefits</h2><a href="#export-csv" class="td-vr-export">⇩ Export CSV</a></div>
+        <div class="td-vr-benefits-head"><h2><span>✓</span> Benefits</h2></div>
         <ul>
           <li>Verified remediation with authoritative evidence</li>
           <li>Production readiness with clear go/no-go criteria</li>
@@ -126,3 +126,19 @@ permalink: /axio/operations/technical-debt/technical-debt-governed-agents-mcp/
     </div>
   </div>
 </div>
+
+
+
+ <nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/operations/technical-debt/technical-debt-governed-agents-mcp/' | relative_url }}">
+       ← Governed Agents & MCP
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/security-governance/' | relative_url }}">
+       Security & Governance →
+    </a>
+
+  </nav>

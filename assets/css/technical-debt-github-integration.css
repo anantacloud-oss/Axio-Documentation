@@ -83,10 +83,21 @@
   font-size: 27px;
   font-weight: 800;
 }
-.td-gh-metric p { margin: 0 0 3px; font-size: 12px; }
+.td-gh-metric p { 
+   margin: 0 0 3px; 
+   font-size: 15px; 
+}
+
+
 .td-gh-metric strong { margin-right: 10px; font-size: 27px; line-height: 1.1; }
-.td-gh-change { font-size: 12px; font-weight: 750; white-space: nowrap; }
-.td-gh-metric small { display: block; margin-top: 2px; color: var(--gh-muted); font-size: 11px; }
+
+
+.td-gh-change { font-size: 15px; font-weight: 750; white-space: nowrap; }
+
+
+.td-gh-metric small { display: block; margin-top: 2px; color: var(--gh-muted); font-size: 15px; }
+
+
 .td-gh-good { color: #00a86b; }
 .td-gh-bad { color: #ef4444; }
 .td-gh-blue { border-color: #d9eaff; background: linear-gradient(110deg,#f1f8ff,#fff); }
@@ -105,14 +116,32 @@
   align-items: start;
   gap: 24px;
 }
+
+
 .td-gh-left, .td-gh-right { min-width: 0; }
+
+
 .td-gh-section { margin: 0 0 17px; }
-.td-gh-section > p { margin-bottom: 7px; }
+
+
+.td-gh-section > p { 
+   margin-bottom: 7px; 
+   font-size: 15px;
+}
+
 
 /* Tables */
-.td-gh-table-wrap { overflow-x: auto; border: 1px solid #d4e0ee; border-radius: 6px; }
+.td-gh-table-wrap { 
+   border-radius: 6px;   
+   border-left: 1px solid var(--gov-border);
+}
+
 .td-gh-table { width: 100%; margin: 0; border-collapse: collapse; font-size: 11px; line-height: 1.35; }
+
+
 .td-gh-table thead { background: #edf3f9; }
+
+
 .td-gh-table th {
   padding: 7px 8px;
   color: var(--gh-ink);
@@ -120,11 +149,23 @@
   font-weight: 750;
   white-space: nowrap;
   border-bottom: 1px solid #d4e0ee;
+  font-size: 15px !important;
 }
-.td-gh-table td { padding: 6px 8px; vertical-align: top; border-bottom: 1px solid #dce6f0; }
+
+
+.td-gh-table td { 
+    padding: 6px 8px; 
+    vertical-align: top;
+    border-bottom: 1px solid #dce6f0; 
+    font-size: 15px !important;
+}
+
+
 .td-gh-table tr:last-child td { border-bottom: 0; }
 .td-gh-table th + th, .td-gh-table td + td { border-left: 1px solid #dce6f0; }
 .td-gh-table tbody tr:nth-child(even) { background: #fbfdff; }
+
+
 .td-gh-pill {
   display: inline-block;
   min-width: 64px;
@@ -132,10 +173,12 @@
   border: 1px solid transparent;
   border-radius: 8px;
   text-align: center;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 750;
   white-space: nowrap;
 }
+
+
 .td-gh-pill-low { color: #ef4444; border-color: #ffcaca; background: #fff0f0; }
 .td-gh-pill-medium { color: #d97706; border-color: #ffdfaa; background: #fff7e8; }
 .td-gh-pill-high { color: #059669; border-color: #b8f0d7; background: #eafff4; }
@@ -195,6 +238,8 @@
   border-radius: 6px;
   background: linear-gradient(120deg,#f4f9ff,#fff);
 }
+
+
 .td-gh-source > span {
   display: grid;
   flex: 0 0 43px;
@@ -205,8 +250,9 @@
   color: #0877f9;
   background: #e4f1ff;
   font-size: 21px;
-  font-weight: 800;
 }
+
+
 .td-gh-source strong { display: block; margin: 1px 0 2px; font-size: 11px; }
 .td-gh-source p { margin: 0; font-size: 11px; line-height: 1.35; }
 
@@ -245,3 +291,275 @@
   .td-gh-source-grid { grid-template-columns: 1fr; }
   .td-gh-code-toolbar code { overflow-wrap: anywhere; }
 }
+
+
+/* Remove default bullets */
+.td-gh-benefits li {
+    position: relative;
+    list-style: none;
+    font-size: 15px;
+}
+
+.td-gh-benefits li::before {
+    content: "✓" !important;
+    position: absolute;
+    left: -23px;
+    top: 1px;
+    display: block;
+    color: #10b981 !important;
+    background: transparent !important;
+    font-size: 15px;
+    font-weight: 800;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+}
+
+
+.main-content ul > li::before {
+    position: absolute;
+    margin-left: 0;
+}
+
+
+/* =========================================
+   Full Width Layout
+========================================= */
+
+.td-gh-layout,
+.td-gh-left {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.td-gh-section {
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 20px;
+    padding: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--body-background-color);
+}
+
+.td-gh-section h2,
+.td-gh-benefits h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+.td-gh-section > p {
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+/* =========================================
+   Full Width Tables
+========================================= */
+
+.td-gh-table-wrap {
+    width: 100%;
+    max-width: 100%;
+}
+
+.td-gh-table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 15px;
+}
+
+.td-gh-table th,
+.td-gh-table td {
+    padding: 12px 13px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.td-gh-table th {
+    font-weight: 700;
+    background: var(--code-background-color);
+}
+
+.td-gh-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.td-gh-table tbody tr:hover {
+    background: var(--sidebar-color);
+}
+
+/* =========================================
+   Status Pills
+========================================= */
+
+.td-gh-pill {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.td-gh-pill-low {
+    color: #d65c5c;
+    background: rgba(214, 92, 92, 0.12);
+}
+
+.td-gh-pill-medium {
+    color: #c28b2c;
+    background: rgba(194, 139, 44, 0.12);
+}
+
+.td-gh-pill-high {
+    color: #159b70;
+    background: rgba(21, 155, 112, 0.12);
+}
+
+.td-gh-pill-low-blue {
+    color: #4388e8;
+    background: rgba(67, 136, 232, 0.12);
+}
+
+/* =========================================
+   Sources + Benefits Two Column Layout
+========================================= */
+
+.td-gh-bottom-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+    gap: 16px;
+    align-items: stretch;
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+
+/* =========================================
+   GitHub Source Cards
+========================================= */
+
+.td-gh-source-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px;
+}
+
+.td-gh-source {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    min-height: 75px;
+    padding: 11px;
+    border: 1px solid var(--border-color);
+    border-radius: 7px;
+}
+
+.td-gh-source > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    color: #4388e8;
+    background: rgba(67, 136, 232, 0.12);
+    font-size: 25px;
+    font-weight: 650px;
+}
+
+.td-gh-source strong {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 650;
+    font-size: 15px;
+}
+
+.td-gh-source p {
+    margin: 0;
+    line-height: 1.4;
+    font-size: 15px;
+}
+
+/* =========================================
+   Benefits
+========================================= */
+
+.td-gh-benefits {
+    display: flex;
+    flex-direction: column;
+}
+
+.td-gh-benefits h2 {
+    margin-bottom: 15px;
+}
+
+.td-gh-benefits ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.td-gh-benefits li {
+    position: relative;
+    padding-left: 23px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.td-gh-benefits li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    color: #10b981;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+/* =========================================
+   Responsive Layout
+========================================= */
+
+@media (max-width: 1000px) {
+    .td-gh-bottom-grid {
+        grid-template-columns: minmax(0, 1.5fr) minmax(230px, 1fr);
+    }
+
+    .td-gh-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .td-gh-bottom-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .td-gh-source-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .td-gh-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .td-gh-section,
+    .td-gh-benefits {
+        padding: 12px;
+    }
+
+    .td-gh-header h1 {
+        font-size: 22px;
+    }
+}
+
+

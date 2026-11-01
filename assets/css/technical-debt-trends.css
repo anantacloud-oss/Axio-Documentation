@@ -522,3 +522,40 @@
   .td-trends-code { flex-wrap: wrap; }
   .td-trends-code > span { margin-bottom: 0; }
 }
+
+
+/* Remove default bullets */
+.td-trends-captured li {
+    position: relative;
+    list-style: none;
+    font-size: 15px;
+}
+
+.td-trends-captured li::before {
+    content: "✓" !important;
+    position: absolute !important;
+    left: -23px;
+    top: 1px;
+    display: block;
+    color: #10b981 !important;
+    background: transparent !important;
+    font-size: 15px;
+    font-weight: 800;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+}
+
+
+.main-content ul > li::before {
+    position: absolute !important;
+    left: 0 !important;
+    margin-left: 0 !important;
+}
+
+.main-content ul > li {
+    position: relative;
+    padding-left: 24px;
+}
+
+

@@ -53,21 +53,85 @@ permalink: /axio/operations/technical-debt/technical-debt-verification-readiness
       </section>
 
       <section class="td-vr-section td-vr-attempts">
-        <h2>Verification attempts</h2>
-        <p>History of remediation attempts and their status.</p>
-        <div class="td-vr-table-wrap">
-          <table class="td-vr-table">
-            <thead><tr><th>Item</th><th>Type</th><th>Execution Time</th><th>Status</th><th>Evidence</th><th>Details</th></tr></thead>
+    <h2>Verification attempts</h2>
+    <p>History of remediation attempts and their status.</p>
+
+    <div class="td-vr-table-wrap">
+        <table class="td-vr-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Type</th>
+                    <th>Execution Time</th>
+                    <th>Status</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+
             <tbody>
-              <tr><td>CVE-2024-1234</td><td>Security finding</td><td>Oct 6, 2026 10:21</td><td><span class="td-vr-status td-vr-status-verified">Verified</span></td><td><a href="#evidence-cve">View</a></td><td>Auto-fixed via PR</td></tr>
-              <tr><td>nginx 1.20 → 1.26</td><td>Dependency</td><td>Oct 5, 2026 14:02</td><td><span class="td-vr-status td-vr-status-verified">Verified</span></td><td><a href="#evidence-nginx">View</a></td><td>Version upgraded</td></tr>
-              <tr><td>S3 public access</td><td>Policy violation</td><td>Oct 4, 2026 09:18</td><td><span class="td-vr-status td-vr-status-verified">Verified</span></td><td><a href="#evidence-s3">View</a></td><td>Bucket made private</td></tr>
-              <tr><td>Old Lambda runtime</td><td>Lifecycle</td><td>Oct 3, 2026 16:45</td><td><span class="td-vr-status td-vr-status-progress">In Progress</span></td><td><a href="#evidence-lambda">View</a></td><td>Upgrade to 20.x</td></tr>
-              <tr><td>Unused EC2 instance</td><td>Cost optimization</td><td>Oct 2, 2026 11:10</td><td><span class="td-vr-status td-vr-status-failed">Failed</span></td><td><a href="#evidence-ec2">View</a></td><td>Manual review required</td></tr>
+                <tr>
+                    <td>CVE-2024-1234</td>
+                    <td>Security finding</td>
+                    <td>Oct 6, 2026 10:21</td>
+                    <td>
+                        <span class="td-vr-status td-vr-status-verified">
+                            Verified
+                        </span>
+                    </td>
+                    <td>Auto-fixed via PR</td>
+                </tr>
+
+                <tr>
+                    <td>nginx 1.20 → 1.26</td>
+                    <td>Dependency</td>
+                    <td>Oct 5, 2026 14:02</td>
+                    <td>
+                        <span class="td-vr-status td-vr-status-verified">
+                            Verified
+                        </span>
+                    </td>
+                    <td>Version upgraded</td>
+                </tr>
+
+                <tr>
+                    <td>S3 public access</td>
+                    <td>Policy violation</td>
+                    <td>Oct 4, 2026 09:18</td>
+                    <td>
+                        <span class="td-vr-status td-vr-status-verified">
+                            Verified
+                        </span>
+                    </td>
+                    <td>Bucket made private</td>
+                </tr>
+
+                <tr>
+                    <td>Old Lambda runtime</td>
+                    <td>Lifecycle</td>
+                    <td>Oct 3, 2026 16:45</td>
+                    <td>
+                        <span class="td-vr-status td-vr-status-progress">
+                            In Progress
+                        </span>
+                    </td>
+                    <td>Upgrade to 20.x</td>
+                </tr>
+
+                <tr>
+                    <td>Unused EC2 instance</td>
+                    <td>Cost optimization</td>
+                    <td>Oct 2, 2026 11:10</td>
+                    <td>
+                        <span class="td-vr-status td-vr-status-failed">
+                            Failed
+                        </span>
+                    </td>
+                    <td>Manual review required</td>
+                </tr>
             </tbody>
-          </table>
-        </div>
-      </section>
+        </table>
+    </div>
+</section>
 
     </div>
 
@@ -93,7 +157,7 @@ permalink: /axio/operations/technical-debt/technical-debt-verification-readiness
           <article><p>Total Items</p><strong>570</strong><small class="td-vr-negative">↓ 8%</small><div class="td-vr-spark td-vr-spark-blue"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
           <article><p>Verified</p><strong>386</strong><small class="td-vr-positive">↑ 24%</small><div class="td-vr-spark td-vr-spark-green"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
           <article><p>Open</p><strong>122</strong><small class="td-vr-negative">↓ 16%</small><div class="td-vr-spark td-vr-spark-red"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
-          <article><p>Avg. Time to Remediate</p><strong>6.4 days</strong><small class="td-vr-positive">↓ 32%</small><div class="td-vr-spark td-vr-spark-blue"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+          <article><p>Avg. Time</p><strong>6.4 days</strong><small class="td-vr-positive">↓ 32%</small><div class="td-vr-spark td-vr-spark-blue"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
         </div>
         <div class="td-vr-trend">
           <div class="td-vr-trend-heading"><strong>Trend: Technical debt over time</strong><span><i class="td-vr-legend-red"></i>Total Items <i class="td-vr-legend-green"></i>Verified Items</span></div>
@@ -113,7 +177,7 @@ permalink: /axio/operations/technical-debt/technical-debt-verification-readiness
       </section>
 
       <section class="td-vr-benefits">
-        <div class="td-vr-benefits-head"><h2><span>✓</span> Benefits</h2></div>
+        <div class="td-vr-benefits-head"><h2>Benefits</h2></div>
         <ul>
           <li>Verified remediation with authoritative evidence</li>
           <li>Production readiness with clear go/no-go criteria</li>

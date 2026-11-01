@@ -289,3 +289,19 @@ permalink: /axio/security-governance/my-findings/
   </section>
 
 </div>
+
+
+
+<nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/security-governance/security-insights/' | relative_url }}">
+       ← Security Insights
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/security-governance/policies/' | relative_url }}">
+       Policies →
+    </a>
+
+  </nav>

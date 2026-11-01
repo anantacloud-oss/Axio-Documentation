@@ -7,6 +7,8 @@ has_toc: false
 permalink: /axio/security-governance/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/security.css' | relative_url }}">
+
 <div class="governance-dashboard">
 
   <div class="governance-top">
@@ -284,3 +286,18 @@ permalink: /axio/security-governance/
   </section>
 
 </div>
+
+
+<nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/operations/technical-debt/technical-debt-verification-readiness/' | relative_url }}">
+       ← Verification, Production Readiness 
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/security-governance/governance-dashboard/' | relative_url }}">
+       Governance Dashboard →
+    </a>
+
+  </nav>

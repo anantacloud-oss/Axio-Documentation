@@ -120,7 +120,7 @@ permalink: /axio/operations/technical-debt/technical-debt-governed-agents-mcp/
         <div class="td-mcp-step-connector">↓</div>
         <div class="td-mcp-workflow-step">
           <span class="td-mcp-step-number td-mcp-step-amber">3</span>
-          <div><strong>Review &amp; Approve</strong><p>Human review with policy and compliance checks</p><small>Manual</small></div>
+          <div><strong>Review &amp; Approve</strong><p>Human review with policy and compliance checks</p></div>
           <b class="td-mcp-manual">Manual</b>
         </div>
         <div class="td-mcp-step-connector">↓</div>
@@ -138,7 +138,7 @@ permalink: /axio/operations/technical-debt/technical-debt-governed-agents-mcp/
       </section>
 
       <section class="td-mcp-benefits">
-        <h2><span>✓</span> Benefits</h2>
+        <h2>Benefits</h2>
         <ul>
           <li>Context-aware remediation with real infrastructure and code data</li>
           <li>Safe execution with permissions and human oversight</li>

@@ -381,3 +381,19 @@ permalink: /axio/administration/runner/targeting/
  </div>
 
 </div>
+
+
+
+<nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/administration/runner/labels/' | relative_url }}">
+       ← Labels
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/administration/runner/lifecycle/' | relative_url }}">
+       Status and lifecycle →
+    </a>
+
+  </nav>

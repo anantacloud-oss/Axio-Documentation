@@ -407,3 +407,18 @@ permalink: /axio/administration/runner/offline-cleanup/
  </section>
 
 </div>
+
+
+<nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/administration/runner/version/' | relative_url }}">
+       ← Runner versions
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/administration/runner/runner-types/' | relative_url }}">
+       Runner types →
+    </a>
+
+  </nav>

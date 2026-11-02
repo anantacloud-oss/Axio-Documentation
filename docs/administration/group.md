@@ -376,3 +376,19 @@ permalink: /axio/administration/runner/group/
 
 
 </div>
+
+
+
+<nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/administration/runner/overview-runner/' | relative_url }}">
+       ← Runners – Overview
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/administration/runner/registration/' | relative_url }}">
+       Setup and registration →
+    </a>
+
+  </nav>

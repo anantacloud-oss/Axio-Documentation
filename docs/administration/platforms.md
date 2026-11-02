@@ -529,3 +529,20 @@ helm upgrade --install axio-runner ./kubernetes/helm \\
  </div>
 
 </div>
+
+
+
+
+<nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/administration/runner/registration/' | relative_url }}">
+       ← Setup and registration
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/administration/runner/tokens/' | relative_url }}">
+       Registration tokens →
+    </a>
+
+  </nav>

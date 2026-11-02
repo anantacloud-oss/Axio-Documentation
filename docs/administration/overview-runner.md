@@ -208,3 +208,19 @@ permalink: /axio/administration/runner/overview-runner/
   </section>
 
 </div>
+
+
+
+<nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/administration/mfa/' | relative_url }}">
+       ← MFA
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/administration/runner/group/' | relative_url }}">
+       Runner groups →
+    </a>
+
+  </nav>

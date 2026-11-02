@@ -496,3 +496,19 @@ permalink: /axio/administration/runner/isolation/
  </div>
 
 </div>
+
+
+
+<nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/administration/runner/lifecycle/' | relative_url }}">
+       ← Status and lifecycle
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/administration/runner/capacity/' | relative_url }}">
+       Capacity and concurrent jobs →
+    </a>
+
+  </nav>

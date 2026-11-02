@@ -467,3 +467,19 @@ permalink: /axio/administration/runner/labels/
  </div>
 
 </div>
+
+
+
+<nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/administration/runner/tokens/' | relative_url }}">
+       ← Registration tokens
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/administration/runner/targeting/' | relative_url }}">
+       Workload targeting →
+    </a>
+
+  </nav>

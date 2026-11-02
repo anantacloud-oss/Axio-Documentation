@@ -481,3 +481,19 @@ permalink: /axio/administration/runner/capacity/
  </div>
 
 </div>
+
+
+
+<nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/administration/runner/isolation/' | relative_url }}">
+       ← Isolation
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/administration/runner/version/' | relative_url }}">
+       Runner versions →
+    </a>
+
+  </nav>

@@ -565,3 +565,19 @@ cd runner/installer
  </div>
 
 </div>
+
+
+
+<nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/administration/runner/group/' | relative_url }}">
+       ← Runner groups
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/administration/runner/platform/' | relative_url }}">
+       Platforms →
+    </a>
+
+  </nav>

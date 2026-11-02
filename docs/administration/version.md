@@ -482,3 +482,19 @@ npm test --workspace=@axio/runner-core</code></pre>
  </div>
 
 </div>
+
+
+
+<nav class="page-navigation cost-page-navigation" aria-label="Documentation navigation">
+
+    <a class="nav-button previous"
+       href="{{ '/axio/administration/runner/capacity/' | relative_url }}">
+       ← Capacity and concurrent jobs
+    </a>
+
+    <a class="nav-button next"
+       href="{{ '/axio/administration/runner/offline-cleanup/' | relative_url }}">
+       Offline runner cleanup →
+    </a>
+
+  </nav>
